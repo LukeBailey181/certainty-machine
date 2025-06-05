@@ -55,3 +55,13 @@ To run pre-commit check:
 pre-commit install
 pre-commit run --all-files
 ```
+
+
+# Luke TODOs
+
+
+-[] Setup verification server on Stanford cluster
+-[] Setup loading data scripts
+-[] Setup multiturn prompting
+
+

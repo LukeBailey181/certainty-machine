@@ -72,29 +72,3 @@ def extract_proof(generation: str) -> str:
         return NO_CODE_FOUND_TAG
 
     return generation[start_idx + len("<begin_proof>") : end_idx]
-
-
-def extract_conjecture(generation: str) -> str:
-    start_idx = generation.rfind("<begin_conjecture>")
-    end_idx = generation.rfind("<end_conjecture>")
-
-    if start_idx == -1 or end_idx == -1:
-        return NO_CONJECTURE_FOUND_TAG
-
-    return generation[start_idx + len("<begin_conjecture>") : end_idx]
-
-
-def extract_reviewer_score(generation: str) -> float:
-    start_idx = generation.rfind("<reviewer_score>")
-    end_idx = generation.rfind("<end_reviewer_score>")
-
-    if start_idx == -1 or end_idx == -1:
-        return NO_REVIEWER_SCORE_FOUND_TAG
-
-    try:
-        score = float(generation[start_idx + len("<reviewer_score>") : end_idx])
-    except ValueError:
-        # Score could not be parsed as float
-        return NO_REVIEWER_SCORE_FOUND_TAG
-
-    return score

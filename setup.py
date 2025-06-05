@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 import os
 
 setup(
-    name="certaity_machine",
+    name="certainty_machine",
     version="0.1.0",
     packages=find_packages(),
     install_requires=[
