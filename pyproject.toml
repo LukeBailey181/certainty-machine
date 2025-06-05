@@ -1,0 +1,10 @@
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[tool.mypy]
+[[tool.mypy.overrides]]
+module = "wandb.*"
+ignore_missing_imports = true
+follow_imports = "skip"
+follow_imports_for_stubs = false
