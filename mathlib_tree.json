@@ -1,0 +1,5620 @@
+{
+  "Tactic.lean": null,
+  "Tactic": {
+    "ToAdditive.lean": null,
+    "Check.lean": null,
+    "Generalize.lean": null,
+    "ExtractGoal.lean": null,
+    "SuccessIfFailWithMsg.lean": null,
+    "Clear_.lean": null,
+    "Observe.lean": null,
+    "Replace.lean": null,
+    "Core.lean": null,
+    "GuardGoalNums.lean": null,
+    "ToLevel.lean": null,
+    "Congrm.lean": null,
+    "Cases.lean": null,
+    "GuardHypNums.lean": null,
+    "Explode.lean": null,
+    "NormNum.lean": null,
+    "HaveI.lean": null,
+    "ApplyWith.lean": null,
+    "Measurability.lean": null,
+    "Ring.lean": null,
+    "DefEqTransformations.lean": null,
+    "Conv.lean": null,
+    "Constructor.lean": null,
+    "ByContra.lean": null,
+    "Group.lean": null,
+    "SplitIfs.lean": null,
+    "IntervalCases.lean": null,
+    "SwapVar.lean": null,
+    "TypeCheck.lean": null,
+    "RSuffices.lean": null,
+    "FBinop.lean": null,
+    "Recover.lean": null,
+    "TFAE.lean": null,
+    "Rename.lean": null,
+    "Propose.lean": null,
+    "MkIffOfInductiveProp.lean": null,
+    "FailIfNoProgress.lean": null,
+    "ArithMult.lean": null,
+    "Eval.lean": null,
+    "HigherOrder.lean": null,
+    "IrreducibleDef.lean": null,
+    "Change.lean": null,
+    "ScopedNS.lean": null,
+    "Have.lean": null,
+    "Monotonicity.lean": null,
+    "WLOG.lean": null,
+    "DeriveToExpr.lean": null,
+    "PPWithUniv.lean": null,
+    "Eqns.lean": null,
+    "Inhabit.lean": null,
+    "ToExpr.lean": null,
+    "Basic.lean": null,
+    "ClearExcept.lean": null,
+    "Recall.lean": null,
+    "Existsi.lean": null,
+    "NoncommRing.lean": null,
+    "Clean.lean": null,
+    "ApplyCongr.lean": null,
+    "DeriveTraversable.lean": null,
+    "ApplyAt.lean": null,
+    "Polyrith.lean": null,
+    "Rify.lean": null,
+    "Tauto.lean": null,
+    "LiftLets.lean": null,
+    "ProxyType.lean": null,
+    "ApplyFun.lean": null,
+    "ProjectionNotation.lean": null,
+    "FunProp.lean": null,
+    "SimpRw.lean": null,
+    "InferParam.lean": null,
+    "Continuity.lean": null,
+    "ExtractLets.lean": null,
+    "PushNeg.lean": null,
+    "GeneralizeProofs.lean": null,
+    "Set.lean": null,
+    "Spread.lean": null,
+    "RewriteSearch.lean": null,
+    "CasesM.lean": null,
+    "Trace.lean": null,
+    "Linter.lean": null,
+    "Convert.lean": null,
+    "Peel.lean": null,
+    "RenameBVar.lean": null,
+    "Zify.lean": null,
+    "Says.lean": null,
+    "SlimCheck.lean": null,
+    "Nontriviality.lean": null,
+    "GCongr.lean": null,
+    "SudoSetOption.lean": null,
+    "Positivity.lean": null,
+    "NthRewrite.lean": null,
+    "SuppressCompilation.lean": null,
+    "Substs.lean": null,
+    "AdaptationNote.lean": null,
+    "Abel.lean": null,
+    "DeriveFintype.lean": null,
+    "UnsetOption.lean": null,
+    "FinCases.lean": null,
+    "ClearExclamation.lean": null,
+    "CancelDenoms.lean": null,
+    "Coe.lean": null,
+    "ExtendDoc.lean": null,
+    "Common.lean": null,
+    "ProdAssoc.lean": null,
+    "SetLike.lean": null,
+    "ModCases.lean": null,
+    "FieldSimp.lean": null,
+    "Hint.lean": null,
+    "Qify.lean": null,
+    "TypeStar.lean": null,
+    "Lemma.lean": null,
+    "Congr!.lean": null,
+    "Lift.lean": null,
+    "TryThis.lean": null,
+    "ReduceModChar.lean": null,
+    "CC.lean": null,
+    "TermCongr.lean": null,
+    "ComputeDegree.lean": null,
+    "Contrapose.lean": null,
+    "LinearCombination.lean": null,
+    "Use.lean": null,
+    "Variable.lean": null,
+    "Find.lean": null,
+    "SimpIntro.lean": null,
+    "MoveAdd.lean": null,
+    "Linarith.lean": null,
+    "Choose.lean": null,
+    "HelpCmd.lean": null,
+    "CancelDenoms": {
+      "Core.lean": null
+    },
+    "Continuity": {
+      "Init.lean": null
+    },
+    "Relation": {
+      "Rfl.lean": null,
+      "Symm.lean": null,
+      "Trans.lean": null
+    },
+    "Widget": {
+      "Calc.lean": null,
+      "Congrm.lean": null,
+      "Conv.lean": null,
+      "SelectPanelUtils.lean": null,
+      "CommDiag.lean": null,
+      "Gcongr.lean": null,
+      "SelectInsertParamsClass.lean": null
+    },
+    "Simps": {
+      "Basic.lean": null,
+      "NotationClass.lean": null
+    },
+    "Linter": {
+      "Lint.lean": null,
+      "GlobalAttributeIn.lean": null,
+      "HashCommandLinter.lean": null
+    },
+    "NormNum": {
+      "DivMod.lean": null,
+      "Ineq.lean": null,
+      "NatFib.lean": null,
+      "Pow.lean": null,
+      "GCD.lean": null,
+      "Core.lean": null,
+      "NatSqrt.lean": null,
+      "LegendreSymbol.lean": null,
+      "Basic.lean": null,
+      "IsCoprime.lean": null,
+      "OfScientific.lean": null,
+      "Result.lean": null,
+      "Eq.lean": null,
+      "BigOperators.lean": null,
+      "Prime.lean": null,
+      "Inv.lean": null
+    },
+    "Nontriviality": {
+      "Core.lean": null
+    },
+    "FunProp": {
+      "Core.lean": null,
+      "Attr.lean": null,
+      "FunctionData.lean": null,
+      "ToBatteries.lean": null,
+      "Mor.lean": null,
+      "ContDiff.lean": null,
+      "StateList.lean": null,
+      "Theorems.lean": null,
+      "Measurable.lean": null,
+      "AEMeasurable.lean": null,
+      "Differentiable.lean": null,
+      "Elab.lean": null,
+      "Decl.lean": null,
+      "RefinedDiscrTree.lean": null,
+      "Types.lean": null
+    },
+    "CategoryTheory": {
+      "Coherence.lean": null,
+      "Elementwise.lean": null,
+      "Reassoc.lean": null,
+      "MonoidalComp.lean": null,
+      "Slice.lean": null,
+      "BicategoryCoherence.lean": null
+    },
+    "Attr": {
+      "Register.lean": null,
+      "Core.lean": null
+    },
+    "GCongr": {
+      "Core.lean": null,
+      "ForwardAttr.lean": null
+    },
+    "Sat": {
+      "FromLRAT.lean": null
+    },
+    "Monotonicity": {
+      "Lemmas.lean": null,
+      "Attr.lean": null,
+      "Basic.lean": null
+    },
+    "Linarith": {
+      "Parsing.lean": null,
+      "Lemmas.lean": null,
+      "Verification.lean": null,
+      "Preprocessing.lean": null,
+      "Datatypes.lean": null,
+      "Frontend.lean": null,
+      "Oracle": {
+        "SimplexAlgorithm.lean": null,
+        "FourierMotzkin.lean": null
+      },
+      "SimplexAlgorithm": {
+        "Gauss.lean": null,
+        "SimplexAlgorithm.lean": null,
+        "PositiveVector.lean": null,
+        "Datatypes.lean": null
+      }
+    },
+    "Measurability": {
+      "Init.lean": null
+    },
+    "CC": {
+      "Lemmas.lean": null,
+      "Addition.lean": null,
+      "Datatypes.lean": null
+    },
+    "Ring": {
+      "Basic.lean": null,
+      "PNat.lean": null,
+      "RingNF.lean": null
+    },
+    "Explode": {
+      "Pretty.lean": null,
+      "Datatypes.lean": null
+    },
+    "Positivity": {
+      "Core.lean": null,
+      "Finset.lean": null,
+      "Basic.lean": null
+    },
+    "ArithMult": {
+      "Init.lean": null
+    },
+    "ReduceModChar": {
+      "Ext.lean": null
+    }
+  },
+  "Order": {
+    "WellFoundedSet.lean": null,
+    "CompleteLatticeIntervals.lean": null,
+    "CountableDenseLinearOrder.lean": null,
+    "Synonym.lean": null,
+    "GaloisConnection.lean": null,
+    "Fin.lean": null,
+    "Birkhoff.lean": null,
+    "Sublattice.lean": null,
+    "Chain.lean": null,
+    "PrimeIdeal.lean": null,
+    "Iterate.lean": null,
+    "CompleteBooleanAlgebra.lean": null,
+    "MinMax.lean": null,
+    "PrimeSeparator.lean": null,
+    "Atoms.lean": null,
+    "Disjointed.lean": null,
+    "RelSeries.lean": null,
+    "JordanHolder.lean": null,
+    "SupIndep.lean": null,
+    "OrdContinuous.lean": null,
+    "Nat.lean": null,
+    "LiminfLimsup.lean": null,
+    "Antichain.lean": null,
+    "Closure.lean": null,
+    "Cover.lean": null,
+    "BooleanAlgebra.lean": null,
+    "IsWellOrderLimitElement.lean": null,
+    "Basic.lean": null,
+    "BooleanGenerators.lean": null,
+    "Disjoint.lean": null,
+    "PartialSups.lean": null,
+    "ULift.lean": null,
+    "Compare.lean": null,
+    "Ideal.lean": null,
+    "WellFounded.lean": null,
+    "Estimator.lean": null,
+    "RelClasses.lean": null,
+    "Minimal.lean": null,
+    "Concept.lean": null,
+    "Notation.lean": null,
+    "Zorn.lean": null,
+    "Booleanisation.lean": null,
+    "InitialSeg.lean": null,
+    "CompleteSublattice.lean": null,
+    "GameAdd.lean": null,
+    "PropInstances.lean": null,
+    "SymmDiff.lean": null,
+    "ZornAtoms.lean": null,
+    "Grade.lean": null,
+    "WithBot.lean": null,
+    "KrullDimension.lean": null,
+    "Copy.lean": null,
+    "PFilter.lean": null,
+    "CompletePartialOrder.lean": null,
+    "OrderIsoNat.lean": null,
+    "Bounded.lean": null,
+    "Directed.lean": null,
+    "ModularLattice.lean": null,
+    "OmegaCompletePartialOrder.lean": null,
+    "Circular.lean": null,
+    "SetNotation.lean": null,
+    "Irreducible.lean": null,
+    "SemiconjSup.lean": null,
+    "Antisymmetrization.lean": null,
+    "CompleteLattice.lean": null,
+    "Lattice.lean": null,
+    "FixedPoints.lean": null,
+    "Height.lean": null,
+    "SupClosed.lean": null,
+    "Max.lean": null,
+    "BoundedOrder.lean": null,
+    "LatticeIntervals.lean": null,
+    "Radical.lean": null,
+    "PiLex.lean": null,
+    "Bounds": {
+      "OrderIso.lean": null,
+      "Basic.lean": null
+    },
+    "Atoms": {
+      "Finite.lean": null
+    },
+    "Heyting": {
+      "Regular.lean": null,
+      "Boundary.lean": null,
+      "Basic.lean": null,
+      "Hom.lean": null
+    },
+    "Extension": {
+      "Linear.lean": null,
+      "Well.lean": null
+    },
+    "Hom": {
+      "Order.lean": null,
+      "Basic.lean": null,
+      "Set.lean": null,
+      "Bounded.lean": null,
+      "CompleteLattice.lean": null,
+      "Lattice.lean": null
+    },
+    "Category": {
+      "DistLat.lean": null,
+      "BddLat.lean": null,
+      "Preord.lean": null,
+      "BddDistLat.lean": null,
+      "FinBddDistLat.lean": null,
+      "LinOrd.lean": null,
+      "PartOrd.lean": null,
+      "FinPartOrd.lean": null,
+      "Lat.lean": null,
+      "HeytAlg.lean": null,
+      "NonemptyFinLinOrd.lean": null,
+      "OmegaCompletePartialOrder.lean": null,
+      "CompleteLat.lean": null,
+      "Semilat.lean": null,
+      "BddOrd.lean": null,
+      "BoolAlg.lean": null,
+      "Frm.lean": null,
+      "FinBoolAlg.lean": null
+    },
+    "SuccPred": {
+      "Limit.lean": null,
+      "CompleteLinearOrder.lean": null,
+      "LinearLocallyFinite.lean": null,
+      "Basic.lean": null,
+      "Relation.lean": null,
+      "IntervalSucc.lean": null
+    },
+    "UpperLower": {
+      "Basic.lean": null,
+      "Hom.lean": null,
+      "LocallyFinite.lean": null
+    },
+    "Interval": {
+      "Basic.lean": null,
+      "Multiset.lean": null,
+      "Finset": {
+        "Fin.lean": null,
+        "Nat.lean": null,
+        "Basic.lean": null,
+        "Defs.lean": null,
+        "Box.lean": null
+      },
+      "Set": {
+        "IsoIoo.lean": null,
+        "UnorderedInterval.lean": null,
+        "OrderIso.lean": null,
+        "SurjOn.lean": null,
+        "WithBotTop.lean": null,
+        "Pi.lean": null,
+        "Image.lean": null,
+        "Basic.lean": null,
+        "ProjIcc.lean": null,
+        "Disjoint.lean": null,
+        "OrdConnectedComponent.lean": null,
+        "OrdConnected.lean": null,
+        "OrderEmbedding.lean": null,
+        "Monotone.lean": null,
+        "Infinite.lean": null
+      }
+    },
+    "RelIso": {
+      "Group.lean": null,
+      "Basic.lean": null,
+      "Set.lean": null
+    },
+    "ConditionallyCompleteLattice": {
+      "Group.lean": null,
+      "Finset.lean": null,
+      "Basic.lean": null
+    },
+    "Filter": {
+      "Germ.lean": null,
+      "ModEq.lean": null,
+      "CountableSeparatingOn.lean": null,
+      "Cofinite.lean": null,
+      "FilterProduct.lean": null,
+      "Bases.lean": null,
+      "Cocardinal.lean": null,
+      "ENNReal.lean": null,
+      "Curry.lean": null,
+      "ZeroAndBoundedAtFilter.lean": null,
+      "Interval.lean": null,
+      "NAry.lean": null,
+      "EventuallyConst.lean": null,
+      "Prod.lean": null,
+      "Partial.lean": null,
+      "Pointwise.lean": null,
+      "Archimedean.lean": null,
+      "Pi.lean": null,
+      "Basic.lean": null,
+      "CountableInter.lean": null,
+      "Ultrafilter.lean": null,
+      "IndicatorFunction.lean": null,
+      "CardinalInter.lean": null,
+      "Ker.lean": null,
+      "AtTopBot.lean": null,
+      "ListTraverse.lean": null,
+      "Subsingleton.lean": null,
+      "Lift.lean": null,
+      "SmallSets.lean": null,
+      "Extr.lean": null
+    },
+    "Partition": {
+      "Finpartition.lean": null,
+      "Equipartition.lean": null
+    },
+    "CompactlyGenerated": {
+      "Basic.lean": null,
+      "Intervals.lean": null
+    },
+    "Monotone": {
+      "Odd.lean": null,
+      "Monovary.lean": null,
+      "Union.lean": null,
+      "Extension.lean": null,
+      "Basic.lean": null
+    }
+  },
+  "Init": {
+    "Quot.lean": null,
+    "Core.lean": null,
+    "Logic.lean": null,
+    "ZeroOne.lean": null,
+    "Set.lean": null,
+    "Function.lean": null,
+    "Classical.lean": null,
+    "Align.lean": null,
+    "Order": {
+      "Defs.lean": null,
+      "LinearOrder.lean": null
+    },
+    "Classes": {
+      "Order.lean": null
+    },
+    "Meta": {
+      "WellFoundedTactics.lean": null
+    },
+    "Data": {
+      "Quot.lean": null,
+      "Prod.lean": null,
+      "Fin": {
+        "Basic.lean": null
+      },
+      "Nat": {
+        "Div.lean": null,
+        "GCD.lean": null,
+        "Lemmas.lean": null,
+        "Basic.lean": null,
+        "Notation.lean": null
+      },
+      "Rat": {
+        "Basic.lean": null
+      },
+      "Option": {
+        "Lemmas.lean": null,
+        "Basic.lean": null,
+        "Init": {
+          "Lemmas.lean": null
+        }
+      },
+      "Sigma": {
+        "Lex.lean": null,
+        "Basic.lean": null
+      },
+      "Int": {
+        "DivMod.lean": null,
+        "Lemmas.lean": null,
+        "Order.lean": null,
+        "Basic.lean": null
+      },
+      "Ordering": {
+        "Lemmas.lean": null,
+        "Basic.lean": null
+      },
+      "List": {
+        "Instances.lean": null,
+        "Lemmas.lean": null,
+        "Basic.lean": null
+      },
+      "Bool": {
+        "Lemmas.lean": null,
+        "Basic.lean": null
+      },
+      "Buffer": {
+        "Parser.lean": null
+      }
+    },
+    "Control": {
+      "Lawful.lean": null,
+      "Combinators.lean": null
+    },
+    "Algebra": {
+      "Classes.lean": null
+    }
+  },
+  "ModelTheory": {
+    "Skolem.lean": null,
+    "Fraisse.lean": null,
+    "Semantics.lean": null,
+    "Graph.lean": null,
+    "ElementarySubstructures.lean": null,
+    "Quotients.lean": null,
+    "LanguageMap.lean": null,
+    "FinitelyGenerated.lean": null,
+    "Order.lean": null,
+    "ElementaryMaps.lean": null,
+    "DirectLimit.lean": null,
+    "Syntax.lean": null,
+    "Basic.lean": null,
+    "Satisfiability.lean": null,
+    "Bundled.lean": null,
+    "Substructures.lean": null,
+    "Encoding.lean": null,
+    "Ultraproducts.lean": null,
+    "Types.lean": null,
+    "Definability.lean": null,
+    "Algebra": {
+      "Field": {
+        "CharP.lean": null,
+        "Basic.lean": null
+      },
+      "Ring": {
+        "Basic.lean": null,
+        "FreeCommRing.lean": null
+      }
+    }
+  },
+  "Topology": {
+    "Germ.lean": null,
+    "Covering.lean": null,
+    "UrysohnsBounded.lean": null,
+    "UnitInterval.lean": null,
+    "CompactOpen.lean": null,
+    "PartialHomeomorph.lean": null,
+    "CountableSeparatingOn.lean": null,
+    "Homeomorph.lean": null,
+    "UrysohnsLemma.lean": null,
+    "DenseEmbedding.lean": null,
+    "Specialization.lean": null,
+    "Bases.lean": null,
+    "GDelta.lean": null,
+    "Support.lean": null,
+    "Clopen.lean": null,
+    "List.lean": null,
+    "Maps.lean": null,
+    "Inseparable.lean": null,
+    "Partial.lean": null,
+    "SeparatedMap.lean": null,
+    "Perfect.lean": null,
+    "IndicatorConstPointwise.lean": null,
+    "Order.lean": null,
+    "IsLocalHomeomorph.lean": null,
+    "Basic.lean": null,
+    "AlexandrovDiscrete.lean": null,
+    "Gluing.lean": null,
+    "ProperMap.lean": null,
+    "Semicontinuous.lean": null,
+    "Filter.lean": null,
+    "Constructions.lean": null,
+    "Tactic.lean": null,
+    "Sober.lean": null,
+    "DiscreteQuotient.lean": null,
+    "Separation.lean": null,
+    "NoetherianSpace.lean": null,
+    "TietzeExtension.lean": null,
+    "ClopenBox.lean": null,
+    "StoneCech.lean": null,
+    "CompletelyRegular.lean": null,
+    "ContinuousOn.lean": null,
+    "ShrinkingLemma.lean": null,
+    "OmegaCompletePartialOrder.lean": null,
+    "NhdsSet.lean": null,
+    "Irreducible.lean": null,
+    "ExtremallyDisconnected.lean": null,
+    "QuasiSeparated.lean": null,
+    "LocalAtTarget.lean": null,
+    "PartitionOfUnity.lean": null,
+    "DiscreteSubset.lean": null,
+    "Sequences.lean": null,
+    "LocallyFinite.lean": null,
+    "ExtendFrom.lean": null,
+    "Order": {
+      "MonotoneContinuity.lean": null,
+      "LowerUpperTopology.lean": null,
+      "DenselyOrdered.lean": null,
+      "Bornology.lean": null,
+      "ScottTopology.lean": null,
+      "T5.lean": null,
+      "ExtrClosure.lean": null,
+      "IntermediateValue.lean": null,
+      "Basic.lean": null,
+      "Priestley.lean": null,
+      "ProjIcc.lean": null,
+      "PartialSups.lean": null,
+      "IsLUB.lean": null,
+      "Filter.lean": null,
+      "OrderClosed.lean": null,
+      "LeftRight.lean": null,
+      "LeftRightLim.lean": null,
+      "LawsonTopology.lean": null,
+      "MonotoneConvergence.lean": null,
+      "Bounded.lean": null,
+      "NhdsSet.lean": null,
+      "UpperLowerSetTopology.lean": null,
+      "LeftRightNhds.lean": null,
+      "Monotone.lean": null,
+      "Lattice.lean": null,
+      "LocalExtr.lean": null,
+      "ExtendFrom.lean": null,
+      "Hom": {
+        "Esakia.lean": null,
+        "Basic.lean": null
+      },
+      "Category": {
+        "FrameAdjunction.lean": null,
+        "AlexDisc.lean": null
+      }
+    },
+    "Hom": {
+      "Open.lean": null
+    },
+    "LocallyConstant": {
+      "Basic.lean": null,
+      "Algebra.lean": null
+    },
+    "Category": {
+      "Born.lean": null,
+      "TopCommRingCat.lean": null,
+      "FinTopCat.lean": null,
+      "UniformSpace.lean": null,
+      "Locale.lean": null,
+      "Compactum.lean": null,
+      "LightProfinite": {
+        "EffectiveEpi.lean": null,
+        "Basic.lean": null,
+        "Limits.lean": null
+      },
+      "TopCat": {
+        "Yoneda.lean": null,
+        "EpiMono.lean": null,
+        "Opens.lean": null,
+        "EffectiveEpi.lean": null,
+        "Basic.lean": null,
+        "OpenNhds.lean": null,
+        "Adjunctions.lean": null,
+        "Limits": {
+          "Products.lean": null,
+          "Konig.lean": null,
+          "Basic.lean": null,
+          "Cofiltered.lean": null,
+          "Pullbacks.lean": null
+        }
+      },
+      "Profinite": {
+        "CofilteredLimit.lean": null,
+        "EffectiveEpi.lean": null,
+        "Product.lean": null,
+        "Basic.lean": null,
+        "Nobeling.lean": null,
+        "Projective.lean": null,
+        "Limits.lean": null,
+        "AsLimit.lean": null
+      },
+      "CompHaus": {
+        "EffectiveEpi.lean": null,
+        "Basic.lean": null,
+        "Projective.lean": null,
+        "Limits.lean": null
+      },
+      "Stonean": {
+        "EffectiveEpi.lean": null,
+        "Basic.lean": null,
+        "Limits.lean": null,
+        "Adjunctions.lean": null
+      }
+    },
+    "Connected": {
+      "TotallyDisconnected.lean": null,
+      "Basic.lean": null,
+      "PathConnected.lean": null,
+      "Separation.lean": null,
+      "LocallyConnected.lean": null
+    },
+    "Homotopy": {
+      "Product.lean": null,
+      "Basic.lean": null,
+      "HSpaces.lean": null,
+      "Path.lean": null,
+      "Contractible.lean": null,
+      "Equiv.lean": null,
+      "HomotopyGroup.lean": null
+    },
+    "Compactification": {
+      "OnePoint.lean": null
+    },
+    "Bornology": {
+      "BoundedOperation.lean": null,
+      "Basic.lean": null,
+      "Constructions.lean": null,
+      "Absorbs.lean": null,
+      "Hom.lean": null
+    },
+    "Spectral": {
+      "Hom.lean": null
+    },
+    "EMetricSpace": {
+      "Paracompact.lean": null,
+      "Basic.lean": null,
+      "Lipschitz.lean": null
+    },
+    "MetricSpace": {
+      "ProperSpace.lean": null,
+      "Thickening.lean": null,
+      "HausdorffDimension.lean": null,
+      "GromovHausdorff.lean": null,
+      "Dilation.lean": null,
+      "ThickenedIndicator.lean": null,
+      "Infsep.lean": null,
+      "PseudoMetric.lean": null,
+      "Isometry.lean": null,
+      "Perfect.lean": null,
+      "Kuratowski.lean": null,
+      "Cauchy.lean": null,
+      "Holder.lean": null,
+      "Completion.lean": null,
+      "Closeds.lean": null,
+      "Contracting.lean": null,
+      "MetricSeparated.lean": null,
+      "Basic.lean": null,
+      "CauSeqFilter.lean": null,
+      "Antilipschitz.lean": null,
+      "Gluing.lean": null,
+      "IsometricSMul.lean": null,
+      "Polish.lean": null,
+      "DilationEquiv.lean": null,
+      "Lipschitz.lean": null,
+      "GromovHausdorffRealized.lean": null,
+      "ShrinkingLemma.lean": null,
+      "CantorScheme.lean": null,
+      "Bounded.lean": null,
+      "Equicontinuity.lean": null,
+      "HausdorffDistance.lean": null,
+      "Algebra.lean": null,
+      "PartitionOfUnity.lean": null,
+      "PiNat.lean": null,
+      "Sequences.lean": null
+    },
+    "VectorBundle": {
+      "Basic.lean": null,
+      "Constructions.lean": null,
+      "Hom.lean": null
+    },
+    "UniformSpace": {
+      "Matrix.lean": null,
+      "Compact.lean": null,
+      "Ascoli.lean": null,
+      "Cauchy.lean": null,
+      "Completion.lean": null,
+      "CompactConvergence.lean": null,
+      "Pi.lean": null,
+      "Basic.lean": null,
+      "UniformConvergence.lean": null,
+      "UniformEmbedding.lean": null,
+      "Separation.lean": null,
+      "CompareReals.lean": null,
+      "Equiv.lean": null,
+      "Equicontinuity.lean": null,
+      "UniformConvergenceTopology.lean": null,
+      "AbstractCompletion.lean": null,
+      "CompleteSeparated.lean": null,
+      "AbsoluteValue.lean": null
+    },
+    "Sets": {
+      "Opens.lean": null,
+      "Order.lean": null,
+      "Compacts.lean": null,
+      "Closeds.lean": null
+    },
+    "Separation": {
+      "NotNormal.lean": null
+    },
+    "FiberBundle": {
+      "IsHomeomorphicTrivialBundle.lean": null,
+      "Basic.lean": null,
+      "Constructions.lean": null,
+      "Trivialization.lean": null
+    },
+    "ContinuousFunction": {
+      "UniqueCFC.lean": null,
+      "Weierstrass.lean": null,
+      "StoneWeierstrass.lean": null,
+      "Compact.lean": null,
+      "Ideals.lean": null,
+      "Sigma.lean": null,
+      "CocompactMap.lean": null,
+      "Basic.lean": null,
+      "Ordered.lean": null,
+      "NonUnitalFunctionalCalculus.lean": null,
+      "FunctionalCalculus.lean": null,
+      "T0Sierpinski.lean": null,
+      "Bounded.lean": null,
+      "LocallyConstant.lean": null,
+      "ContinuousMapZero.lean": null,
+      "Polynomial.lean": null,
+      "StarOrdered.lean": null,
+      "Algebra.lean": null,
+      "Units.lean": null,
+      "ZeroAtInfty.lean": null
+    },
+    "Instances": {
+      "CantorSet.lean": null,
+      "Int.lean": null,
+      "Sign.lean": null,
+      "Matrix.lean": null,
+      "ENNReal.lean": null,
+      "Discrete.lean": null,
+      "AddCircle.lean": null,
+      "Rat.lean": null,
+      "RealVectorSpace.lean": null,
+      "Nat.lean": null,
+      "RatLemmas.lean": null,
+      "PNat.lean": null,
+      "Complex.lean": null,
+      "EReal.lean": null,
+      "Irrational.lean": null,
+      "NNReal.lean": null,
+      "TrivSqZeroExt.lean": null,
+      "Real.lean": null
+    },
+    "Compactness": {
+      "Compact.lean": null,
+      "SigmaCompact.lean": null,
+      "PseudometrizableLindelof.lean": null,
+      "Paracompact.lean": null,
+      "Lindelof.lean": null,
+      "LocallyCompact.lean": null
+    },
+    "Baire": {
+      "Lemmas.lean": null,
+      "LocallyCompactRegular.lean": null,
+      "CompleteMetrizable.lean": null
+    },
+    "Metrizable": {
+      "Basic.lean": null,
+      "ContinuousMap.lean": null,
+      "Uniformity.lean": null,
+      "Urysohn.lean": null
+    },
+    "Algebra": {
+      "GroupCompletion.lean": null,
+      "Valuation.lean": null,
+      "UniformGroup.lean": null,
+      "Monoid.lean": null,
+      "PontryaginDual.lean": null,
+      "UniformFilterBasis.lean": null,
+      "OpenSubgroup.lean": null,
+      "UniformRing.lean": null,
+      "Star.lean": null,
+      "ConstMulAction.lean": null,
+      "ProperConstSMul.lean": null,
+      "NormedValued.lean": null,
+      "ContinuousMonoidHom.lean": null,
+      "WithZeroTopology.lean": null,
+      "StarSubalgebra.lean": null,
+      "UniformConvergence.lean": null,
+      "Constructions.lean": null,
+      "Localization.lean": null,
+      "MvPolynomial.lean": null,
+      "Field.lean": null,
+      "Equicontinuity.lean": null,
+      "Polynomial.lean": null,
+      "Semigroup.lean": null,
+      "UniformMulAction.lean": null,
+      "Affine.lean": null,
+      "Algebra.lean": null,
+      "ContinuousAffineMap.lean": null,
+      "FilterBasis.lean": null,
+      "UniformField.lean": null,
+      "MulAction.lean": null,
+      "GroupWithZero.lean": null,
+      "ValuedField.lean": null,
+      "Order": {
+        "Compact.lean": null,
+        "Group.lean": null,
+        "LiminfLimsup.lean": null,
+        "Archimedean.lean": null,
+        "UpperLower.lean": null,
+        "Floor.lean": null,
+        "Field.lean": null,
+        "Rolle.lean": null
+      },
+      "Group": {
+        "OpenMapping.lean": null,
+        "Compact.lean": null,
+        "Basic.lean": null,
+        "TopologicalAbelianization.lean": null
+      },
+      "Module": {
+        "WeakDual.lean": null,
+        "Star.lean": null,
+        "Basic.lean": null,
+        "FiniteDimension.lean": null,
+        "Cardinality.lean": null,
+        "Simple.lean": null,
+        "StrongTopology.lean": null,
+        "LinearPMap.lean": null,
+        "Determinant.lean": null,
+        "CharacterSpace.lean": null,
+        "LocallyConvex.lean": null,
+        "Multilinear": {
+          "Topology.lean": null,
+          "Basic.lean": null,
+          "Bounded.lean": null
+        },
+        "Alternating": {
+          "Basic.lean": null
+        }
+      },
+      "Ring": {
+        "Basic.lean": null,
+        "Ideal.lean": null
+      },
+      "InfiniteSum": {
+        "GroupCompletion.lean": null,
+        "NatInt.lean": null,
+        "Module.lean": null,
+        "Ring.lean": null,
+        "Group.lean": null,
+        "Order.lean": null,
+        "Basic.lean": null,
+        "Constructions.lean": null,
+        "Defs.lean": null,
+        "Nonarchimedean.lean": null,
+        "Real.lean": null
+      },
+      "Nonarchimedean": {
+        "Bases.lean": null,
+        "Completion.lean": null,
+        "Basic.lean": null,
+        "AdicTopology.lean": null
+      }
+    },
+    "Defs": {
+      "Basic.lean": null,
+      "Filter.lean": null,
+      "Sequences.lean": null,
+      "Induced.lean": null
+    },
+    "Sheaves": {
+      "Stalks.lean": null,
+      "Forget.lean": null,
+      "LocallySurjective.lean": null,
+      "SheafOfFunctions.lean": null,
+      "PUnit.lean": null,
+      "Presheaf.lean": null,
+      "Init.lean": null,
+      "Sheafify.lean": null,
+      "Functors.lean": null,
+      "Operations.lean": null,
+      "Skyscraper.lean": null,
+      "LocalPredicate.lean": null,
+      "PresheafOfFunctions.lean": null,
+      "Sheaf.lean": null,
+      "Limits.lean": null,
+      "SheafCondition": {
+        "OpensLeCover.lean": null,
+        "PairwiseIntersections.lean": null,
+        "Sites.lean": null,
+        "UniqueGluing.lean": null,
+        "EqualizerProducts.lean": null
+      }
+    }
+  },
+  "Mathport": {
+    "Rename.lean": null,
+    "Syntax.lean": null,
+    "Attributes.lean": null,
+    "Notation.lean": null
+  },
+  "Lean": {
+    "EnvExtension.lean": null,
+    "LocalContext.lean": null,
+    "Json.lean": null,
+    "Exception.lean": null,
+    "CoreM.lean": null,
+    "Thunk.lean": null,
+    "Meta.lean": null,
+    "Message.lean": null,
+    "Expr.lean": null,
+    "Name.lean": null,
+    "PrettyPrinter": {
+      "Delaborator.lean": null
+    },
+    "Meta": {
+      "Basic.lean": null,
+      "Simp.lean": null,
+      "CongrTheorems.lean": null,
+      "DiscrTree.lean": null
+    },
+    "Expr": {
+      "ExtraRecognizers.lean": null,
+      "ReplaceRec.lean": null,
+      "Basic.lean": null
+    },
+    "Elab": {
+      "Term.lean": null,
+      "Tactic": {
+        "Basic.lean": null
+      }
+    }
+  },
+  "Dynamics": {
+    "Flow.lean": null,
+    "OmegaLimit.lean": null,
+    "PeriodicPts.lean": null,
+    "Minimal.lean": null,
+    "Newton.lean": null,
+    "BirkhoffSum": {
+      "Average.lean": null,
+      "Basic.lean": null,
+      "NormedSpace.lean": null
+    },
+    "FixedPoints": {
+      "Topology.lean": null,
+      "Basic.lean": null
+    },
+    "Circle": {
+      "RotationNumber": {
+        "TranslationNumber.lean": null
+      }
+    },
+    "Ergodic": {
+      "MeasurePreserving.lean": null,
+      "AddCircle.lean": null,
+      "Function.lean": null,
+      "Ergodic.lean": null,
+      "Conservative.lean": null
+    }
+  },
+  "Analysis": {
+    "Hofer.lean": null,
+    "Convolution.lean": null,
+    "Matrix.lean": null,
+    "Subadditive.lean": null,
+    "MellinTransform.lean": null,
+    "PSeries.lean": null,
+    "MeanInequalities.lean": null,
+    "ConstantSpeed.lean": null,
+    "Quaternion.lean": null,
+    "MeanInequalitiesPow.lean": null,
+    "BoundedVariation.lean": null,
+    "PSeriesComplex.lean": null,
+    "SumIntegralComparisons.lean": null,
+    "Seminorm.lean": null,
+    "SumOverResidueClass.lean": null,
+    "MellinInversion.lean": null,
+    "InnerProductSpace": {
+      "MeanErgodic.lean": null,
+      "Rayleigh.lean": null,
+      "Calculus.lean": null,
+      "TwoDim.lean": null,
+      "Orientation.lean": null,
+      "Basic.lean": null,
+      "GramSchmidtOrtho.lean": null,
+      "EuclideanDist.lean": null,
+      "OfNorm.lean": null,
+      "l2Space.lean": null,
+      "PiL2.lean": null,
+      "Positive.lean": null,
+      "LaxMilgram.lean": null,
+      "ConformalLinearMap.lean": null,
+      "Adjoint.lean": null,
+      "Orthogonal.lean": null,
+      "Dual.lean": null,
+      "LinearPMap.lean": null,
+      "Symmetric.lean": null,
+      "Projection.lean": null,
+      "ProdL2.lean": null,
+      "Spectrum.lean": null
+    },
+    "RCLike": {
+      "Lemmas.lean": null,
+      "Basic.lean": null
+    },
+    "VonNeumannAlgebra": {
+      "Basic.lean": null
+    },
+    "Complex": {
+      "Tietze.lean": null,
+      "Convex.lean": null,
+      "OperatorNorm.lean": null,
+      "OpenMapping.lean": null,
+      "Asymptotics.lean": null,
+      "Hadamard.lean": null,
+      "TaylorSeries.lean": null,
+      "Isometry.lean": null,
+      "Angle.lean": null,
+      "RemovableSingularity.lean": null,
+      "AbsMax.lean": null,
+      "ReImTopology.lean": null,
+      "Arg.lean": null,
+      "HalfPlane.lean": null,
+      "Basic.lean": null,
+      "LocallyUniformLimit.lean": null,
+      "CauchyIntegral.lean": null,
+      "PhragmenLindelof.lean": null,
+      "RealDeriv.lean": null,
+      "Liouville.lean": null,
+      "Conformal.lean": null,
+      "Polynomial.lean": null,
+      "AbelLimit.lean": null,
+      "Schwarz.lean": null,
+      "Circle.lean": null,
+      "UnitDisc": {
+        "Basic.lean": null
+      },
+      "UpperHalfPlane": {
+        "Metric.lean": null,
+        "Topology.lean": null,
+        "Basic.lean": null,
+        "FunctionsBoundedAtInfty.lean": null,
+        "Manifold.lean": null
+      }
+    },
+    "Asymptotics": {
+      "Theta.lean": null,
+      "Asymptotics.lean": null,
+      "AsymptoticEquivalent.lean": null,
+      "SpecificAsymptotics.lean": null,
+      "SuperpolynomialDecay.lean": null
+    },
+    "Fourier": {
+      "AddCircle.lean": null,
+      "FourierTransformDeriv.lean": null,
+      "FourierTransform.lean": null,
+      "PoissonSummation.lean": null,
+      "RiemannLebesgueLemma.lean": null,
+      "Inversion.lean": null
+    },
+    "Distribution": {
+      "AEEqOfIntegralContDiff.lean": null,
+      "SchwartzSpace.lean": null,
+      "FourierSchwartz.lean": null
+    },
+    "Convex": {
+      "Normed.lean": null,
+      "StoneSeparation.lean": null,
+      "EGauge.lean": null,
+      "Side.lean": null,
+      "Caratheodory.lean": null,
+      "GaugeRescale.lean": null,
+      "Radon.lean": null,
+      "Quasiconvex.lean": null,
+      "Uniform.lean": null,
+      "Integral.lean": null,
+      "Body.lean": null,
+      "Star.lean": null,
+      "Deriv.lean": null,
+      "Combination.lean": null,
+      "Gauge.lean": null,
+      "Extreme.lean": null,
+      "Segment.lean": null,
+      "Topology.lean": null,
+      "Strong.lean": null,
+      "Independent.lean": null,
+      "Mul.lean": null,
+      "Join.lean": null,
+      "Basic.lean": null,
+      "Slope.lean": null,
+      "Exposed.lean": null,
+      "StrictConvexBetween.lean": null,
+      "AmpleSet.lean": null,
+      "Hull.lean": null,
+      "Between.lean": null,
+      "Function.lean": null,
+      "Contractible.lean": null,
+      "Complex.lean": null,
+      "StrictConvexSpace.lean": null,
+      "Jensen.lean": null,
+      "Extrema.lean": null,
+      "Measure.lean": null,
+      "Intrinsic.lean": null,
+      "PartitionOfUnity.lean": null,
+      "KreinMilman.lean": null,
+      "Strict.lean": null,
+      "Cone": {
+        "InnerDual.lean": null,
+        "Closure.lean": null,
+        "Extension.lean": null,
+        "Basic.lean": null,
+        "Proper.lean": null,
+        "Pointed.lean": null
+      },
+      "SpecificFunctions": {
+        "Pow.lean": null,
+        "Deriv.lean": null,
+        "Basic.lean": null
+      },
+      "SimplicialComplex": {
+        "Basic.lean": null
+      }
+    },
+    "SpecialFunctions": {
+      "Exp.lean": null,
+      "Integrals.lean": null,
+      "Sqrt.lean": null,
+      "PolynomialExp.lean": null,
+      "Exponential.lean": null,
+      "NonIntegrable.lean": null,
+      "Bernstein.lean": null,
+      "JapaneseBracket.lean": null,
+      "PolarCoord.lean": null,
+      "CompareExp.lean": null,
+      "ExpDeriv.lean": null,
+      "SmoothTransition.lean": null,
+      "Polynomials.lean": null,
+      "Arsinh.lean": null,
+      "ImproperIntegrals.lean": null,
+      "Stirling.lean": null,
+      "Gamma": {
+        "Basic.lean": null,
+        "BohrMollerup.lean": null,
+        "Deligne.lean": null,
+        "Beta.lean": null
+      },
+      "Pow": {
+        "Asymptotics.lean": null,
+        "Integral.lean": null,
+        "Deriv.lean": null,
+        "Continuity.lean": null,
+        "Complex.lean": null,
+        "NNReal.lean": null,
+        "Real.lean": null
+      },
+      "Gaussian": {
+        "FourierTransform.lean": null,
+        "PoissonSummation.lean": null,
+        "GaussianIntegral.lean": null
+      },
+      "Trigonometric": {
+        "Inverse.lean": null,
+        "Arctan.lean": null,
+        "Series.lean": null,
+        "Angle.lean": null,
+        "Deriv.lean": null,
+        "InverseDeriv.lean": null,
+        "Basic.lean": null,
+        "Complex.lean": null,
+        "ArctanDeriv.lean": null,
+        "ComplexDeriv.lean": null,
+        "Chebyshev.lean": null,
+        "EulerSineProd.lean": null,
+        "Bounds.lean": null
+      },
+      "Complex": {
+        "Analytic.lean": null,
+        "Arctan.lean": null,
+        "Arg.lean": null,
+        "LogBounds.lean": null,
+        "LogDeriv.lean": null,
+        "Log.lean": null,
+        "Circle.lean": null
+      },
+      "Log": {
+        "Deriv.lean": null,
+        "Base.lean": null,
+        "Basic.lean": null,
+        "Monotone.lean": null,
+        "NegMulLog.lean": null
+      }
+    },
+    "SpecificLimits": {
+      "RCLike.lean": null,
+      "Normed.lean": null,
+      "Basic.lean": null,
+      "FloorPow.lean": null
+    },
+    "ODE": {
+      "PicardLindelof.lean": null,
+      "Gronwall.lean": null
+    },
+    "BoxIntegral": {
+      "Integrability.lean": null,
+      "Basic.lean": null,
+      "DivergenceTheorem.lean": null,
+      "Box": {
+        "Basic.lean": null,
+        "SubboxInduction.lean": null
+      },
+      "Partition": {
+        "Tagged.lean": null,
+        "Additive.lean": null,
+        "Split.lean": null,
+        "Basic.lean": null,
+        "Filter.lean": null,
+        "SubboxInduction.lean": null,
+        "Measure.lean": null
+      }
+    },
+    "NormedSpace": {
+      "MatrixExponential.lean": null,
+      "RCLike.lean": null,
+      "WeakDual.lean": null,
+      "ENorm.lean": null,
+      "ContinuousLinearMap.lean": null,
+      "Ray.lean": null,
+      "RieszLemma.lean": null,
+      "Int.lean": null,
+      "AddTorsor.lean": null,
+      "CompactOperator.lean": null,
+      "Pointwise.lean": null,
+      "UnitizationL1.lean": null,
+      "Completion.lean": null,
+      "Exponential.lean": null,
+      "MazurUlam.lean": null,
+      "Complemented.lean": null,
+      "Basic.lean": null,
+      "AffineIsometry.lean": null,
+      "AddTorsorBases.lean": null,
+      "FiniteDimension.lean": null,
+      "HomeomorphBall.lean": null,
+      "PiLp.lean": null,
+      "Span.lean": null,
+      "LpEquiv.lean": null,
+      "QuaternionExponential.lean": null,
+      "ConformalLinearMap.lean": null,
+      "IndicatorFunction.lean": null,
+      "SphereNormEquiv.lean": null,
+      "lpSpace.lean": null,
+      "BallAction.lean": null,
+      "Banach.lean": null,
+      "Unitization.lean": null,
+      "ProdLp.lean": null,
+      "MStructure.lean": null,
+      "Connected.lean": null,
+      "WithLp.lean": null,
+      "Dual.lean": null,
+      "BanachSteinhaus.lean": null,
+      "FunctionSeries.lean": null,
+      "Algebra.lean": null,
+      "TrivSqZeroExt.lean": null,
+      "Extend.lean": null,
+      "Units.lean": null,
+      "ContinuousAffineMap.lean": null,
+      "Extr.lean": null,
+      "DualNumber.lean": null,
+      "Spectrum.lean": null,
+      "BoundedLinearMaps.lean": null,
+      "LinearIsometry.lean": null,
+      "Real.lean": null,
+      "Multilinear": {
+        "Curry.lean": null,
+        "Basic.lean": null
+      },
+      "OperatorNorm": {
+        "Bilinear.lean": null,
+        "Asymptotics.lean": null,
+        "Prod.lean": null,
+        "NNNorm.lean": null,
+        "Mul.lean": null,
+        "Basic.lean": null,
+        "Completeness.lean": null,
+        "NormedSpace.lean": null
+      },
+      "HahnBanach": {
+        "SeparatingDual.lean": null,
+        "Extension.lean": null,
+        "Separation.lean": null
+      },
+      "PiTensorProduct": {
+        "ProjectiveSeminorm.lean": null,
+        "InjectiveSeminorm.lean": null
+      },
+      "Star": {
+        "ContinuousFunctionalCalculus.lean": null,
+        "Matrix.lean": null,
+        "Exponential.lean": null,
+        "Basic.lean": null,
+        "Multiplier.lean": null,
+        "Unitization.lean": null,
+        "GelfandDuality.lean": null,
+        "Spectrum.lean": null,
+        "ContinuousFunctionalCalculus": {
+          "Instances.lean": null,
+          "Order.lean": null,
+          "Restrict.lean": null
+        }
+      }
+    },
+    "LocallyConvex": {
+      "AbsConvex.lean": null,
+      "WeakDual.lean": null,
+      "Polar.lean": null,
+      "Barrelled.lean": null,
+      "BalancedCoreHull.lean": null,
+      "Basic.lean": null,
+      "StrongTopology.lean": null,
+      "ContinuousOfBounded.lean": null,
+      "WithSeminorms.lean": null,
+      "Bounded.lean": null
+    },
+    "Calculus": {
+      "Rademacher.lean": null,
+      "UniformLimitsDeriv.lean": null,
+      "AffineMap.lean": null,
+      "Implicit.lean": null,
+      "Dslope.lean": null,
+      "ParametricIntervalIntegral.lean": null,
+      "Taylor.lean": null,
+      "LagrangeMultipliers.lean": null,
+      "ParametricIntegral.lean": null,
+      "Darboux.lean": null,
+      "Monotone.lean": null,
+      "MeanValue.lean": null,
+      "SmoothSeries.lean": null,
+      "FormalMultilinearSeries.lean": null,
+      "LHopital.lean": null,
+      "DiffContOnCl.lean": null,
+      "TangentCone.lean": null,
+      "Gradient": {
+        "Basic.lean": null
+      },
+      "FDeriv": {
+        "Analytic.lean": null,
+        "RestrictScalars.lean": null,
+        "Bilinear.lean": null,
+        "Comp.lean": null,
+        "Add.lean": null,
+        "Star.lean": null,
+        "Prod.lean": null,
+        "Linear.lean": null,
+        "Pi.lean": null,
+        "Mul.lean": null,
+        "Basic.lean": null,
+        "Measurable.lean": null,
+        "Equiv.lean": null,
+        "Symmetric.lean": null,
+        "Extend.lean": null
+      },
+      "IteratedDeriv": {
+        "Lemmas.lean": null,
+        "Defs.lean": null
+      },
+      "ContDiff": {
+        "RCLike.lean": null,
+        "Basic.lean": null,
+        "FiniteDimension.lean": null,
+        "Defs.lean": null,
+        "Bounds.lean": null
+      },
+      "Conformal": {
+        "InnerProduct.lean": null,
+        "NormedSpace.lean": null
+      },
+      "LineDeriv": {
+        "IntegrationByParts.lean": null,
+        "Basic.lean": null,
+        "Measurable.lean": null
+      },
+      "BumpFunction": {
+        "Normed.lean": null,
+        "Convolution.lean": null,
+        "Basic.lean": null,
+        "FiniteDimension.lean": null,
+        "InnerProduct.lean": null
+      },
+      "Deriv": {
+        "Pow.lean": null,
+        "Inverse.lean": null,
+        "Comp.lean": null,
+        "Support.lean": null,
+        "Add.lean": null,
+        "Star.lean": null,
+        "Prod.lean": null,
+        "AffineMap.lean": null,
+        "Linear.lean": null,
+        "Pi.lean": null,
+        "Mul.lean": null,
+        "Basic.lean": null,
+        "Slope.lean": null,
+        "ZPow.lean": null,
+        "Polynomial.lean": null,
+        "Shift.lean": null,
+        "Inv.lean": null
+      },
+      "InverseFunctionTheorem": {
+        "Deriv.lean": null,
+        "ContDiff.lean": null,
+        "ApproximatesLinearOn.lean": null,
+        "FDeriv.lean": null,
+        "FiniteDimensional.lean": null
+      },
+      "LocalExtr": {
+        "Basic.lean": null,
+        "Polynomial.lean": null,
+        "Rolle.lean": null
+      }
+    },
+    "Normed": {
+      "MulAction.lean": null,
+      "Order": {
+        "Basic.lean": null,
+        "UpperLower.lean": null,
+        "Lattice.lean": null
+      },
+      "Group": {
+        "HomCompletion.lean": null,
+        "SemiNormedGroupCat.lean": null,
+        "Lemmas.lean": null,
+        "InfiniteSum.lean": null,
+        "AddCircle.lean": null,
+        "AddTorsor.lean": null,
+        "Tannery.lean": null,
+        "Pointwise.lean": null,
+        "Completion.lean": null,
+        "CocompactMap.lean": null,
+        "Basic.lean": null,
+        "Quotient.lean": null,
+        "Completeness.lean": null,
+        "BallSphere.lean": null,
+        "Seminorm.lean": null,
+        "ControlledClosure.lean": null,
+        "ZeroAtInfty.lean": null,
+        "Hom.lean": null,
+        "SemiNormedGroupCat": {
+          "Completion.lean": null,
+          "Kernels.lean": null
+        }
+      },
+      "Field": {
+        "InfiniteSum.lean": null,
+        "Basic.lean": null,
+        "UnitBall.lean": null
+      },
+      "Ring": {
+        "Seminorm.lean": null
+      }
+    },
+    "Analytic": {
+      "RadiusLiminf.lean": null,
+      "Inverse.lean": null,
+      "Meromorphic.lean": null,
+      "Composition.lean": null,
+      "Linear.lean": null,
+      "Uniqueness.lean": null,
+      "Basic.lean": null,
+      "Constructions.lean": null,
+      "Polynomial.lean": null,
+      "CPolynomial.lean": null,
+      "IsolatedZeros.lean": null
+    }
+  },
+  "Probability": {
+    "BorelCantelli.lean": null,
+    "Variance.lean": null,
+    "Integration.lean": null,
+    "Density.lean": null,
+    "StrongLaw.lean": null,
+    "IdentDistrib.lean": null,
+    "CondCount.lean": null,
+    "Notation.lean": null,
+    "ConditionalProbability.lean": null,
+    "Cdf.lean": null,
+    "ConditionalExpectation.lean": null,
+    "Moments.lean": null,
+    "ProbabilityMassFunction": {
+      "Integrals.lean": null,
+      "Monad.lean": null,
+      "Basic.lean": null,
+      "Constructions.lean": null,
+      "Binomial.lean": null
+    },
+    "Independence": {
+      "ZeroOne.lean": null,
+      "Basic.lean": null,
+      "Conditional.lean": null,
+      "Kernel.lean": null
+    },
+    "Martingale": {
+      "OptionalStopping.lean": null,
+      "BorelCantelli.lean": null,
+      "Basic.lean": null,
+      "OptionalSampling.lean": null,
+      "Centering.lean": null,
+      "Convergence.lean": null,
+      "Upcrossing.lean": null
+    },
+    "Distributions": {
+      "Gamma.lean": null,
+      "Gaussian.lean": null,
+      "Uniform.lean": null,
+      "Exponential.lean": null,
+      "Geometric.lean": null,
+      "Poisson.lean": null
+    },
+    "Kernel": {
+      "MeasurableIntegral.lean": null,
+      "Condexp.lean": null,
+      "MeasureCompProd.lean": null,
+      "Composition.lean": null,
+      "CondDistrib.lean": null,
+      "Basic.lean": null,
+      "RadonNikodym.lean": null,
+      "IntegralCompProd.lean": null,
+      "WithDensity.lean": null,
+      "Invariance.lean": null,
+      "Disintegration": {
+        "CdfToKernel.lean": null,
+        "MeasurableStieltjes.lean": null,
+        "Integral.lean": null,
+        "Density.lean": null,
+        "Basic.lean": null,
+        "Unique.lean": null,
+        "CondCdf.lean": null
+      }
+    },
+    "Process": {
+      "Adapted.lean": null,
+      "Filtration.lean": null,
+      "Stopping.lean": null,
+      "PartitionFiltration.lean": null,
+      "HittingTime.lean": null
+    }
+  },
+  "Util": {
+    "WhatsNew.lean": null,
+    "Time.lean": null,
+    "Qq.lean": null,
+    "TermBeta.lean": null,
+    "GetAllModules.lean": null,
+    "AtomM.lean": null,
+    "SleepHeartbeats.lean": null,
+    "WithWeakNamespace.lean": null,
+    "CountHeartbeats.lean": null,
+    "AssertExists.lean": null,
+    "Superscript.lean": null,
+    "Delaborators.lean": null,
+    "IncludeStr.lean": null,
+    "Tactic.lean": null,
+    "CompileInductive.lean": null,
+    "DischargerAsTactic.lean": null,
+    "Export.lean": null,
+    "AssertNoSorry.lean": null,
+    "LongNames.lean": null,
+    "SynthesizeUsing.lean": null,
+    "AddRelatedDecl.lean": null,
+    "MemoFix.lean": null
+  },
+  "NumberTheory": {
+    "BernoulliPolynomials.lean": null,
+    "Bertrand.lean": null,
+    "ZetaValues.lean": null,
+    "DiophantineApproximation.lean": null,
+    "SumPrimeReciprocals.lean": null,
+    "Dioph.lean": null,
+    "Pell.lean": null,
+    "MaricaSchoenheim.lean": null,
+    "SumTwoSquares.lean": null,
+    "Bernoulli.lean": null,
+    "Rayleigh.lean": null,
+    "SumFourSquares.lean": null,
+    "Modular.lean": null,
+    "VonMangoldt.lean": null,
+    "PrimesCongruentOne.lean": null,
+    "Multiplicity.lean": null,
+    "LucasPrimality.lean": null,
+    "ArithmeticFunction.lean": null,
+    "PrimeCounting.lean": null,
+    "Primorial.lean": null,
+    "KummerDedekind.lean": null,
+    "GaussSum.lean": null,
+    "Basic.lean": null,
+    "Divisors.lean": null,
+    "Wilson.lean": null,
+    "FermatPsp.lean": null,
+    "EllipticDivisibilitySequence.lean": null,
+    "FrobeniusNumber.lean": null,
+    "RamificationInertia.lean": null,
+    "LucasLehmer.lean": null,
+    "ADEInequality.lean": null,
+    "WellApproximable.lean": null,
+    "SmoothNumbers.lean": null,
+    "FunctionField.lean": null,
+    "PellMatiyasevic.lean": null,
+    "PythagoreanTriples.lean": null,
+    "Harmonic": {
+      "Int.lean": null,
+      "GammaDeriv.lean": null,
+      "Defs.lean": null,
+      "ZetaAsymp.lean": null,
+      "EulerMascheroni.lean": null,
+      "Bounds.lean": null
+    },
+    "Liouville": {
+      "Basic.lean": null,
+      "LiouvilleNumber.lean": null,
+      "LiouvilleWith.lean": null,
+      "Measure.lean": null,
+      "Residual.lean": null
+    },
+    "Padics": {
+      "RingHoms.lean": null,
+      "PadicIntegers.lean": null,
+      "PadicVal.lean": null,
+      "PadicNorm.lean": null,
+      "PadicNumbers.lean": null,
+      "Hensel.lean": null
+    },
+    "ModularForms": {
+      "CongruenceSubgroups.lean": null,
+      "SlashInvariantForms.lean": null,
+      "Basic.lean": null,
+      "Identities.lean": null,
+      "SlashActions.lean": null,
+      "EisensteinSeries": {
+        "MDifferentiable.lean": null,
+        "Basic.lean": null,
+        "UniformConvergence.lean": null
+      },
+      "JacobiTheta": {
+        "TwoVariable.lean": null,
+        "OneVariable.lean": null,
+        "Manifold.lean": null,
+        "Bounds.lean": null
+      }
+    },
+    "LSeries": {
+      "HurwitzZetaValues.lean": null,
+      "Dirichlet.lean": null,
+      "Convolution.lean": null,
+      "RiemannZeta.lean": null,
+      "AbstractFuncEq.lean": null,
+      "Deriv.lean": null,
+      "Basic.lean": null,
+      "HurwitzZetaEven.lean": null,
+      "MellinEqDirichlet.lean": null,
+      "Linearity.lean": null,
+      "Convergence.lean": null,
+      "HurwitzZetaOdd.lean": null,
+      "HurwitzZeta.lean": null
+    },
+    "LegendreSymbol": {
+      "Basic.lean": null,
+      "AddCharacter.lean": null,
+      "QuadraticReciprocity.lean": null,
+      "GaussEisensteinLemmas.lean": null,
+      "ZModChar.lean": null,
+      "JacobiSymbol.lean": null,
+      "QuadraticChar": {
+        "GaussSum.lean": null,
+        "Basic.lean": null
+      }
+    },
+    "DirichletCharacter": {
+      "GaussSum.lean": null,
+      "Basic.lean": null,
+      "Bounds.lean": null
+    },
+    "Cyclotomic": {
+      "Rat.lean": null,
+      "PID.lean": null,
+      "Discriminant.lean": null,
+      "Basic.lean": null,
+      "Gal.lean": null,
+      "Embeddings.lean": null,
+      "CyclotomicCharacter.lean": null,
+      "Three.lean": null,
+      "PrimitiveRoots.lean": null
+    },
+    "ClassNumber": {
+      "Finite.lean": null,
+      "AdmissibleAbsoluteValue.lean": null,
+      "AdmissibleAbs.lean": null,
+      "FunctionField.lean": null,
+      "AdmissibleCardPowDegree.lean": null
+    },
+    "Zsqrtd": {
+      "ToReal.lean": null,
+      "GaussianInt.lean": null,
+      "Basic.lean": null,
+      "QuadraticReciprocity.lean": null
+    },
+    "FLT": {
+      "Four.lean": null,
+      "Basic.lean": null,
+      "Three.lean": null
+    },
+    "MulChar": {
+      "Basic.lean": null
+    },
+    "EulerProduct": {
+      "DirichletLSeries.lean": null,
+      "Basic.lean": null
+    },
+    "NumberField": {
+      "ClassNumber.lean": null,
+      "Norm.lean": null,
+      "Discriminant.lean": null,
+      "Basic.lean": null,
+      "FractionalIdeal.lean": null,
+      "Embeddings.lean": null,
+      "Units": {
+        "Basic.lean": null,
+        "DirichletTheorem.lean": null
+      },
+      "CanonicalEmbedding": {
+        "Basic.lean": null,
+        "ConvexBody.lean": null
+      }
+    }
+  },
+  "FieldTheory": {
+    "Galois.lean": null,
+    "AbsoluteGaloisGroup.lean": null,
+    "AbelRuffini.lean": null,
+    "AxGrothendieck.lean": null,
+    "Laurent.lean": null,
+    "SeparableDegree.lean": null,
+    "PurelyInseparable.lean": null,
+    "Perfect.lean": null,
+    "IsPerfectClosure.lean": null,
+    "PolynomialGaloisGroup.lean": null,
+    "IntermediateField.lean": null,
+    "Tower.lean": null,
+    "Extension.lean": null,
+    "Cardinality.lean": null,
+    "ChevalleyWarning.lean": null,
+    "IsSepClosed.lean": null,
+    "KummerExtension.lean": null,
+    "SeparableClosure.lean": null,
+    "MvPolynomial.lean": null,
+    "Normal.lean": null,
+    "NormalClosure.lean": null,
+    "PrimitiveElement.lean": null,
+    "KrullTopology.lean": null,
+    "Separable.lean": null,
+    "Adjoin.lean": null,
+    "Fixed.lean": null,
+    "PerfectClosure.lean": null,
+    "Finiteness.lean": null,
+    "Finite": {
+      "GaloisField.lean": null,
+      "Basic.lean": null,
+      "Trace.lean": null,
+      "Polynomial.lean": null
+    },
+    "SplittingField": {
+      "Construction.lean": null,
+      "IsSplittingField.lean": null
+    },
+    "IsAlgClosed": {
+      "Classification.lean": null,
+      "AlgebraicClosure.lean": null,
+      "Basic.lean": null,
+      "Spectrum.lean": null
+    },
+    "Minpoly": {
+      "MinpolyDiv.lean": null,
+      "IsIntegrallyClosed.lean": null,
+      "Basic.lean": null,
+      "Field.lean": null
+    },
+    "RatFunc": {
+      "AsPolynomial.lean": null,
+      "Basic.lean": null,
+      "Defs.lean": null,
+      "Degree.lean": null
+    }
+  },
+  "AlgebraicGeometry": {
+    "AffineScheme.lean": null,
+    "OpenImmersion.lean": null,
+    "Restrict.lean": null,
+    "StructureSheaf.lean": null,
+    "Gluing.lean": null,
+    "Spec.lean": null,
+    "Scheme.lean": null,
+    "FunctionField.lean": null,
+    "Limits.lean": null,
+    "GammaSpecAdjunction.lean": null,
+    "Properties.lean": null,
+    "Pullbacks.lean": null,
+    "Morphisms": {
+      "OpenImmersion.lean": null,
+      "Separated.lean": null,
+      "QuasiCompact.lean": null,
+      "Basic.lean": null,
+      "ClosedImmersion.lean": null,
+      "FiniteType.lean": null,
+      "UniversallyClosed.lean": null,
+      "RingHomProperties.lean": null,
+      "QuasiSeparated.lean": null
+    },
+    "EllipticCurve": {
+      "Jacobian.lean": null,
+      "Weierstrass.lean": null,
+      "Group.lean": null,
+      "Projective.lean": null,
+      "Affine.lean": null,
+      "DivisionPolynomial": {
+        "Basic.lean": null
+      }
+    },
+    "Sites": {
+      "BigZariski.lean": null
+    },
+    "PrimeSpectrum": {
+      "Basic.lean": null,
+      "Maximal.lean": null,
+      "Noetherian.lean": null,
+      "IsOpenComapC.lean": null
+    },
+    "ProjectiveSpectrum": {
+      "Topology.lean": null,
+      "StructureSheaf.lean": null,
+      "Scheme.lean": null
+    },
+    "Modules": {
+      "Presheaf.lean": null,
+      "Sheaf.lean": null
+    }
+  },
+  "RepresentationTheory": {
+    "Maschke.lean": null,
+    "FdRep.lean": null,
+    "Basic.lean": null,
+    "Rep.lean": null,
+    "Invariants.lean": null,
+    "Character.lean": null,
+    "GroupCohomology": {
+      "Basic.lean": null,
+      "Hilbert90.lean": null,
+      "Resolution.lean": null,
+      "LowDegree.lean": null
+    },
+    "Action": {
+      "Monoidal.lean": null,
+      "Basic.lean": null,
+      "Continuous.lean": null,
+      "Limits.lean": null,
+      "Concrete.lean": null
+    }
+  },
+  "Logic": {
+    "Lemmas.lean": null,
+    "Pairwise.lean": null,
+    "IsEmpty.lean": null,
+    "UnivLE.lean": null,
+    "Denumerable.lean": null,
+    "Nonempty.lean": null,
+    "Basic.lean": null,
+    "Unique.lean": null,
+    "Relation.lean": null,
+    "Hydra.lean": null,
+    "Relator.lean": null,
+    "Nontrivial": {
+      "Basic.lean": null,
+      "Defs.lean": null
+    },
+    "Equiv": {
+      "Fintype.lean": null,
+      "Fin.lean": null,
+      "PartialEquiv.lean": null,
+      "Option.lean": null,
+      "Pairwise.lean": null,
+      "TransferInstance.lean": null,
+      "List.lean": null,
+      "Nat.lean": null,
+      "Basic.lean": null,
+      "Defs.lean": null,
+      "Set.lean": null,
+      "Functor.lean": null,
+      "Embedding.lean": null,
+      "Array.lean": null
+    },
+    "Embedding": {
+      "Basic.lean": null,
+      "Set.lean": null
+    },
+    "Function": {
+      "Iterate.lean": null,
+      "Conjugate.lean": null,
+      "FromTypes.lean": null,
+      "Basic.lean": null,
+      "OfArity.lean": null,
+      "CompTypeclasses.lean": null
+    },
+    "Encodable": {
+      "Basic.lean": null,
+      "Lattice.lean": null
+    },
+    "Small": {
+      "Module.lean": null,
+      "Ring.lean": null,
+      "List.lean": null,
+      "Group.lean": null,
+      "Basic.lean": null,
+      "Defs.lean": null,
+      "Set.lean": null
+    },
+    "Godel": {
+      "GodelBetaFunction.lean": null
+    }
+  },
+  "CategoryTheory": {
+    "Yoneda.lean": null,
+    "CatCommSq.lean": null,
+    "Extensive.lean": null,
+    "Skeletal.lean": null,
+    "EssentiallySmall.lean": null,
+    "Core.lean": null,
+    "IsomorphismClasses.lean": null,
+    "EpiMono.lean": null,
+    "CofilteredSystem.lean": null,
+    "Balanced.lean": null,
+    "GradedObject.lean": null,
+    "PUnit.lean": null,
+    "NatTrans.lean": null,
+    "Subterminal.lean": null,
+    "Elementwise.lean": null,
+    "UnivLE.lean": null,
+    "FullSubcategory.lean": null,
+    "Groupoid.lean": null,
+    "Quotient.lean": null,
+    "Simple.lean": null,
+    "Conj.lean": null,
+    "Adhesive.lean": null,
+    "ChosenFiniteProducts.lean": null,
+    "Generator.lean": null,
+    "GlueData.lean": null,
+    "ConnectedComponents.lean": null,
+    "Endomorphism.lean": null,
+    "ComposableArrows.lean": null,
+    "WithTerminal.lean": null,
+    "Action.lean": null,
+    "EssentialImage.lean": null,
+    "SingleObj.lean": null,
+    "DiscreteCategory.lean": null,
+    "Opposites.lean": null,
+    "Thin.lean": null,
+    "Grothendieck.lean": null,
+    "ClosedUnderIsomorphisms.lean": null,
+    "Types.lean": null,
+    "PEmpty.lean": null,
+    "EqToHom.lean": null,
+    "Whiskering.lean": null,
+    "Iso.lean": null,
+    "NatIso.lean": null,
+    "Equivalence.lean": null,
+    "IsConnected.lean": null,
+    "PathCategory.lean": null,
+    "Elements.lean": null,
+    "DifferentialObject.lean": null,
+    "Noetherian.lean": null,
+    "Countable.lean": null,
+    "FintypeCat.lean": null,
+    "CommSq.lean": null,
+    "Functor": {
+      "Flat.lean": null,
+      "EpiMono.lean": null,
+      "Category.lean": null,
+      "ReflectsIso.lean": null,
+      "Basic.lean": null,
+      "OfSequence.lean": null,
+      "Const.lean": null,
+      "Trifunctor.lean": null,
+      "Functorial.lean": null,
+      "FullyFaithful.lean": null,
+      "Currying.lean": null,
+      "Hom.lean": null,
+      "Derived": {
+        "RightDerived.lean": null
+      },
+      "KanExtension": {
+        "Pointwise.lean": null,
+        "Basic.lean": null,
+        "Adjunction.lean": null
+      }
+    },
+    "GradedObject": {
+      "Bifunctor.lean": null,
+      "Single.lean": null,
+      "Trifunctor.lean": null,
+      "Associator.lean": null,
+      "Unitor.lean": null
+    },
+    "ChosenFiniteProducts": {
+      "FunctorCategory.lean": null
+    },
+    "Preadditive": {
+      "Biproducts.lean": null,
+      "AdditiveFunctor.lean": null,
+      "OfBiproducts.lean": null,
+      "Opposite.lean": null,
+      "LeftExact.lean": null,
+      "Basic.lean": null,
+      "Generator.lean": null,
+      "Injective.lean": null,
+      "ProjectiveResolution.lean": null,
+      "Schur.lean": null,
+      "InjectiveResolution.lean": null,
+      "Projective.lean": null,
+      "SingleObj.lean": null,
+      "EndoFunctor.lean": null,
+      "HomOrthogonal.lean": null,
+      "FunctorCategory.lean": null,
+      "Mat.lean": null,
+      "EilenbergMoore.lean": null,
+      "Yoneda": {
+        "Basic.lean": null,
+        "Injective.lean": null,
+        "Projective.lean": null,
+        "Limits.lean": null
+      }
+    },
+    "Products": {
+      "Bifunctor.lean": null,
+      "Basic.lean": null,
+      "Associator.lean": null
+    },
+    "Category": {
+      "Grpd.lean": null,
+      "GaloisConnection.lean": null,
+      "Factorisation.lean": null,
+      "Pairwise.lean": null,
+      "Bipointed.lean": null,
+      "Init.lean": null,
+      "TwoP.lean": null,
+      "RelCat.lean": null,
+      "KleisliCat.lean": null,
+      "Basic.lean": null,
+      "ULift.lean": null,
+      "PartialFun.lean": null,
+      "Pointed.lean": null,
+      "Cat.lean": null,
+      "Quiv.lean": null,
+      "Preorder.lean": null,
+      "Cat": {
+        "Limit.lean": null
+      }
+    },
+    "Groupoid": {
+      "VertexGroup.lean": null,
+      "Subgroupoid.lean": null,
+      "Basic.lean": null,
+      "FreeGroupoid.lean": null
+    },
+    "GuitartExact": {
+      "VerticalComposition.lean": null,
+      "Basic.lean": null
+    },
+    "FiberedCategory": {
+      "HomLift.lean": null
+    },
+    "Linear": {
+      "Yoneda.lean": null,
+      "LinearFunctor.lean": null,
+      "Basic.lean": null,
+      "FunctorCategory.lean": null
+    },
+    "Idempotents": {
+      "Biproducts.lean": null,
+      "HomologicalComplex.lean": null,
+      "SimplicialObject.lean": null,
+      "FunctorExtension.lean": null,
+      "Karoubi.lean": null,
+      "Basic.lean": null,
+      "FunctorCategories.lean": null,
+      "KaroubiKaroubi.lean": null
+    },
+    "Shift": {
+      "Opposite.lean": null,
+      "CommShift.lean": null,
+      "SingleFunctors.lean": null,
+      "Basic.lean": null,
+      "Quotient.lean": null,
+      "ShiftSequence.lean": null,
+      "Localization.lean": null,
+      "Pullback.lean": null,
+      "ShiftedHom.lean": null,
+      "InducedShiftSequence.lean": null,
+      "Predicate.lean": null,
+      "Induced.lean": null
+    },
+    "MorphismProperty": {
+      "IsInvertedBy.lean": null,
+      "Composition.lean": null,
+      "Basic.lean": null,
+      "Factorization.lean": null,
+      "Limits.lean": null,
+      "Concrete.lean": null
+    },
+    "SmallObject": {
+      "Construction.lean": null
+    },
+    "EffectiveEpi": {
+      "Extensive.lean": null,
+      "Enough.lean": null,
+      "Comp.lean": null,
+      "Preserves.lean": null,
+      "Basic.lean": null,
+      "RegularEpi.lean": null,
+      "Coproduct.lean": null
+    },
+    "Limits": {
+      "Yoneda.lean": null,
+      "TypesFiltered.lean": null,
+      "FunctorToTypes.lean": null,
+      "HasLimits.lean": null,
+      "ColimitLimit.lean": null,
+      "EssentiallySmall.lean": null,
+      "KanExtension.lean": null,
+      "EpiMono.lean": null,
+      "Fubini.lean": null,
+      "IndYoneda.lean": null,
+      "Filtered.lean": null,
+      "Unit.lean": null,
+      "Presheaf.lean": null,
+      "FilteredColimitCommutesFiniteLimit.lean": null,
+      "Cones.lean": null,
+      "Final.lean": null,
+      "Comma.lean": null,
+      "Over.lean": null,
+      "SmallComplete.lean": null,
+      "MonoCoprod.lean": null,
+      "Pi.lean": null,
+      "ConeCategory.lean": null,
+      "FullSubcategory.lean": null,
+      "Creates.lean": null,
+      "ExactFunctor.lean": null,
+      "FinallySmall.lean": null,
+      "Opposites.lean": null,
+      "Connected.lean": null,
+      "Types.lean": null,
+      "IsLimit.lean": null,
+      "VanKampen.lean": null,
+      "Bicones.lean": null,
+      "Lattice.lean": null,
+      "IsConnected.lean": null,
+      "Elements.lean": null,
+      "FunctorCategory.lean": null,
+      "ConcreteCategory.lean": null,
+      "FintypeCat.lean": null,
+      "Constructions": {
+        "FiniteProductsOfBinaryProducts.lean": null,
+        "EpiMono.lean": null,
+        "Filtered.lean": null,
+        "LimitsOfProductsAndEqualizers.lean": null,
+        "Equalizers.lean": null,
+        "ZeroObjects.lean": null,
+        "WeaklyInitial.lean": null,
+        "BinaryProducts.lean": null,
+        "Pullbacks.lean": null,
+        "Over": {
+          "Products.lean": null,
+          "Basic.lean": null,
+          "Connected.lean": null
+        }
+      },
+      "Indization": {
+        "IndObject.lean": null
+      },
+      "Shapes": {
+        "Biproducts.lean": null,
+        "FunctorToTypes.lean": null,
+        "StrictInitial.lean": null,
+        "Reflexive.lean": null,
+        "StrongEpi.lean": null,
+        "Diagonal.lean": null,
+        "Products.lean": null,
+        "RegularMono.lean": null,
+        "Terminal.lean": null,
+        "SplitCoequalizer.lean": null,
+        "ZeroMorphisms.lean": null,
+        "Equalizers.lean": null,
+        "WidePullbacks.lean": null,
+        "Kernels.lean": null,
+        "KernelPair.lean": null,
+        "ZeroObjects.lean": null,
+        "SingleObj.lean": null,
+        "FiniteLimits.lean": null,
+        "Types.lean": null,
+        "Multiequalizer.lean": null,
+        "CombinedProducts.lean": null,
+        "FiniteProducts.lean": null,
+        "Equivalence.lean": null,
+        "WideEqualizers.lean": null,
+        "Images.lean": null,
+        "BinaryProducts.lean": null,
+        "FunctorCategory.lean": null,
+        "DisjointCoproduct.lean": null,
+        "ConcreteCategory.lean": null,
+        "Pullbacks.lean": null,
+        "Countable.lean": null,
+        "CommSq.lean": null,
+        "NormalMono": {
+          "Basic.lean": null,
+          "Equalizers.lean": null
+        }
+      },
+      "Final": {
+        "ParallelPair.lean": null
+      },
+      "Preserves": {
+        "Finite.lean": null,
+        "Filtered.lean": null,
+        "Basic.lean": null,
+        "Ulift.lean": null,
+        "Opposites.lean": null,
+        "Limits.lean": null,
+        "FunctorCategory.lean": null,
+        "Shapes": {
+          "Biproducts.lean": null,
+          "Products.lean": null,
+          "Terminal.lean": null,
+          "Equalizers.lean": null,
+          "Kernels.lean": null,
+          "Images.lean": null,
+          "BinaryProducts.lean": null,
+          "Zero.lean": null,
+          "Pullbacks.lean": null
+        }
+      }
+    },
+    "Comma": {
+      "Presheaf.lean": null,
+      "Over.lean": null,
+      "Basic.lean": null,
+      "Arrow.lean": null,
+      "StructuredArrow.lean": null
+    },
+    "ConcreteCategory": {
+      "EpiMono.lean": null,
+      "ReflectsIso.lean": null,
+      "Elementwise.lean": null,
+      "Basic.lean": null,
+      "Bundled.lean": null,
+      "UnbundledHom.lean": null,
+      "BundledHom.lean": null
+    },
+    "Closed": {
+      "Monoidal.lean": null,
+      "Cartesian.lean": null,
+      "Ideal.lean": null,
+      "Functor.lean": null,
+      "Types.lean": null,
+      "FunctorCategory.lean": null,
+      "Zero.lean": null
+    },
+    "Filtered": {
+      "Final.lean": null,
+      "Basic.lean": null,
+      "Small.lean": null,
+      "Connected.lean": null
+    },
+    "Sigma": {
+      "Basic.lean": null
+    },
+    "Sites": {
+      "LocallySurjective.lean": null,
+      "EffectiveEpimorphic.lean": null,
+      "LeftExact.lean": null,
+      "EpiMono.lean": null,
+      "CoverPreserving.lean": null,
+      "Canonical.lean": null,
+      "Subsheaf.lean": null,
+      "LocallyBijective.lean": null,
+      "Coverage.lean": null,
+      "Pretopology.lean": null,
+      "EqualizerSheafCondition.lean": null,
+      "Abelian.lean": null,
+      "IsSheafFor.lean": null,
+      "Preserves.lean": null,
+      "Over.lean": null,
+      "PreservesLocallyBijective.lean": null,
+      "SheafHom.lean": null,
+      "IsSheafOneHypercover.lean": null,
+      "CoverLifting.lean": null,
+      "SheafOfTypes.lean": null,
+      "Spaces.lean": null,
+      "Sieves.lean": null,
+      "Plus.lean": null,
+      "LocallyInjective.lean": null,
+      "CompatiblePlus.lean": null,
+      "Localization.lean": null,
+      "Sheafification.lean": null,
+      "DenseSubsite.lean": null,
+      "ConstantSheaf.lean": null,
+      "Pullback.lean": null,
+      "CoversTop.lean": null,
+      "Adjunction.lean": null,
+      "PreservesSheafification.lean": null,
+      "InducedTopology.lean": null,
+      "Sheaf.lean": null,
+      "Grothendieck.lean": null,
+      "Types.lean": null,
+      "OneHypercover.lean": null,
+      "Whiskering.lean": null,
+      "Limits.lean": null,
+      "Closed.lean": null,
+      "Equivalence.lean": null,
+      "CompatibleSheafification.lean": null,
+      "ConcreteSheafification.lean": null,
+      "Coherent": {
+        "SheafComparison.lean": null,
+        "ReflectsPreregular.lean": null,
+        "CoherentTopology.lean": null,
+        "ReflectsPrecoherent.lean": null,
+        "Basic.lean": null,
+        "ExtensiveSheaves.lean": null,
+        "CoherentSheaves.lean": null,
+        "Equivalence.lean": null,
+        "RegularSheaves.lean": null,
+        "Comparison.lean": null,
+        "RegularTopology.lean": null
+      },
+      "NonabelianCohomology": {
+        "H1.lean": null
+      }
+    },
+    "Abelian": {
+      "Opposite.lean": null,
+      "RightDerived.lean": null,
+      "Pseudoelements.lean": null,
+      "Basic.lean": null,
+      "LeftDerived.lean": null,
+      "Subobject.lean": null,
+      "Ext.lean": null,
+      "Generator.lean": null,
+      "Refinements.lean": null,
+      "Injective.lean": null,
+      "ProjectiveResolution.lean": null,
+      "InjectiveResolution.lean": null,
+      "Projective.lean": null,
+      "Exact.lean": null,
+      "Transfer.lean": null,
+      "EpiWithInjectiveKernel.lean": null,
+      "Homology.lean": null,
+      "Images.lean": null,
+      "FunctorCategory.lean": null,
+      "NonPreadditive.lean": null,
+      "DiagramLemmas": {
+        "Four.lean": null
+      }
+    },
+    "Monoidal": {
+      "NaturalTransformation.lean": null,
+      "Transport.lean": null,
+      "Opposite.lean": null,
+      "Category.lean": null,
+      "Discrete.lean": null,
+      "Subcategory.lean": null,
+      "Skeleton.lean": null,
+      "OfHasFiniteProducts.lean": null,
+      "Mod_.lean": null,
+      "Bimod.lean": null,
+      "Linear.lean": null,
+      "Preadditive.lean": null,
+      "Center.lean": null,
+      "End.lean": null,
+      "CoherenceLemmas.lean": null,
+      "Functorial.lean": null,
+      "CommMon_.lean": null,
+      "Functor.lean": null,
+      "Limits.lean": null,
+      "Comon_.lean": null,
+      "Tor.lean": null,
+      "Mon_.lean": null,
+      "FunctorCategory.lean": null,
+      "Bimon_.lean": null,
+      "Cartesian": {
+        "Comon_.lean": null
+      },
+      "Types": {
+        "Coyoneda.lean": null,
+        "Basic.lean": null,
+        "Symmetric.lean": null
+      },
+      "Free": {
+        "Coherence.lean": null,
+        "Basic.lean": null
+      },
+      "Rigid": {
+        "OfEquivalence.lean": null,
+        "Basic.lean": null,
+        "FunctorCategory.lean": null
+      },
+      "Internal": {
+        "Module.lean": null,
+        "Types.lean": null,
+        "Limits.lean": null,
+        "FunctorCategory.lean": null
+      },
+      "OfChosenFiniteProducts": {
+        "Basic.lean": null,
+        "Symmetric.lean": null
+      },
+      "Braided": {
+        "Opposite.lean": null,
+        "Basic.lean": null
+      }
+    },
+    "Pi": {
+      "Basic.lean": null
+    },
+    "Enriched": {
+      "Basic.lean": null
+    },
+    "Quotient": {
+      "Linear.lean": null,
+      "Preadditive.lean": null
+    },
+    "Sums": {
+      "Basic.lean": null,
+      "Associator.lean": null
+    },
+    "Galois": {
+      "Decomposition.lean": null,
+      "Basic.lean": null,
+      "Prorepresentability.lean": null,
+      "Examples.lean": null,
+      "GaloisObjects.lean": null
+    },
+    "Bicategory": {
+      "NaturalTransformation.lean": null,
+      "Coherence.lean": null,
+      "FunctorBicategory.lean": null,
+      "Extension.lean": null,
+      "Basic.lean": null,
+      "End.lean": null,
+      "SingleObj.lean": null,
+      "Adjunction.lean": null,
+      "Free.lean": null,
+      "LocallyDiscrete.lean": null,
+      "Strict.lean": null,
+      "Functor": {
+        "Oplax.lean": null,
+        "Pseudofunctor.lean": null
+      },
+      "Kan": {
+        "IsKan.lean": null,
+        "Adjunction.lean": null
+      }
+    },
+    "Monad": {
+      "Monadicity.lean": null,
+      "Products.lean": null,
+      "Basic.lean": null,
+      "EquivMon.lean": null,
+      "Adjunction.lean": null,
+      "Types.lean": null,
+      "Limits.lean": null,
+      "Algebra.lean": null,
+      "Coequalizer.lean": null,
+      "Kleisli.lean": null
+    },
+    "Triangulated": {
+      "HomologicalFunctor.lean": null,
+      "Opposite.lean": null,
+      "TriangleShift.lean": null,
+      "Subcategory.lean": null,
+      "Triangulated.lean": null,
+      "Basic.lean": null,
+      "Functor.lean": null,
+      "Pretriangulated.lean": null,
+      "Rotate.lean": null,
+      "TStructure": {
+        "Basic.lean": null
+      }
+    },
+    "Subobject": {
+      "WellPowered.lean": null,
+      "Comma.lean": null,
+      "Basic.lean": null,
+      "FactorThru.lean": null,
+      "MonoOver.lean": null,
+      "Types.lean": null,
+      "Limits.lean": null,
+      "Lattice.lean": null
+    },
+    "FinCategory": {
+      "AsType.lean": null,
+      "Basic.lean": null
+    },
+    "Adjunction": {
+      "Lifting.lean": null,
+      "Mates.lean": null,
+      "Reflective.lean": null,
+      "AdjointFunctorTheorems.lean": null,
+      "Comma.lean": null,
+      "Over.lean": null,
+      "Evaluation.lean": null,
+      "Restrict.lean": null,
+      "Basic.lean": null,
+      "Unique.lean": null,
+      "Opposites.lean": null,
+      "FullyFaithful.lean": null,
+      "Whiskering.lean": null,
+      "Limits.lean": null
+    },
+    "LiftingProperties": {
+      "Basic.lean": null,
+      "Adjunction.lean": null
+    },
+    "Endofunctor": {
+      "Algebra.lean": null
+    },
+    "Localization": {
+      "CalculusOfFractions.lean": null,
+      "Opposite.lean": null,
+      "Construction.lean": null,
+      "Triangulated.lean": null,
+      "Prod.lean": null,
+      "Composition.lean": null,
+      "Pi.lean": null,
+      "LocalizerMorphism.lean": null,
+      "Bousfield.lean": null,
+      "HasLocalization.lean": null,
+      "Adjunction.lean": null,
+      "FiniteProducts.lean": null,
+      "Equivalence.lean": null,
+      "Resolution.lean": null,
+      "Predicate.lean": null,
+      "CalculusOfFractions": {
+        "Preadditive.lean": null,
+        "ComposableArrows.lean": null,
+        "Fractions.lean": null
+      },
+      "DerivabilityStructure": {
+        "Basic.lean": null
+      }
+    }
+  },
+  "GroupTheory": {
+    "PGroup.lean": null,
+    "NoncommPiCoprod.lean": null,
+    "CoprodI.lean": null,
+    "Nilpotent.lean": null,
+    "FreeAbelianGroup.lean": null,
+    "FreeAbelianGroupFinsupp.lean": null,
+    "Solvable.lean": null,
+    "Complement.lean": null,
+    "MonoidLocalization.lean": null,
+    "FixedPointFree.lean": null,
+    "ClassEquation.lean": null,
+    "Index.lean": null,
+    "Archimedean.lean": null,
+    "Commutator.lean": null,
+    "EckmannHilton.lean": null,
+    "Divisible.lean": null,
+    "DoubleCoset.lean": null,
+    "SchurZassenhaus.lean": null,
+    "PresentedGroup.lean": null,
+    "CommutingProbability.lean": null,
+    "Sylow.lean": null,
+    "Torsion.lean": null,
+    "HNNExtension.lean": null,
+    "Schreier.lean": null,
+    "NoncommCoprod.lean": null,
+    "Abelianization.lean": null,
+    "Exponent.lean": null,
+    "Commensurable.lean": null,
+    "Coset.lean": null,
+    "FiniteAbelian.lean": null,
+    "Transfer.lean": null,
+    "Frattini.lean": null,
+    "QuotientGroup.lean": null,
+    "PushoutI.lean": null,
+    "Finiteness.lean": null,
+    "SemidirectProduct.lean": null,
+    "OrderOfElement.lean": null,
+    "Order": {
+      "Min.lean": null
+    },
+    "Perm": {
+      "Finite.lean": null,
+      "ClosureSwap.lean": null,
+      "Fin.lean": null,
+      "Sign.lean": null,
+      "Option.lean": null,
+      "Support.lean": null,
+      "List.lean": null,
+      "Closure.lean": null,
+      "Basic.lean": null,
+      "ViaEmbedding.lean": null,
+      "Subgroup.lean": null,
+      "DomMulAct.lean": null,
+      "Cycle": {
+        "Factors.lean": null,
+        "Type.lean": null,
+        "Basic.lean": null,
+        "Concrete.lean": null,
+        "PossibleTypes.lean": null
+      }
+    },
+    "Coxeter": {
+      "Length.lean": null,
+      "Matrix.lean": null,
+      "Basic.lean": null,
+      "Inversion.lean": null
+    },
+    "GroupAction": {
+      "Sum.lean": null,
+      "SubMulAction.lean": null,
+      "Opposite.lean": null,
+      "Option.lean": null,
+      "Support.lean": null,
+      "Ring.lean": null,
+      "ConjAct.lean": null,
+      "Group.lean": null,
+      "Sigma.lean": null,
+      "Prod.lean": null,
+      "Pointwise.lean": null,
+      "Pi.lean": null,
+      "Basic.lean": null,
+      "Quotient.lean": null,
+      "FixingSubgroup.lean": null,
+      "Defs.lean": null,
+      "Period.lean": null,
+      "Embedding.lean": null,
+      "BigOperators.lean": null,
+      "Blocks.lean": null,
+      "Units.lean": null,
+      "FixedPoints.lean": null,
+      "Hom.lean": null,
+      "SubMulAction": {
+        "Pointwise.lean": null
+      },
+      "DomAct": {
+        "ActionHom.lean": null,
+        "Basic.lean": null
+      }
+    },
+    "Coprod": {
+      "Basic.lean": null
+    },
+    "Submonoid": {
+      "Inverses.lean": null,
+      "Center.lean": null,
+      "Centralizer.lean": null
+    },
+    "Congruence": {
+      "Opposite.lean": null,
+      "Basic.lean": null,
+      "BigOperators.lean": null
+    },
+    "SpecificGroups": {
+      "Alternating.lean": null,
+      "Dihedral.lean": null,
+      "Cyclic.lean": null,
+      "Quaternion.lean": null,
+      "KleinFour.lean": null
+    },
+    "FreeGroup": {
+      "IsFreeGroup.lean": null,
+      "Basic.lean": null,
+      "NielsenSchreier.lean": null
+    },
+    "Subgroup": {
+      "Saturated.lean": null,
+      "Center.lean": null,
+      "Simple.lean": null,
+      "Centralizer.lean": null
+    },
+    "Subsemigroup": {
+      "Center.lean": null,
+      "Centralizer.lean": null
+    }
+  },
+  "AlgebraicTopology": {
+    "SimplicialSet.lean": null,
+    "MooreComplex.lean": null,
+    "SplitSimplicialObject.lean": null,
+    "Nerve.lean": null,
+    "SimplicialObject.lean": null,
+    "TopologicalSimplex.lean": null,
+    "AlternatingFaceMapComplex.lean": null,
+    "SimplexCategory.lean": null,
+    "ExtraDegeneracy.lean": null,
+    "KanComplex.lean": null,
+    "CechNerve.lean": null,
+    "Quasicategory.lean": null,
+    "SingularSet.lean": null,
+    "DoldKan": {
+      "Normalized.lean": null,
+      "Decomposition.lean": null,
+      "FunctorGamma.lean": null,
+      "HomotopyEquivalence.lean": null,
+      "SplitSimplicialObject.lean": null,
+      "NReflectsIso.lean": null,
+      "Projections.lean": null,
+      "Faces.lean": null,
+      "GammaCompN.lean": null,
+      "Degeneracies.lean": null,
+      "Homotopies.lean": null,
+      "NCompGamma.lean": null,
+      "PInfty.lean": null,
+      "EquivalencePseudoabelian.lean": null,
+      "Equivalence.lean": null,
+      "EquivalenceAdditive.lean": null,
+      "Notations.lean": null,
+      "FunctorN.lean": null,
+      "Compatibility.lean": null
+    },
+    "FundamentalGroupoid": {
+      "SimplyConnected.lean": null,
+      "PUnit.lean": null,
+      "Product.lean": null,
+      "Basic.lean": null,
+      "InducedMaps.lean": null,
+      "FundamentalGroup.lean": null
+    },
+    "SimplicialCategory": {
+      "Basic.lean": null
+    },
+    "SimplicialSet": {
+      "Monoidal.lean": null
+    }
+  },
+  "Testing": {
+    "SlimCheck": {
+      "Functions.lean": null,
+      "Testable.lean": null,
+      "Gen.lean": null,
+      "Sampleable.lean": null
+    }
+  },
+  "Condensed": {
+    "Discrete.lean": null,
+    "Module.lean": null,
+    "Functors.lean": null,
+    "Basic.lean": null,
+    "TopComparison.lean": null,
+    "Solid.lean": null,
+    "Explicit.lean": null,
+    "Limits.lean": null,
+    "Equivalence.lean": null,
+    "Light": {
+      "Discrete.lean": null,
+      "Module.lean": null,
+      "Functors.lean": null,
+      "Basic.lean": null,
+      "Explicit.lean": null
+    }
+  },
+  "RingTheory": {
+    "Fintype.lean": null,
+    "RingInvo.lean": null,
+    "IsTensorProduct.lean": null,
+    "PiTensorProduct.lean": null,
+    "Perfection.lean": null,
+    "JacobsonIdeal.lean": null,
+    "Henselian.lean": null,
+    "IntegralDomain.lean": null,
+    "EisensteinCriterion.lean": null,
+    "QuotientNilpotent.lean": null,
+    "Algebraic.lean": null,
+    "Norm.lean": null,
+    "Nakayama.lean": null,
+    "Multiplicity.lean": null,
+    "AlgebraTower.lean": null,
+    "AdjoinRoot.lean": null,
+    "Kaehler.lean": null,
+    "LittleWedderburn.lean": null,
+    "IntegrallyClosed.lean": null,
+    "Filtration.lean": null,
+    "Discriminant.lean": null,
+    "ClassGroup.lean": null,
+    "EuclideanDomain.lean": null,
+    "HopfAlgebra.lean": null,
+    "AlgebraicIndependent.lean": null,
+    "PrincipalIdealDomain.lean": null,
+    "Bezout.lean": null,
+    "NormTrace.lean": null,
+    "QuotientNoetherian.lean": null,
+    "PolynomialAlgebra.lean": null,
+    "IntegralRestrict.lean": null,
+    "FreeCommRing.lean": null,
+    "UniqueFactorizationDomain.lean": null,
+    "Trace.lean": null,
+    "PowerBasis.lean": null,
+    "FiniteType.lean": null,
+    "Complex.lean": null,
+    "IntegralClosure.lean": null,
+    "Generators.lean": null,
+    "RingHomProperties.lean": null,
+    "IsAdjoinRoot.lean": null,
+    "QuotSMulTop.lean": null,
+    "ChainOfDivisors.lean": null,
+    "Prime.lean": null,
+    "FinitePresentation.lean": null,
+    "Artinian.lean": null,
+    "ReesAlgebra.lean": null,
+    "Jacobson.lean": null,
+    "Congruence.lean": null,
+    "SimpleModule.lean": null,
+    "ZMod.lean": null,
+    "Binomial.lean": null,
+    "OrzechProperty.lean": null,
+    "MatrixAlgebra.lean": null,
+    "LaurentSeries.lean": null,
+    "Nullstellensatz.lean": null,
+    "Finiteness.lean": null,
+    "Noetherian.lean": null,
+    "FreeRing.lean": null,
+    "LocalProperties.lean": null,
+    "NonUnitalSubring": {
+      "Basic.lean": null
+    },
+    "Flat": {
+      "EquationalCriterion.lean": null,
+      "Basic.lean": null,
+      "Stability.lean": null,
+      "Algebra.lean": null
+    },
+    "WittVector": {
+      "StructurePolynomial.lean": null,
+      "WittPolynomial.lean": null,
+      "DiscreteValuationRing.lean": null,
+      "MulCoeff.lean": null,
+      "Verschiebung.lean": null,
+      "Basic.lean": null,
+      "Frobenius.lean": null,
+      "Compare.lean": null,
+      "InitTail.lean": null,
+      "Domain.lean": null,
+      "Defs.lean": null,
+      "IsPoly.lean": null,
+      "Truncated.lean": null,
+      "FrobeniusFractionField.lean": null,
+      "MulP.lean": null,
+      "Identities.lean": null,
+      "Isocrystal.lean": null,
+      "Teichmuller.lean": null
+    },
+    "GradedAlgebra": {
+      "HomogeneousIdeal.lean": null,
+      "Basic.lean": null,
+      "HomogeneousLocalization.lean": null,
+      "Radical.lean": null
+    },
+    "MvPolynomial": {
+      "NewtonIdentities.lean": null,
+      "Tower.lean": null,
+      "Basic.lean": null,
+      "Ideal.lean": null,
+      "Symmetric.lean": null,
+      "Homogeneous.lean": null,
+      "WeightedHomogeneous.lean": null
+    },
+    "Derivation": {
+      "Lie.lean": null,
+      "Basic.lean": null,
+      "ToSquareZero.lean": null
+    },
+    "Etale": {
+      "Basic.lean": null
+    },
+    "Smooth": {
+      "Basic.lean": null
+    },
+    "Ideal": {
+      "QuotientOperations.lean": null,
+      "LocalRing.lean": null,
+      "AssociatedPrime.lean": null,
+      "Colon.lean": null,
+      "Maps.lean": null,
+      "Norm.lean": null,
+      "Prod.lean": null,
+      "Over.lean": null,
+      "MinimalPrime.lean": null,
+      "IsPrimary.lean": null,
+      "IdempotentFG.lean": null,
+      "Basic.lean": null,
+      "Operations.lean": null,
+      "Quotient.lean": null,
+      "Cotangent.lean": null,
+      "Basis.lean": null,
+      "IsPrincipal.lean": null
+    },
+    "TensorProduct": {
+      "Basic.lean": null,
+      "MvPolynomial.lean": null
+    },
+    "Nilpotent": {
+      "Lemmas.lean": null,
+      "Basic.lean": null,
+      "Defs.lean": null
+    },
+    "Coprime": {
+      "Lemmas.lean": null,
+      "Basic.lean": null,
+      "Ideal.lean": null
+    },
+    "DiscreteValuationRing": {
+      "TFAE.lean": null,
+      "Basic.lean": null
+    },
+    "FractionalIdeal": {
+      "Norm.lean": null,
+      "Basic.lean": null,
+      "Operations.lean": null
+    },
+    "PowerSeries": {
+      "Inverse.lean": null,
+      "WellKnown.lean": null,
+      "Order.lean": null,
+      "Trunc.lean": null,
+      "Basic.lean": null,
+      "Derivative.lean": null
+    },
+    "Adjoin": {
+      "FG.lean": null,
+      "Tower.lean": null,
+      "Basic.lean": null,
+      "PowerBasis.lean": null,
+      "Field.lean": null
+    },
+    "Coalgebra": {
+      "Basic.lean": null,
+      "Equiv.lean": null,
+      "Hom.lean": null
+    },
+    "Int": {
+      "Basic.lean": null
+    },
+    "OreLocalization": {
+      "Ring.lean": null,
+      "OreSet.lean": null,
+      "Basic.lean": null
+    },
+    "RootsOfUnity": {
+      "Lemmas.lean": null,
+      "Basic.lean": null,
+      "Complex.lean": null,
+      "Minpoly.lean": null
+    },
+    "RingHom": {
+      "Finite.lean": null,
+      "Integral.lean": null,
+      "Surjective.lean": null,
+      "FiniteType.lean": null
+    },
+    "AdicCompletion": {
+      "Functoriality.lean": null,
+      "Basic.lean": null,
+      "Algebra.lean": null
+    },
+    "Regular": {
+      "IsSMulRegular.lean": null,
+      "RegularSequence.lean": null
+    },
+    "Unramified": {
+      "Derivations.lean": null,
+      "Basic.lean": null
+    },
+    "DedekindDomain": {
+      "Different.lean": null,
+      "FiniteAdeleRing.lean": null,
+      "SelmerGroup.lean": null,
+      "PID.lean": null,
+      "Basic.lean": null,
+      "Ideal.lean": null,
+      "AdicValuation.lean": null,
+      "Factorization.lean": null,
+      "Dvr.lean": null,
+      "IntegralClosure.lean": null,
+      "SInteger.lean": null
+    },
+    "Bialgebra": {
+      "Basic.lean": null,
+      "Equiv.lean": null,
+      "Hom.lean": null
+    },
+    "Valuation": {
+      "Integers.lean": null,
+      "PrimeMultiplicity.lean": null,
+      "RamificationGroup.lean": null,
+      "ValuationRing.lean": null,
+      "Integral.lean": null,
+      "ExtendToLocalization.lean": null,
+      "ValuationSubring.lean": null,
+      "Basic.lean": null,
+      "Quotient.lean": null,
+      "RankOne.lean": null
+    },
+    "Polynomial": {
+      "Pochhammer.lean": null,
+      "Nilpotent.lean": null,
+      "IntegralNormalization.lean": null,
+      "GaussLemma.lean": null,
+      "SeparableDegree.lean": null,
+      "Tower.lean": null,
+      "Dickson.lean": null,
+      "Selmer.lean": null,
+      "Basic.lean": null,
+      "Bernstein.lean": null,
+      "Quotient.lean": null,
+      "Content.lean": null,
+      "Vieta.lean": null,
+      "IrreducibleRing.lean": null,
+      "Opposites.lean": null,
+      "Chebyshev.lean": null,
+      "ScaleRoots.lean": null,
+      "RationalRoot.lean": null,
+      "Cyclotomic": {
+        "Expand.lean": null,
+        "Eval.lean": null,
+        "Basic.lean": null,
+        "Roots.lean": null
+      },
+      "Hermite": {
+        "Gaussian.lean": null,
+        "Basic.lean": null
+      },
+      "Eisenstein": {
+        "Basic.lean": null,
+        "IsIntegral.lean": null
+      }
+    },
+    "NonUnitalSubsemiring": {
+      "Basic.lean": null
+    },
+    "MvPowerSeries": {
+      "Inverse.lean": null,
+      "Trunc.lean": null,
+      "Basic.lean": null
+    },
+    "Localization": {
+      "NumDen.lean": null,
+      "Integral.lean": null,
+      "Module.lean": null,
+      "AsSubring.lean": null,
+      "AtPrime.lean": null,
+      "Integer.lean": null,
+      "InvSubmonoid.lean": null,
+      "Basic.lean": null,
+      "Cardinality.lean": null,
+      "Ideal.lean": null,
+      "NormTrace.lean": null,
+      "LocalizationLocalization.lean": null,
+      "Submodule.lean": null,
+      "BaseChange.lean": null,
+      "FractionRing.lean": null,
+      "Away": {
+        "AdjoinRoot.lean": null,
+        "Basic.lean": null
+      }
+    },
+    "HahnSeries": {
+      "Summable.lean": null,
+      "PowerSeries.lean": null,
+      "Addition.lean": null,
+      "Multiplication.lean": null,
+      "Basic.lean": null
+    }
+  },
+  "MeasureTheory": {
+    "SetAlgebra.lean": null,
+    "Tactic.lean": null,
+    "PiSystem.lean": null,
+    "SetSemiring.lean": null,
+    "Order": {
+      "Lattice.lean": null,
+      "Group": {
+        "Lattice.lean": null
+      }
+    },
+    "OuterMeasure": {
+      "Caratheodory.lean": null,
+      "OfFunction.lean": null,
+      "Basic.lean": null,
+      "Operations.lean": null,
+      "Defs.lean": null,
+      "AE.lean": null,
+      "Induced.lean": null
+    },
+    "MeasurableSpace": {
+      "Card.lean": null,
+      "CountablyGenerated.lean": null,
+      "Basic.lean": null,
+      "Defs.lean": null,
+      "Invariants.lean": null
+    },
+    "Category": {
+      "MeasCat.lean": null
+    },
+    "Group": {
+      "Convolution.lean": null,
+      "Integral.lean": null,
+      "AddCircle.lean": null,
+      "Prod.lean": null,
+      "Pointwise.lean": null,
+      "GeometryOfNumbers.lean": null,
+      "Arithmetic.lean": null,
+      "LIntegral.lean": null,
+      "MeasurableEquiv.lean": null,
+      "Action.lean": null,
+      "Measure.lean": null,
+      "FundamentalDomain.lean": null
+    },
+    "Constructions": {
+      "UnitInterval.lean": null,
+      "EventuallyMeasurable.lean": null,
+      "Pi.lean": null,
+      "HaarToSphere.lean": null,
+      "Polish.lean": null,
+      "Projective.lean": null,
+      "Cylinders.lean": null,
+      "Prod": {
+        "Integral.lean": null,
+        "Basic.lean": null
+      },
+      "BorelSpace": {
+        "ContinuousLinearMap.lean": null,
+        "Metric.lean": null,
+        "Metrizable.lean": null,
+        "Order.lean": null,
+        "Basic.lean": null,
+        "Complex.lean": null,
+        "Real.lean": null
+      }
+    },
+    "Function": {
+      "Jacobian.lean": null,
+      "AEEqFun.lean": null,
+      "SimpleFunc.lean": null,
+      "L1Space.lean": null,
+      "LpOrder.lean": null,
+      "UniformIntegrable.lean": null,
+      "ContinuousMapDense.lean": null,
+      "EssSup.lean": null,
+      "ConvergenceInMeasure.lean": null,
+      "L2Space.lean": null,
+      "AEMeasurableOrder.lean": null,
+      "LocallyIntegrable.lean": null,
+      "Floor.lean": null,
+      "SimpleFuncDenseLp.lean": null,
+      "LpSpace.lean": null,
+      "SimpleFuncDense.lean": null,
+      "Egorov.lean": null,
+      "AEEqOfIntegral.lean": null,
+      "AEMeasurableSequence.lean": null,
+      "ConditionalExpectation": {
+        "CondexpL1.lean": null,
+        "Indicator.lean": null,
+        "Basic.lean": null,
+        "Unique.lean": null,
+        "AEMeasurable.lean": null,
+        "CondexpL2.lean": null,
+        "Real.lean": null
+      },
+      "StronglyMeasurable": {
+        "Lp.lean": null,
+        "Inner.lean": null,
+        "Basic.lean": null
+      },
+      "SpecialFunctions": {
+        "RCLike.lean": null,
+        "Arctan.lean": null,
+        "Inner.lean": null,
+        "Basic.lean": null
+      },
+      "LpSpace": {
+        "DomAct": {
+          "Basic.lean": null
+        }
+      },
+      "AEEqFun": {
+        "DomAct.lean": null
+      },
+      "LpSeminorm": {
+        "Trim.lean": null,
+        "Basic.lean": null,
+        "ChebyshevMarkov.lean": null,
+        "CompareExp.lean": null,
+        "TriangleInequality.lean": null
+      }
+    },
+    "Measure": {
+      "Trim.lean": null,
+      "MutuallySingular.lean": null,
+      "Count.lean": null,
+      "Tilted.lean": null,
+      "DiracProba.lean": null,
+      "AEDisjoint.lean": null,
+      "Regular.lean": null,
+      "Doubling.lean": null,
+      "ProbabilityMeasure.lean": null,
+      "WithDensityFinite.lean": null,
+      "OpenPos.lean": null,
+      "MeasureSpace.lean": null,
+      "Portmanteau.lean": null,
+      "FiniteMeasure.lean": null,
+      "LogLikelihoodRatio.lean": null,
+      "FiniteMeasureProd.lean": null,
+      "Dirac.lean": null,
+      "Restrict.lean": null,
+      "VectorMeasure.lean": null,
+      "NullMeasurable.lean": null,
+      "AddContent.lean": null,
+      "Content.lean": null,
+      "Hausdorff.lean": null,
+      "WithDensity.lean": null,
+      "MeasureSpaceDef.lean": null,
+      "Complex.lean": null,
+      "AEMeasurable.lean": null,
+      "EverywherePos.lean": null,
+      "WithDensityVectorMeasure.lean": null,
+      "LevyProkhorovMetric.lean": null,
+      "GiryMonad.lean": null,
+      "Typeclasses.lean": null,
+      "HasOuterApproxClosed.lean": null,
+      "Stieltjes.lean": null,
+      "Sub.lean": null,
+      "Haar": {
+        "Basic.lean": null,
+        "Quotient.lean": null,
+        "Unique.lean": null,
+        "NormedSpace.lean": null,
+        "OfBasis.lean": null,
+        "Disintegration.lean": null,
+        "InnerProductSpace.lean": null
+      },
+      "Lebesgue": {
+        "Integral.lean": null,
+        "EqHaar.lean": null,
+        "Basic.lean": null,
+        "VolumeOfBalls.lean": null,
+        "Complex.lean": null
+      }
+    },
+    "Covering": {
+      "Besicovitch.lean": null,
+      "LiminfLimsup.lean": null,
+      "Vitali.lean": null,
+      "Differentiation.lean": null,
+      "OneDim.lean": null,
+      "BesicovitchVectorSpace.lean": null,
+      "VitaliFamily.lean": null,
+      "DensityTheorem.lean": null
+    },
+    "Integral": {
+      "Gamma.lean": null,
+      "IntegrableOn.lean": null,
+      "ExpDecay.lean": null,
+      "BoundedContinuousFunction.lean": null,
+      "Indicator.lean": null,
+      "Asymptotics.lean": null,
+      "LebesgueNormedSpace.lean": null,
+      "TorusIntegral.lean": null,
+      "CircleTransform.lean": null,
+      "Average.lean": null,
+      "DominatedConvergence.lean": null,
+      "Bochner.lean": null,
+      "RieszMarkovKakutani.lean": null,
+      "SetIntegral.lean": null,
+      "Pi.lean": null,
+      "IntervalAverage.lean": null,
+      "MeanInequalities.lean": null,
+      "FundThmCalculus.lean": null,
+      "IntegralEqImproper.lean": null,
+      "Marginal.lean": null,
+      "IntervalIntegral.lean": null,
+      "CircleIntegral.lean": null,
+      "Lebesgue.lean": null,
+      "Periodic.lean": null,
+      "Layercake.lean": null,
+      "SetToL1.lean": null,
+      "PeakFunction.lean": null,
+      "VitaliCaratheodory.lean": null,
+      "DivergenceTheorem.lean": null
+    },
+    "Decomposition": {
+      "Jordan.lean": null,
+      "SignedHahn.lean": null,
+      "RadonNikodym.lean": null,
+      "UnsignedHahn.lean": null,
+      "SignedLebesgue.lean": null,
+      "Lebesgue.lean": null
+    }
+  },
+  "Combinatorics": {
+    "Colex.lean": null,
+    "Configuration.lean": null,
+    "Pigeonhole.lean": null,
+    "Hindman.lean": null,
+    "HalesJewett.lean": null,
+    "Schnirelmann.lean": null,
+    "Enumerative": {
+      "Catalan.lean": null,
+      "DoubleCounting.lean": null,
+      "Composition.lean": null,
+      "Partition.lean": null
+    },
+    "Optimization": {
+      "ValuedCSP.lean": null
+    },
+    "Quiver": {
+      "Covering.lean": null,
+      "Arborescence.lean": null,
+      "Basic.lean": null,
+      "Path.lean": null,
+      "SingleObj.lean": null,
+      "Subquiver.lean": null,
+      "Symmetric.lean": null,
+      "Cast.lean": null,
+      "ConnectedComponent.lean": null,
+      "Push.lean": null
+    },
+    "SimpleGraph": {
+      "Finite.lean": null,
+      "Finsubgraph.lean": null,
+      "AdjMatrix.lean": null,
+      "Dart.lean": null,
+      "Metric.lean": null,
+      "Acyclic.lean": null,
+      "Maps.lean": null,
+      "Girth.lean": null,
+      "Matching.lean": null,
+      "Init.lean": null,
+      "Prod.lean": null,
+      "Hasse.lean": null,
+      "Density.lean": null,
+      "Basic.lean": null,
+      "IncMatrix.lean": null,
+      "Operations.lean": null,
+      "Trails.lean": null,
+      "Coloring.lean": null,
+      "StronglyRegular.lean": null,
+      "Hamiltonian.lean": null,
+      "Turan.lean": null,
+      "DegreeSum.lean": null,
+      "Partition.lean": null,
+      "Subgraph.lean": null,
+      "LapMatrix.lean": null,
+      "Clique.lean": null,
+      "ConcreteColorings.lean": null,
+      "Connectivity.lean": null,
+      "Connectivity": {
+        "Subgraph.lean": null
+      },
+      "Triangle": {
+        "Tripartite.lean": null,
+        "Basic.lean": null,
+        "Counting.lean": null,
+        "Removal.lean": null
+      },
+      "Regularity": {
+        "Energy.lean": null,
+        "Uniform.lean": null,
+        "Equitabilise.lean": null,
+        "Bound.lean": null,
+        "Chunk.lean": null,
+        "Lemma.lean": null,
+        "Increment.lean": null
+      },
+      "Ends": {
+        "Defs.lean": null,
+        "Properties.lean": null
+      }
+    },
+    "Additive": {
+      "Energy.lean": null,
+      "RuzsaCovering.lean": null,
+      "ETransform.lean": null,
+      "Dissociation.lean": null,
+      "PluenneckeRuzsa.lean": null,
+      "FreimanHom.lean": null,
+      "AP": {
+        "Three": {
+          "Behrend.lean": null,
+          "Defs.lean": null
+        }
+      },
+      "Corner": {
+        "Defs.lean": null,
+        "Roth.lean": null
+      }
+    },
+    "Young": {
+      "SemistandardTableau.lean": null,
+      "YoungDiagram.lean": null
+    },
+    "SetFamily": {
+      "LYM.lean": null,
+      "Shadow.lean": null,
+      "Intersecting.lean": null,
+      "FourFunctions.lean": null,
+      "AhlswedeZhang.lean": null,
+      "Kleitman.lean": null,
+      "CauchyDavenport.lean": null,
+      "HarrisKleitman.lean": null,
+      "Shatter.lean": null,
+      "Compression": {
+        "UV.lean": null,
+        "Down.lean": null
+      }
+    },
+    "Hall": {
+      "Finite.lean": null,
+      "Basic.lean": null
+    },
+    "Derangements": {
+      "Finite.lean": null,
+      "Exponential.lean": null,
+      "Basic.lean": null
+    }
+  },
+  "LinearAlgebra": {
+    "QuotientPi.lean": null,
+    "Ray.lean": null,
+    "PiTensorProduct.lean": null,
+    "CrossProduct.lean": null,
+    "SesquilinearForm.lean": null,
+    "Reflection.lean": null,
+    "AnnihilatingPolynomial.lean": null,
+    "GeneralLinearGroup.lean": null,
+    "BilinearMap.lean": null,
+    "FiniteSpan.lean": null,
+    "PerfectPairing.lean": null,
+    "SymplecticGroup.lean": null,
+    "Prod.lean": null,
+    "PID.lean": null,
+    "Pi.lean": null,
+    "Orientation.lean": null,
+    "Isomorphisms.lean": null,
+    "Basic.lean": null,
+    "FinsuppVectorSpace.lean": null,
+    "JordanChevalley.lean": null,
+    "Quotient.lean": null,
+    "Contraction.lean": null,
+    "TensorPower.lean": null,
+    "Span.lean": null,
+    "Trace.lean": null,
+    "Finsupp.lean": null,
+    "SModEq.lean": null,
+    "Lagrange.lean": null,
+    "Vandermonde.lean": null,
+    "StdBasis.lean": null,
+    "InvariantBasisNumber.lean": null,
+    "Dual.lean": null,
+    "UnitaryGroup.lean": null,
+    "LinearPMap.lean": null,
+    "Projection.lean": null,
+    "Determinant.lean": null,
+    "Basis.lean": null,
+    "Semisimple.lean": null,
+    "DFinsupp.lean": null,
+    "LinearIndependent.lean": null,
+    "Coevaluation.lean": null,
+    "FiniteDimensional.lean": null,
+    "FreeAlgebra.lean": null,
+    "BilinearForm": {
+      "TensorProduct.lean": null,
+      "DualLattice.lean": null,
+      "Basic.lean": null,
+      "Orthogonal.lean": null,
+      "Properties.lean": null,
+      "Hom.lean": null
+    },
+    "ExteriorAlgebra": {
+      "Basic.lean": null,
+      "Grading.lean": null,
+      "OfAlternating.lean": null
+    },
+    "Projectivization": {
+      "Independence.lean": null,
+      "Basic.lean": null,
+      "Subspace.lean": null
+    },
+    "DirectSum": {
+      "TensorProduct.lean": null,
+      "Finsupp.lean": null
+    },
+    "Multilinear": {
+      "TensorProduct.lean": null,
+      "Basic.lean": null,
+      "Basis.lean": null,
+      "FiniteDimensional.lean": null
+    },
+    "Eigenspace": {
+      "Triangularizable.lean": null,
+      "Basic.lean": null,
+      "Semisimple.lean": null,
+      "Zero.lean": null,
+      "Minpoly.lean": null
+    },
+    "TensorProduct": {
+      "Opposite.lean": null,
+      "Matrix.lean": null,
+      "Vanishing.lean": null,
+      "Prod.lean": null,
+      "Tower.lean": null,
+      "DirectLimit.lean": null,
+      "Basic.lean": null,
+      "RightExactness.lean": null,
+      "Basis.lean": null,
+      "Finiteness.lean": null,
+      "Graded": {
+        "External.lean": null,
+        "Internal.lean": null
+      }
+    },
+    "Charpoly": {
+      "Basic.lean": null,
+      "ToMatrix.lean": null
+    },
+    "AffineSpace": {
+      "Midpoint.lean": null,
+      "Matrix.lean": null,
+      "AffineSubspace.lean": null,
+      "Combination.lean": null,
+      "Independent.lean": null,
+      "AffineMap.lean": null,
+      "Pointwise.lean": null,
+      "Restrict.lean": null,
+      "Basic.lean": null,
+      "Slope.lean": null,
+      "Ordered.lean": null,
+      "MidpointZero.lean": null,
+      "Basis.lean": null,
+      "ContinuousAffineEquiv.lean": null,
+      "FiniteDimensional.lean": null,
+      "AffineEquiv.lean": null
+    },
+    "RootSystem": {
+      "Basic.lean": null,
+      "Defs.lean": null
+    },
+    "QuadraticForm": {
+      "QuadraticModuleCat.lean": null,
+      "TensorProduct.lean": null,
+      "Isometry.lean": null,
+      "Prod.lean": null,
+      "Basic.lean": null,
+      "Complex.lean": null,
+      "Dual.lean": null,
+      "IsometryEquiv.lean": null,
+      "Real.lean": null,
+      "TensorProduct": {
+        "Isometries.lean": null
+      },
+      "QuadraticModuleCat": {
+        "Monoidal.lean": null,
+        "Symmetric.lean": null
+      }
+    },
+    "CliffordAlgebra": {
+      "Star.lean": null,
+      "Prod.lean": null,
+      "Basic.lean": null,
+      "Grading.lean": null,
+      "Contraction.lean": null,
+      "Even.lean": null,
+      "Fold.lean": null,
+      "CategoryTheory.lean": null,
+      "BaseChange.lean": null,
+      "Conjugation.lean": null,
+      "Inversion.lean": null,
+      "EvenEquiv.lean": null,
+      "Equivs.lean": null
+    },
+    "Alternating": {
+      "DomCoprod.lean": null,
+      "Basic.lean": null
+    },
+    "FreeModule": {
+      "IdealQuotient.lean": null,
+      "StrongRankCondition.lean": null,
+      "Norm.lean": null,
+      "PID.lean": null,
+      "Basic.lean": null,
+      "Determinant.lean": null,
+      "Finite": {
+        "Matrix.lean": null,
+        "Basic.lean": null
+      }
+    },
+    "TensorAlgebra": {
+      "ToTensorPower.lean": null,
+      "Basic.lean": null,
+      "Grading.lean": null,
+      "Basis.lean": null
+    },
+    "Matrix": {
+      "NonsingularInverse.lean": null,
+      "IsDiag.lean": null,
+      "Circulant.lean": null,
+      "LDL.lean": null,
+      "Diagonal.lean": null,
+      "PosDef.lean": null,
+      "BilinearForm.lean": null,
+      "Nondegenerate.lean": null,
+      "SesquilinearForm.lean": null,
+      "GeneralLinearGroup.lean": null,
+      "Permutation.lean": null,
+      "ZPow.lean": null,
+      "Reindex.lean": null,
+      "SchurComplement.lean": null,
+      "ToLin.lean": null,
+      "Trace.lean": null,
+      "Block.lean": null,
+      "MvPolynomial.lean": null,
+      "Transvection.lean": null,
+      "DotProduct.lean": null,
+      "Orthogonal.lean": null,
+      "ProjectiveSpecialLinearGroup.lean": null,
+      "Adjugate.lean": null,
+      "InvariantBasisNumber.lean": null,
+      "Dual.lean": null,
+      "Polynomial.lean": null,
+      "SpecialLinearGroup.lean": null,
+      "Symmetric.lean": null,
+      "Basis.lean": null,
+      "Hermitian.lean": null,
+      "Gershgorin.lean": null,
+      "Spectrum.lean": null,
+      "FiniteDimensional.lean": null,
+      "AbsoluteValue.lean": null,
+      "ToLinearEquiv.lean": null,
+      "Charpoly": {
+        "FiniteField.lean": null,
+        "Basic.lean": null,
+        "Univ.lean": null,
+        "LinearMap.lean": null,
+        "Coeff.lean": null,
+        "Eigs.lean": null,
+        "Minpoly.lean": null
+      },
+      "Determinant": {
+        "Basic.lean": null,
+        "Misc.lean": null
+      }
+    },
+    "Basis": {
+      "Bilinear.lean": null,
+      "Flag.lean": null,
+      "VectorSpace.lean": null
+    },
+    "Dimension": {
+      "Finite.lean": null,
+      "Finrank.lean": null,
+      "StrongRankCondition.lean": null,
+      "Basic.lean": null,
+      "Constructions.lean": null,
+      "DivisionRing.lean": null,
+      "Localization.lean": null,
+      "LinearMap.lean": null,
+      "RankNullity.lean": null,
+      "Free.lean": null,
+      "FreeAndStrongRankCondition.lean": null
+    }
+  },
+  "Geometry": {
+    "RingedSpace": {
+      "Stalks.lean": null,
+      "SheafedSpace.lean": null,
+      "OpenImmersion.lean": null,
+      "LocallyRingedSpace.lean": null,
+      "Basic.lean": null,
+      "PresheafedSpace.lean": null,
+      "PresheafedSpace": {
+        "HasColimits.lean": null,
+        "Gluing.lean": null
+      },
+      "LocallyRingedSpace": {
+        "HasColimits.lean": null
+      }
+    },
+    "Euclidean": {
+      "Triangle.lean": null,
+      "Circumcenter.lean": null,
+      "MongePoint.lean": null,
+      "Basic.lean": null,
+      "PerpBisector.lean": null,
+      "Inversion": {
+        "ImageHyperplane.lean": null,
+        "Calculus.lean": null,
+        "Basic.lean": null
+      },
+      "Angle": {
+        "Sphere.lean": null,
+        "Oriented": {
+          "Basic.lean": null,
+          "RightAngle.lean": null,
+          "Affine.lean": null,
+          "Rotation.lean": null
+        },
+        "Unoriented": {
+          "Basic.lean": null,
+          "RightAngle.lean": null,
+          "Conformal.lean": null,
+          "Affine.lean": null
+        }
+      },
+      "Sphere": {
+        "SecondInter.lean": null,
+        "Basic.lean": null,
+        "Power.lean": null,
+        "Ptolemy.lean": null
+      }
+    },
+    "Manifold": {
+      "ContMDiffMFDeriv.lean": null,
+      "InteriorBoundary.lean": null,
+      "ChartedSpace.lean": null,
+      "ContMDiffMap.lean": null,
+      "IntegralCurve.lean": null,
+      "BumpFunction.lean": null,
+      "SmoothManifoldWithCorners.lean": null,
+      "ConformalGroupoid.lean": null,
+      "Metrizable.lean": null,
+      "WhitneyEmbedding.lean": null,
+      "DerivationBundle.lean": null,
+      "Diffeomorph.lean": null,
+      "LocalDiffeomorph.lean": null,
+      "Complex.lean": null,
+      "PartitionOfUnity.lean": null,
+      "LocalInvariantProperties.lean": null,
+      "MFDeriv": {
+        "UniqueDifferential.lean": null,
+        "Atlas.lean": null,
+        "Basic.lean": null,
+        "Defs.lean": null,
+        "SpecificFunctions.lean": null,
+        "FDeriv.lean": null
+      },
+      "VectorBundle": {
+        "Basic.lean": null,
+        "Tangent.lean": null,
+        "Pullback.lean": null,
+        "SmoothSection.lean": null,
+        "Hom.lean": null,
+        "FiberwiseLinear.lean": null
+      },
+      "ContMDiff": {
+        "Product.lean": null,
+        "Atlas.lean": null,
+        "Basic.lean": null,
+        "Defs.lean": null,
+        "NormedSpace.lean": null
+      },
+      "Sheaf": {
+        "LocallyRingedSpace.lean": null,
+        "Basic.lean": null,
+        "Smooth.lean": null
+      },
+      "Instances": {
+        "Sphere.lean": null,
+        "UnitsOfNormedAlgebra.lean": null,
+        "Real.lean": null
+      },
+      "Algebra": {
+        "Monoid.lean": null,
+        "SmoothFunctions.lean": null,
+        "LeftInvariantDerivation.lean": null,
+        "LieGroup.lean": null,
+        "Structures.lean": null
+      }
+    }
+  },
+  "InformationTheory": {
+    "Hamming.lean": null
+  },
+  "SetTheory": {
+    "Lists.lean": null,
+    "ZFC": {
+      "Basic.lean": null,
+      "Ordinal.lean": null
+    },
+    "Surreal": {
+      "Dyadic.lean": null,
+      "Basic.lean": null
+    },
+    "Ordinal": {
+      "FixedPointApproximants.lean": null,
+      "NaturalOps.lean": null,
+      "Topology.lean": null,
+      "Exponential.lean": null,
+      "Arithmetic.lean": null,
+      "Basic.lean": null,
+      "Notation.lean": null,
+      "CantorNormalForm.lean": null,
+      "Principal.lean": null,
+      "FixedPoint.lean": null
+    },
+    "Cardinal": {
+      "Finite.lean": null,
+      "SchroederBernstein.lean": null,
+      "Subfield.lean": null,
+      "Continuum.lean": null,
+      "UnivLE.lean": null,
+      "Basic.lean": null,
+      "ENat.lean": null,
+      "CountableCover.lean": null,
+      "Cofinality.lean": null,
+      "ToNat.lean": null,
+      "Ordinal.lean": null,
+      "Divisibility.lean": null,
+      "PartENat.lean": null
+    },
+    "Game": {
+      "Short.lean": null,
+      "Impartial.lean": null,
+      "Domineering.lean": null,
+      "Basic.lean": null,
+      "Nim.lean": null,
+      "Ordinal.lean": null,
+      "State.lean": null,
+      "PGame.lean": null,
+      "Birthday.lean": null
+    }
+  },
+  "Data": {
+    "Subtype.lean": null,
+    "Quot.lean": null,
+    "Part.lean": null,
+    "Opposite.lean": null,
+    "Sign.lean": null,
+    "Rel.lean": null,
+    "HashMap.lean": null,
+    "Erased.lean": null,
+    "PFun.lean": null,
+    "TwoPointing.lean": null,
+    "BitVec.lean": null,
+    "UnionFind.lean": null,
+    "ULift.lean": null,
+    "Finmap.lean": null,
+    "FinEnum.lean": null,
+    "Holor.lean": null,
+    "SProd.lean": null,
+    "ByteArray.lean": null,
+    "Semiquot.lean": null,
+    "BinaryHeap.lean": null,
+    "TypeVec.lean": null,
+    "Bracket.lean": null,
+    "Vector3.lean": null,
+    "Char.lean": null,
+    "PEquiv.lean": null,
+    "UInt.lean": null,
+    "Bundle.lean": null,
+    "TypeMax.lean": null,
+    "LazyList": {
+      "Basic.lean": null
+    },
+    "Prod": {
+      "PProd.lean": null,
+      "Lex.lean": null,
+      "Basic.lean": null,
+      "TProd.lean": null
+    },
+    "Ordmap": {
+      "Ordset.lean": null,
+      "Ordnode.lean": null
+    },
+    "Sym": {
+      "Card.lean": null,
+      "Basic.lean": null,
+      "Sym2.lean": null,
+      "Sym2": {
+        "Init.lean": null
+      }
+    },
+    "Tree": {
+      "Basic.lean": null,
+      "Get.lean": null
+    },
+    "QPF": {
+      "Multivariate": {
+        "Basic.lean": null,
+        "Constructions": {
+          "Quot.lean": null,
+          "Comp.lean": null,
+          "Sigma.lean": null,
+          "Const.lean": null,
+          "Prj.lean": null,
+          "Cofix.lean": null,
+          "Fix.lean": null
+        }
+      },
+      "Univariate": {
+        "Basic.lean": null
+      }
+    },
+    "DList": {
+      "Instances.lean": null,
+      "Basic.lean": null,
+      "Defs.lean": null
+    },
+    "DFinsupp": {
+      "Interval.lean": null,
+      "Lex.lean": null,
+      "Order.lean": null,
+      "Basic.lean": null,
+      "Multiset.lean": null,
+      "WellFounded.lean": null,
+      "Notation.lean": null,
+      "NeLocus.lean": null,
+      "Encodable.lean": null
+    },
+    "Fin": {
+      "SuccPred.lean": null,
+      "VecNotation.lean": null,
+      "FlagRange.lean": null,
+      "Basic.lean": null,
+      "Fin2.lean": null,
+      "Tuple": {
+        "BubbleSortInduction.lean": null,
+        "Curry.lean": null,
+        "Reflection.lean": null,
+        "Finset.lean": null,
+        "Basic.lean": null,
+        "Sort.lean": null,
+        "Monotone.lean": null,
+        "NatAntidiagonal.lean": null
+      }
+    },
+    "Finsupp": {
+      "Fintype.lean": null,
+      "Fin.lean": null,
+      "Indicator.lean": null,
+      "Interval.lean": null,
+      "Lex.lean": null,
+      "Antidiagonal.lean": null,
+      "Pointwise.lean": null,
+      "Order.lean": null,
+      "Basic.lean": null,
+      "Multiset.lean": null,
+      "PWO.lean": null,
+      "WellFounded.lean": null,
+      "Notation.lean": null,
+      "Defs.lean": null,
+      "AList.lean": null,
+      "BigOperators.lean": null,
+      "ToDFinsupp.lean": null,
+      "NeLocus.lean": null,
+      "Encodable.lean": null
+    },
+    "Analysis": {
+      "Topology.lean": null,
+      "Filter.lean": null
+    },
+    "MLList": {
+      "IO.lean": null,
+      "Split.lean": null,
+      "BestFirst.lean": null,
+      "Dedup.lean": null,
+      "DepthFirst.lean": null
+    },
+    "Rbtree": {
+      "MinMax.lean": null,
+      "Init.lean": null,
+      "DefaultLt.lean": null,
+      "Insert.lean": null,
+      "Basic.lean": null,
+      "Main.lean": null,
+      "Find.lean": null
+    },
+    "PFunctor": {
+      "Multivariate": {
+        "Basic.lean": null,
+        "W.lean": null,
+        "M.lean": null
+      },
+      "Univariate": {
+        "Basic.lean": null,
+        "M.lean": null
+      }
+    },
+    "Array": {
+      "Lemmas.lean": null,
+      "Basic.lean": null,
+      "Defs.lean": null,
+      "ExtractLemmas.lean": null
+    },
+    "ZMod": {
+      "Module.lean": null,
+      "IntUnitsPower.lean": null,
+      "Basic.lean": null,
+      "Quotient.lean": null,
+      "Defs.lean": null,
+      "Coprime.lean": null,
+      "Parity.lean": null,
+      "Algebra.lean": null,
+      "Factorial.lean": null,
+      "Units.lean": null
+    },
+    "Finset": {
+      "Sum.lean": null,
+      "Fin.lean": null,
+      "Card.lean": null,
+      "NoncommProd.lean": null,
+      "Option.lean": null,
+      "Pairwise.lean": null,
+      "Attr.lean": null,
+      "PImage.lean": null,
+      "Sups.lean": null,
+      "Piecewise.lean": null,
+      "Interval.lean": null,
+      "NAry.lean": null,
+      "Antidiagonal.lean": null,
+      "Sigma.lean": null,
+      "Update.lean": null,
+      "PiAntidiagonal.lean": null,
+      "Prod.lean": null,
+      "Pointwise.lean": null,
+      "Union.lean": null,
+      "Order.lean": null,
+      "Pi.lean": null,
+      "Image.lean": null,
+      "Basic.lean": null,
+      "Sort.lean": null,
+      "Powerset.lean": null,
+      "Finsupp.lean": null,
+      "Grade.lean": null,
+      "Fold.lean": null,
+      "MulAntidiagonal.lean": null,
+      "Functor.lean": null,
+      "Lattice.lean": null,
+      "PiInduction.lean": null,
+      "Slice.lean": null,
+      "NatAntidiagonal.lean": null,
+      "Preimage.lean": null,
+      "Sym.lean": null,
+      "NatDivisors.lean": null,
+      "Pointwise": {
+        "Interval.lean": null
+      }
+    },
+    "Fintype": {
+      "Sum.lean": null,
+      "Fin.lean": null,
+      "Card.lean": null,
+      "Option.lean": null,
+      "List.lean": null,
+      "Sigma.lean": null,
+      "Prod.lean": null,
+      "Perm.lean": null,
+      "Order.lean": null,
+      "Pi.lean": null,
+      "Basic.lean": null,
+      "Sort.lean": null,
+      "Quotient.lean": null,
+      "Vector.lean": null,
+      "Powerset.lean": null,
+      "CardEmbedding.lean": null,
+      "BigOperators.lean": null,
+      "Parity.lean": null,
+      "Array.lean": null,
+      "Lattice.lean": null,
+      "Units.lean": null
+    },
+    "Complex": {
+      "ExponentialBounds.lean": null,
+      "Module.lean": null,
+      "Exponential.lean": null,
+      "Order.lean": null,
+      "Orientation.lean": null,
+      "Basic.lean": null,
+      "Cardinality.lean": null,
+      "BigOperators.lean": null,
+      "Determinant.lean": null,
+      "Abs.lean": null
+    },
+    "Real": {
+      "Sqrt.lean": null,
+      "Sign.lean": null,
+      "ENatENNReal.lean": null,
+      "Pointwise.lean": null,
+      "ConjExponents.lean": null,
+      "Archimedean.lean": null,
+      "GoldenRatio.lean": null,
+      "Basic.lean": null,
+      "Cardinality.lean": null,
+      "EReal.lean": null,
+      "Hyperreal.lean": null,
+      "Irrational.lean": null,
+      "NNReal.lean": null,
+      "Pi": {
+        "Wallis.lean": null,
+        "Leibniz.lean": null,
+        "Bounds.lean": null
+      }
+    },
+    "Equiv": {
+      "Functor.lean": null
+    },
+    "Seq": {
+      "Computation.lean": null,
+      "Seq.lean": null,
+      "WSeq.lean": null,
+      "Parallel.lean": null
+    },
+    "Finite": {
+      "Card.lean": null,
+      "Basic.lean": null,
+      "Defs.lean": null,
+      "Set.lean": null
+    },
+    "NNRat": {
+      "Lemmas.lean": null,
+      "Defs.lean": null,
+      "BigOperators.lean": null
+    },
+    "Nat": {
+      "ModEq.lean": null,
+      "Nth.lean": null,
+      "Bitwise.lean": null,
+      "Count.lean": null,
+      "PrimeFin.lean": null,
+      "Dist.lean": null,
+      "SuccPred.lean": null,
+      "EvenOddRec.lean": null,
+      "Factors.lean": null,
+      "Multiplicity.lean": null,
+      "MaxPowDiv.lean": null,
+      "Digits.lean": null,
+      "Size.lean": null,
+      "Hyperoperation.lean": null,
+      "Defs.lean": null,
+      "Set.lean": null,
+      "PrimeNormNum.lean": null,
+      "SqrtNormNum.lean": null,
+      "ChineseRemainder.lean": null,
+      "Squarefree.lean": null,
+      "WithBot.lean": null,
+      "Bits.lean": null,
+      "Periodic.lean": null,
+      "Prime.lean": null,
+      "PartENat.lean": null,
+      "Totient.lean": null,
+      "PSub.lean": null,
+      "Pairing.lean": null,
+      "Lattice.lean": null,
+      "Log.lean": null,
+      "Upto.lean": null,
+      "Order": {
+        "Lemmas.lean": null
+      },
+      "Choose": {
+        "Sum.lean": null,
+        "Dvd.lean": null,
+        "Basic.lean": null,
+        "Factorization.lean": null,
+        "Vandermonde.lean": null,
+        "Central.lean": null,
+        "Multinomial.lean": null,
+        "Cast.lean": null,
+        "Bounds.lean": null
+      },
+      "Cast": {
+        "SetInterval.lean": null,
+        "WithTop.lean": null,
+        "Synonym.lean": null,
+        "Prod.lean": null,
+        "Order.lean": null,
+        "Commute.lean": null,
+        "Basic.lean": null,
+        "Defs.lean": null,
+        "Field.lean": null,
+        "NeZero.lean": null
+      },
+      "Factorization": {
+        "PrimePow.lean": null,
+        "Root.lean": null,
+        "Basic.lean": null
+      },
+      "Factorial": {
+        "Basic.lean": null,
+        "SuperFactorial.lean": null,
+        "BigOperators.lean": null,
+        "DoubleFactorial.lean": null,
+        "Cast.lean": null
+      },
+      "GCD": {
+        "Basic.lean": null,
+        "BigOperators.lean": null
+      },
+      "Fib": {
+        "Basic.lean": null,
+        "Zeckendorf.lean": null
+      }
+    },
+    "Stream": {
+      "Init.lean": null,
+      "Defs.lean": null
+    },
+    "FP": {
+      "Basic.lean": null
+    },
+    "Setoid": {
+      "Basic.lean": null,
+      "Partition.lean": null
+    },
+    "ENat": {
+      "Basic.lean": null,
+      "Lattice.lean": null
+    },
+    "Rat": {
+      "Sqrt.lean": null,
+      "Lemmas.lean": null,
+      "Star.lean": null,
+      "Init.lean": null,
+      "Denumerable.lean": null,
+      "Defs.lean": null,
+      "Floor.lean": null,
+      "BigOperators.lean": null,
+      "Encodable.lean": null,
+      "Cast": {
+        "Lemmas.lean": null,
+        "Order.lean": null,
+        "Defs.lean": null,
+        "CharZero.lean": null
+      }
+    },
+    "Num": {
+      "Bitwise.lean": null,
+      "Lemmas.lean": null,
+      "Basic.lean": null,
+      "Prime.lean": null
+    },
+    "Option": {
+      "NAry.lean": null,
+      "Basic.lean": null,
+      "Defs.lean": null
+    },
+    "FunLike": {
+      "Fintype.lean": null,
+      "Basic.lean": null,
+      "Embedding.lean": null,
+      "Equiv.lean": null
+    },
+    "Sigma": {
+      "Interval.lean": null,
+      "Lex.lean": null,
+      "Order.lean": null,
+      "Basic.lean": null
+    },
+    "Pi": {
+      "Interval.lean": null
+    },
+    "Int": {
+      "ModEq.lean": null,
+      "Bitwise.lean": null,
+      "GCD.lean": null,
+      "SuccPred.lean": null,
+      "Sqrt.lean": null,
+      "CardIntervalMod.lean": null,
+      "Lemmas.lean": null,
+      "Star.lean": null,
+      "Interval.lean": null,
+      "NatPrime.lean": null,
+      "LeastGreatest.lean": null,
+      "ConditionallyCompleteOrder.lean": null,
+      "Defs.lean": null,
+      "CharZero.lean": null,
+      "Range.lean": null,
+      "Log.lean": null,
+      "Associated.lean": null,
+      "AbsoluteValue.lean": null,
+      "Order": {
+        "Lemmas.lean": null,
+        "Units.lean": null
+      },
+      "Cast": {
+        "Lemmas.lean": null,
+        "Prod.lean": null,
+        "Basic.lean": null,
+        "Defs.lean": null,
+        "Field.lean": null
+      }
+    },
+    "Matroid": {
+      "Init.lean": null,
+      "Restrict.lean": null,
+      "Basic.lean": null,
+      "Constructions.lean": null,
+      "IndepAxioms.lean": null,
+      "Dual.lean": null
+    },
+    "Sum": {
+      "Interval.lean": null,
+      "Order.lean": null,
+      "Basic.lean": null,
+      "Lattice.lean": null
+    },
+    "List": {
+      "Nodup.lean": null,
+      "ReduceOption.lean": null,
+      "Zip.lean": null,
+      "Count.lean": null,
+      "Chain.lean": null,
+      "Iterate.lean": null,
+      "Sections.lean": null,
+      "Lemmas.lean": null,
+      "Pairwise.lean": null,
+      "MinMax.lean": null,
+      "Lex.lean": null,
+      "TFAE.lean": null,
+      "Permutation.lean": null,
+      "Sigma.lean": null,
+      "Dedup.lean": null,
+      "FinRange.lean": null,
+      "Forall2.lean": null,
+      "NodupEquivFin.lean": null,
+      "Perm.lean": null,
+      "Indexes.lean": null,
+      "Join.lean": null,
+      "Duplicate.lean": null,
+      "Basic.lean": null,
+      "Sort.lean": null,
+      "DropRight.lean": null,
+      "Defs.lean": null,
+      "GetD.lean": null,
+      "Infix.lean": null,
+      "ToFinsupp.lean": null,
+      "AList.lean": null,
+      "Destutter.lean": null,
+      "Prime.lean": null,
+      "Range.lean": null,
+      "OfFn.lean": null,
+      "Palindrome.lean": null,
+      "Enum.lean": null,
+      "InsertNth.lean": null,
+      "Lattice.lean": null,
+      "ProdSigma.lean": null,
+      "NatAntidiagonal.lean": null,
+      "Sublists.lean": null,
+      "Cycle.lean": null,
+      "Intervals.lean": null,
+      "Sym.lean": null,
+      "Rotate.lean": null,
+      "EditDistance": {
+        "Estimator.lean": null,
+        "Defs.lean": null,
+        "Bounds.lean": null
+      }
+    },
+    "Bool": {
+      "Count.lean": null,
+      "AllAny.lean": null,
+      "Basic.lean": null,
+      "Set.lean": null
+    },
+    "ENNReal": {
+      "Basic.lean": null,
+      "Operations.lean": null,
+      "Inv.lean": null,
+      "Real.lean": null
+    },
+    "SetLike": {
+      "Fintype.lean": null,
+      "Basic.lean": null
+    },
+    "String": {
+      "Lemmas.lean": null,
+      "Basic.lean": null,
+      "Defs.lean": null
+    },
+    "Set": {
+      "Finite.lean": null,
+      "Equitable.lean": null,
+      "Enumerate.lean": null,
+      "Card.lean": null,
+      "Opposite.lean": null,
+      "Subset.lean": null,
+      "List.lean": null,
+      "Sups.lean": null,
+      "BoolIndicator.lean": null,
+      "NAry.lean": null,
+      "Accumulate.lean": null,
+      "Sigma.lean": null,
+      "Prod.lean": null,
+      "UnionLift.lean": null,
+      "Image.lean": null,
+      "Basic.lean": null,
+      "Constructions.lean": null,
+      "MemPartition.lean": null,
+      "Defs.lean": null,
+      "Semiring.lean": null,
+      "Function.lean": null,
+      "MulAntidiagonal.lean": null,
+      "Functor.lean": null,
+      "Subsingleton.lean": null,
+      "Lattice.lean": null,
+      "Countable.lean": null,
+      "Pairwise": {
+        "Basic.lean": null,
+        "Lattice.lean": null
+      },
+      "Pointwise": {
+        "Finite.lean": null,
+        "SMul.lean": null,
+        "Iterate.lean": null,
+        "Support.lean": null,
+        "Interval.lean": null,
+        "ListOfFn.lean": null,
+        "Basic.lean": null,
+        "BigOperators.lean": null
+      }
+    },
+    "PNat": {
+      "Xgcd.lean": null,
+      "Interval.lean": null,
+      "Factors.lean": null,
+      "Basic.lean": null,
+      "Defs.lean": null,
+      "Prime.lean": null,
+      "Find.lean": null
+    },
+    "Multiset": {
+      "Nodup.lean": null,
+      "Sum.lean": null,
+      "Fintype.lean": null,
+      "Sections.lean": null,
+      "Bind.lean": null,
+      "Interval.lean": null,
+      "Antidiagonal.lean": null,
+      "Dedup.lean": null,
+      "Pi.lean": null,
+      "Basic.lean": null,
+      "Sort.lean": null,
+      "FinsetOps.lean": null,
+      "Powerset.lean": null,
+      "Fold.lean": null,
+      "Functor.lean": null,
+      "Range.lean": null,
+      "Lattice.lean": null,
+      "NatAntidiagonal.lean": null,
+      "Sym.lean": null
+    },
+    "Vector": {
+      "Zip.lean": null,
+      "Snoc.lean": null,
+      "Basic.lean": null,
+      "Defs.lean": null,
+      "Mem.lean": null,
+      "MapLemmas.lean": null
+    },
+    "Rbmap": {
+      "Default.lean": null,
+      "Basic.lean": null
+    },
+    "Matrix": {
+      "Kronecker.lean": null,
+      "Auto.lean": null,
+      "RowCol.lean": null,
+      "ColumnRowPartitioned.lean": null,
+      "Hadamard.lean": null,
+      "Reflection.lean": null,
+      "Rank.lean": null,
+      "Invertible.lean": null,
+      "CharP.lean": null,
+      "Basic.lean": null,
+      "DMatrix.lean": null,
+      "Notation.lean": null,
+      "Block.lean": null,
+      "Basis.lean": null,
+      "PEquiv.lean": null,
+      "DualNumber.lean": null
+    },
+    "PSigma": {
+      "Order.lean": null
+    },
+    "Countable": {
+      "Basic.lean": null,
+      "Defs.lean": null,
+      "Small.lean": null
+    },
+    "Buffer": {
+      "Basic.lean": null
+    },
+    "W": {
+      "Basic.lean": null,
+      "Constructions.lean": null,
+      "Cardinal.lean": null
+    }
+  },
+  "Control": {
+    "Applicative.lean": null,
+    "LawfulFix.lean": null,
+    "Bifunctor.lean": null,
+    "Basic.lean": null,
+    "ULift.lean": null,
+    "ULiftable.lean": null,
+    "Fold.lean": null,
+    "Functor.lean": null,
+    "Fix.lean": null,
+    "EquivFunctor.lean": null,
+    "Random.lean": null,
+    "Functor": {
+      "Multivariate.lean": null
+    },
+    "Traversable": {
+      "Instances.lean": null,
+      "Lemmas.lean": null,
+      "Basic.lean": null,
+      "Equiv.lean": null
+    },
+    "Bitraversable": {
+      "Instances.lean": null,
+      "Lemmas.lean": null,
+      "Basic.lean": null
+    },
+    "Monad": {
+      "Writer.lean": null,
+      "Basic.lean": null,
+      "Cont.lean": null
+    },
+    "EquivFunctor": {
+      "Instances.lean": null
+    }
+  },
+  "Computability": {
+    "TMComputable.lean": null,
+    "Primrec.lean": null,
+    "ContextFreeGrammar.lean": null,
+    "NFA.lean": null,
+    "Partrec.lean": null,
+    "Ackermann.lean": null,
+    "RegularExpressions.lean": null,
+    "Halting.lean": null,
+    "DFA.lean": null,
+    "EpsilonNFA.lean": null,
+    "TMToPartrec.lean": null,
+    "Encoding.lean": null,
+    "Language.lean": null,
+    "PartrecCode.lean": null,
+    "Reduce.lean": null,
+    "TuringMachine.lean": null,
+    "AkraBazzi": {
+      "GrowsPolynomially.lean": null,
+      "AkraBazzi.lean": null
+    }
+  },
+  "Algebra": {
+    "ModEq.lean": null,
+    "QuaternionBasis.lean": null,
+    "LinearRecurrence.lean": null,
+    "GradedMulAction.lean": null,
+    "GradedMonoid.lean": null,
+    "SMulWithZero.lean": null,
+    "QuadraticDiscriminant.lean": null,
+    "AddTorsor.lean": null,
+    "AlgebraicCard.lean": null,
+    "IsPrimePow.lean": null,
+    "HierarchyDesign.lean": null,
+    "CubicDiscriminant.lean": null,
+    "DirectLimit.lean": null,
+    "Quotient.lean": null,
+    "PEmptyInstances.lean": null,
+    "Symmetrized.lean": null,
+    "Quaternion.lean": null,
+    "RingQuot.lean": null,
+    "GeomSum.lean": null,
+    "Exact.lean": null,
+    "FreeNonUnitalNonAssocAlgebra.lean": null,
+    "Periodic.lean": null,
+    "Opposites.lean": null,
+    "DualQuaternion.lean": null,
+    "Quandle.lean": null,
+    "Expr.lean": null,
+    "NeZero.lean": null,
+    "PUnitInstances.lean": null,
+    "TrivSqZeroExt.lean": null,
+    "Free.lean": null,
+    "Associated.lean": null,
+    "DualNumber.lean": null,
+    "Bounds.lean": null,
+    "FreeAlgebra.lean": null,
+    "CharZero": {
+      "Lemmas.lean": null,
+      "Quotient.lean": null,
+      "Defs.lean": null,
+      "Infinite.lean": null
+    },
+    "Order": {
+      "CompleteField.lean": null,
+      "Sum.lean": null,
+      "Monovary.lean": null,
+      "ToIntervalMod.lean": null,
+      "Pointwise.lean": null,
+      "Archimedean.lean": null,
+      "Invertible.lean": null,
+      "Pi.lean": null,
+      "UpperLower.lean": null,
+      "Rearrangement.lean": null,
+      "ZeroLEOne.lean": null,
+      "EuclideanAbsoluteValue.lean": null,
+      "Floor.lean": null,
+      "Chebyshev.lean": null,
+      "Algebra.lean": null,
+      "Kleene.lean": null,
+      "AbsoluteValue.lean": null,
+      "Nonneg": {
+        "Module.lean": null,
+        "Ring.lean": null,
+        "Floor.lean": null,
+        "Field.lean": null
+      },
+      "Positive": {
+        "Ring.lean": null,
+        "Field.lean": null
+      },
+      "Monoid": {
+        "WithTop.lean": null,
+        "OrderDual.lean": null,
+        "ToMulBot.lean": null,
+        "Prod.lean": null,
+        "Basic.lean": null,
+        "NatCast.lean": null,
+        "Defs.lean": null,
+        "Submonoid.lean": null,
+        "TypeTags.lean": null,
+        "Units.lean": null,
+        "Canonical": {
+          "Defs.lean": null
+        },
+        "Unbundled": {
+          "Pow.lean": null,
+          "MinMax.lean": null,
+          "Basic.lean": null,
+          "Defs.lean": null
+        }
+      },
+      "Hom": {
+        "Monoid.lean": null,
+        "Ring.lean": null,
+        "Basic.lean": null
+      },
+      "Group": {
+        "OrderIso.lean": null,
+        "WithTop.lean": null,
+        "DenselyOrdered.lean": null,
+        "Synonym.lean": null,
+        "Instances.lean": null,
+        "Int.lean": null,
+        "Indicator.lean": null,
+        "MinMax.lean": null,
+        "Prod.lean": null,
+        "Nat.lean": null,
+        "Cone.lean": null,
+        "Basic.lean": null,
+        "InjSurj.lean": null,
+        "Defs.lean": null,
+        "Action.lean": null,
+        "TypeTags.lean": null,
+        "PosPart.lean": null,
+        "Abs.lean": null,
+        "Lattice.lean": null,
+        "Units.lean": null,
+        "Bounds.lean": null,
+        "PiLex.lean": null
+      },
+      "Interval": {
+        "Finset.lean": null,
+        "Basic.lean": null,
+        "Multiset.lean": null,
+        "Set": {
+          "Instances.lean": null,
+          "Monoid.lean": null,
+          "Group.lean": null
+        }
+      },
+      "BigOperators": {
+        "Group": {
+          "List.lean": null,
+          "Finset.lean": null,
+          "Multiset.lean": null
+        },
+        "Ring": {
+          "List.lean": null,
+          "Finset.lean": null,
+          "Multiset.lean": null
+        }
+      },
+      "Module": {
+        "Synonym.lean": null,
+        "Pointwise.lean": null,
+        "OrderedSMul.lean": null,
+        "Defs.lean": null,
+        "Algebra.lean": null
+      },
+      "CauSeq": {
+        "Completion.lean": null,
+        "Basic.lean": null,
+        "BigOperators.lean": null
+      },
+      "GroupWithZero": {
+        "Synonym.lean": null,
+        "WithZero.lean": null,
+        "Canonical.lean": null,
+        "Unbundled.lean": null
+      },
+      "Field": {
+        "Rat.lean": null,
+        "Subfield.lean": null,
+        "Pi.lean": null,
+        "Basic.lean": null,
+        "InjSurj.lean": null,
+        "Defs.lean": null,
+        "Power.lean": null,
+        "Canonical": {
+          "Basic.lean": null,
+          "Defs.lean": null
+        }
+      },
+      "Sub": {
+        "WithTop.lean": null,
+        "Canonical.lean": null,
+        "Prod.lean": null,
+        "Basic.lean": null,
+        "Defs.lean": null
+      },
+      "Floor": {
+        "Div.lean": null,
+        "Prime.lean": null
+      },
+      "Ring": {
+        "WithTop.lean": null,
+        "Synonym.lean": null,
+        "Pow.lean": null,
+        "Int.lean": null,
+        "Canonical.lean": null,
+        "Rat.lean": null,
+        "Star.lean": null,
+        "Nat.lean": null,
+        "Cone.lean": null,
+        "Finset.lean": null,
+        "Basic.lean": null,
+        "InjSurj.lean": null,
+        "Defs.lean": null,
+        "Abs.lean": null,
+        "Cast.lean": null
+      }
+    },
+    "DirectSum": {
+      "Decomposition.lean": null,
+      "Module.lean": null,
+      "Ring.lean": null,
+      "Internal.lean": null,
+      "Basic.lean": null,
+      "Finsupp.lean": null,
+      "LinearMap.lean": null,
+      "Algebra.lean": null
+    },
+    "Category": {
+      "BoolRing.lean": null,
+      "GroupWithZeroCat.lean": null,
+      "AlgebraCat": {
+        "Monoidal.lean": null,
+        "Basic.lean": null,
+        "Symmetric.lean": null,
+        "Limits.lean": null
+      },
+      "CoalgebraCat": {
+        "Basic.lean": null
+      },
+      "SemigroupCat": {
+        "Basic.lean": null
+      },
+      "ModuleCat": {
+        "Biproducts.lean": null,
+        "EpiMono.lean": null,
+        "Products.lean": null,
+        "Abelian.lean": null,
+        "Presheaf.lean": null,
+        "Tannaka.lean": null,
+        "Basic.lean": null,
+        "Simple.lean": null,
+        "FilteredColimits.lean": null,
+        "Subobject.lean": null,
+        "Kernels.lean": null,
+        "Injective.lean": null,
+        "Projective.lean": null,
+        "Colimits.lean": null,
+        "Sheaf.lean": null,
+        "Limits.lean": null,
+        "Algebra.lean": null,
+        "ChangeOfRings.lean": null,
+        "Adjunctions.lean": null,
+        "Free.lean": null,
+        "Images.lean": null,
+        "Presheaf": {
+          "Abelian.lean": null,
+          "Sheafify.lean": null,
+          "Pushforward.lean": null,
+          "Sheafification.lean": null,
+          "Colimits.lean": null,
+          "Limits.lean": null,
+          "ChangeOfRings.lean": null
+        },
+        "Monoidal": {
+          "Basic.lean": null,
+          "Symmetric.lean": null,
+          "Closed.lean": null
+        },
+        "Sheaf": {
+          "Abelian.lean": null,
+          "PushforwardContinuous.lean": null,
+          "Limits.lean": null,
+          "ChangeOfRings.lean": null
+        }
+      },
+      "BialgebraCat": {
+        "Basic.lean": null
+      },
+      "Ring": {
+        "Instances.lean": null,
+        "Basic.lean": null,
+        "FilteredColimits.lean": null,
+        "Constructions.lean": null,
+        "Colimits.lean": null,
+        "Limits.lean": null,
+        "Adjunctions.lean": null
+      },
+      "MonCat": {
+        "Basic.lean": null,
+        "FilteredColimits.lean": null,
+        "Colimits.lean": null,
+        "Limits.lean": null,
+        "Adjunctions.lean": null
+      },
+      "FGModuleCat": {
+        "Basic.lean": null,
+        "Limits.lean": null
+      },
+      "GroupCat": {
+        "Biproducts.lean": null,
+        "EpiMono.lean": null,
+        "Abelian.lean": null,
+        "EnoughInjectives.lean": null,
+        "Preadditive.lean": null,
+        "Basic.lean": null,
+        "FilteredColimits.lean": null,
+        "Subobject.lean": null,
+        "ZModuleEquivalence.lean": null,
+        "ForgetCorepresentable.lean": null,
+        "Kernels.lean": null,
+        "Injective.lean": null,
+        "Colimits.lean": null,
+        "Limits.lean": null,
+        "Adjunctions.lean": null,
+        "Images.lean": null,
+        "Zero.lean": null,
+        "EquivalenceGroupAddGroup.lean": null
+      }
+    },
+    "GroupPower": {
+      "IterateHom.lean": null
+    },
+    "Group": {
+      "Fin.lean": null,
+      "Opposite.lean": null,
+      "Int.lean": null,
+      "Indicator.lean": null,
+      "Support.lean": null,
+      "ConjFinite.lean": null,
+      "Aut.lean": null,
+      "Prod.lean": null,
+      "Nat.lean": null,
+      "Commutator.lean": null,
+      "PNatPowAssoc.lean": null,
+      "Center.lean": null,
+      "Basic.lean": null,
+      "ULift.lean": null,
+      "Conj.lean": null,
+      "Ext.lean": null,
+      "InjSurj.lean": null,
+      "Defs.lean": null,
+      "Even.lean": null,
+      "Embedding.lean": null,
+      "FiniteSupport.lean": null,
+      "Centralizer.lean": null,
+      "UniqueProds.lean": null,
+      "TypeTags.lean": null,
+      "MinimalAxioms.lean": null,
+      "Units.lean": null,
+      "NatPowAssoc.lean": null,
+      "AddChar.lean": null,
+      "Hom": {
+        "Instances.lean": null,
+        "Basic.lean": null,
+        "End.lean": null,
+        "Defs.lean": null,
+        "CompTypeclasses.lean": null
+      },
+      "Invertible": {
+        "Basic.lean": null,
+        "Defs.lean": null
+      },
+      "Equiv": {
+        "Basic.lean": null,
+        "TypeTags.lean": null
+      },
+      "Submonoid": {
+        "MulOpposite.lean": null,
+        "Pointwise.lean": null,
+        "Basic.lean": null,
+        "Operations.lean": null,
+        "Membership.lean": null,
+        "Units.lean": null
+      },
+      "Units": {
+        "Equiv.lean": null,
+        "Hom.lean": null
+      },
+      "Pi": {
+        "Lemmas.lean": null,
+        "Basic.lean": null
+      },
+      "Action": {
+        "Defs.lean": null
+      },
+      "Commute": {
+        "Basic.lean": null,
+        "Defs.lean": null,
+        "Units.lean": null,
+        "Hom.lean": null
+      },
+      "Semiconj": {
+        "Basic.lean": null,
+        "Defs.lean": null,
+        "Units.lean": null
+      },
+      "Subgroup": {
+        "Finite.lean": null,
+        "MulOpposite.lean": null,
+        "Pointwise.lean": null,
+        "Order.lean": null,
+        "Actions.lean": null,
+        "Basic.lean": null,
+        "ZPowers.lean": null
+      },
+      "WithOne": {
+        "Basic.lean": null,
+        "Defs.lean": null
+      },
+      "Subsemigroup": {
+        "Basic.lean": null,
+        "Operations.lean": null,
+        "Membership.lean": null
+      }
+    },
+    "MvPolynomial": {
+      "PDeriv.lean": null,
+      "Derivation.lean": null,
+      "Comap.lean": null,
+      "Variables.lean": null,
+      "Expand.lean": null,
+      "Rename.lean": null,
+      "Degrees.lean": null,
+      "Invertible.lean": null,
+      "Monad.lean": null,
+      "CommRing.lean": null,
+      "Basic.lean": null,
+      "Counit.lean": null,
+      "Division.lean": null,
+      "Supported.lean": null,
+      "Equiv.lean": null,
+      "Polynomial.lean": null,
+      "Cardinal.lean": null,
+      "Funext.lean": null
+    },
+    "GCDMonoid": {
+      "Nat.lean": null,
+      "IntegrallyClosed.lean": null,
+      "Finset.lean": null,
+      "Basic.lean": null,
+      "Multiset.lean": null
+    },
+    "BigOperators": {
+      "Finprod.lean": null,
+      "WithTop.lean": null,
+      "RingEquiv.lean": null,
+      "Fin.lean": null,
+      "Option.lean": null,
+      "Module.lean": null,
+      "Ring.lean": null,
+      "Pi.lean": null,
+      "Finsupp.lean": null,
+      "NatAntidiagonal.lean": null,
+      "Associated.lean": null,
+      "Intervals.lean": null,
+      "Group": {
+        "List.lean": null,
+        "Finset.lean": null,
+        "Multiset.lean": null
+      },
+      "GroupWithZero": {
+        "Finset.lean": null
+      },
+      "Ring": {
+        "List.lean": null,
+        "Multiset.lean": null
+      }
+    },
+    "Module": {
+      "GradedModule.lean": null,
+      "Card.lean": null,
+      "DedekindDomain.lean": null,
+      "Bimodule.lean": null,
+      "Prod.lean": null,
+      "LocalizedModule.lean": null,
+      "PID.lean": null,
+      "Pi.lean": null,
+      "Basic.lean": null,
+      "ULift.lean": null,
+      "PointwisePi.lean": null,
+      "Defs.lean": null,
+      "CharacterModule.lean": null,
+      "Injective.lean": null,
+      "Torsion.lean": null,
+      "Projective.lean": null,
+      "BigOperators.lean": null,
+      "Equiv.lean": null,
+      "Opposites.lean": null,
+      "FinitePresentation.lean": null,
+      "Algebra.lean": null,
+      "MinimalAxioms.lean": null,
+      "Hom.lean": null,
+      "Submodule": {
+        "RestrictScalars.lean": null,
+        "Bilinear.lean": null,
+        "Pointwise.lean": null,
+        "Order.lean": null,
+        "Map.lean": null,
+        "EqLocus.lean": null,
+        "Basic.lean": null,
+        "Localization.lean": null,
+        "LinearMap.lean": null,
+        "Range.lean": null,
+        "Ker.lean": null,
+        "Lattice.lean": null,
+        "IterateMapComap.lean": null
+      },
+      "LinearMap": {
+        "Basic.lean": null,
+        "End.lean": null,
+        "Polynomial.lean": null
+      },
+      "Zlattice": {
+        "Basic.lean": null,
+        "Covolume.lean": null
+      }
+    },
+    "Divisibility": {
+      "Prod.lean": null,
+      "Basic.lean": null,
+      "Units.lean": null
+    },
+    "EuclideanDomain": {
+      "Instances.lean": null,
+      "Basic.lean": null,
+      "Defs.lean": null
+    },
+    "GroupWithZero": {
+      "Semiconj.lean": null,
+      "WithZero.lean": null,
+      "Indicator.lean": null,
+      "Prod.lean": null,
+      "Invertible.lean": null,
+      "Pi.lean": null,
+      "Commute.lean": null,
+      "Basic.lean": null,
+      "ULift.lean": null,
+      "Conj.lean": null,
+      "InjSurj.lean": null,
+      "Defs.lean": null,
+      "NonZeroDivisors.lean": null,
+      "Divisibility.lean": null,
+      "NeZero.lean": null,
+      "Hom.lean": null,
+      "Units": {
+        "Lemmas.lean": null,
+        "Basic.lean": null,
+        "Equiv.lean": null
+      }
+    },
+    "Field": {
+      "Opposite.lean": null,
+      "Rat.lean": null,
+      "Subfield.lean": null,
+      "IsField.lean": null,
+      "Basic.lean": null,
+      "ULift.lean": null,
+      "Defs.lean": null,
+      "Power.lean": null,
+      "Equiv.lean": null,
+      "MinimalAxioms.lean": null
+    },
+    "Star": {
+      "Subalgebra.lean": null,
+      "Module.lean": null,
+      "SelfAdjoint.lean": null,
+      "Prod.lean": null,
+      "Pointwise.lean": null,
+      "StarAlgHom.lean": null,
+      "Order.lean": null,
+      "Pi.lean": null,
+      "Center.lean": null,
+      "Basic.lean": null,
+      "NonUnitalSubalgebra.lean": null,
+      "CHSH.lean": null,
+      "Unitary.lean": null,
+      "BigOperators.lean": null,
+      "Free.lean": null
+    },
+    "Tropical": {
+      "Basic.lean": null,
+      "BigOperators.lean": null,
+      "Lattice.lean": null
+    },
+    "FreeMonoid": {
+      "Count.lean": null,
+      "Basic.lean": null
+    },
+    "Lie": {
+      "DirectSum.lean": null,
+      "Subalgebra.lean": null,
+      "UniversalEnveloping.lean": null,
+      "CartanSubalgebra.lean": null,
+      "EngelSubalgebra.lean": null,
+      "Matrix.lean": null,
+      "Nilpotent.lean": null,
+      "Solvable.lean": null,
+      "IdealOperations.lean": null,
+      "TensorProduct.lean": null,
+      "Abelian.lean": null,
+      "Rank.lean": null,
+      "NonUnitalNonAssocAlgebra.lean": null,
+      "InvariantForm.lean": null,
+      "OfAssociative.lean": null,
+      "SkewAdjoint.lean": null,
+      "Basic.lean": null,
+      "Quotient.lean": null,
+      "Sl2.lean": null,
+      "CartanExists.lean": null,
+      "Killing.lean": null,
+      "Engel.lean": null,
+      "Submodule.lean": null,
+      "CartanMatrix.lean": null,
+      "TraceForm.lean": null,
+      "Classical.lean": null,
+      "BaseChange.lean": null,
+      "Free.lean": null,
+      "Character.lean": null,
+      "Normalizer.lean": null,
+      "Semisimple": {
+        "Basic.lean": null,
+        "Defs.lean": null
+      },
+      "Derivation": {
+        "AdjointAction.lean": null,
+        "Basic.lean": null,
+        "Killing.lean": null
+      },
+      "Weights": {
+        "Chain.lean": null,
+        "Cartan.lean": null,
+        "Linear.lean": null,
+        "Basic.lean": null,
+        "RootSystem.lean": null,
+        "Killing.lean": null
+      }
+    },
+    "AddConstMap": {
+      "Basic.lean": null
+    },
+    "Ring": {
+      "Fin.lean": null,
+      "Opposite.lean": null,
+      "Semiconj.lean": null,
+      "Int.lean": null,
+      "WithZero.lean": null,
+      "Regular.lean": null,
+      "Rat.lean": null,
+      "Aut.lean": null,
+      "NegOnePow.lean": null,
+      "Prod.lean": null,
+      "Nat.lean": null,
+      "Invertible.lean": null,
+      "Pi.lean": null,
+      "Center.lean": null,
+      "Commute.lean": null,
+      "Basic.lean": null,
+      "ULift.lean": null,
+      "Ext.lean": null,
+      "InjSurj.lean": null,
+      "Defs.lean": null,
+      "CentroidHom.lean": null,
+      "Centralizer.lean": null,
+      "Equiv.lean": null,
+      "Parity.lean": null,
+      "BooleanRing.lean": null,
+      "Identities.lean": null,
+      "MinimalAxioms.lean": null,
+      "Units.lean": null,
+      "Idempotents.lean": null,
+      "CompTypeclasses.lean": null,
+      "AddAut.lean": null,
+      "Hom": {
+        "Basic.lean": null,
+        "Defs.lean": null
+      },
+      "Divisibility": {
+        "Lemmas.lean": null,
+        "Basic.lean": null
+      },
+      "Action": {
+        "Invariant.lean": null,
+        "Basic.lean": null,
+        "Subobjects.lean": null
+      },
+      "Subring": {
+        "Pointwise.lean": null,
+        "Order.lean": null,
+        "Basic.lean": null,
+        "Units.lean": null
+      },
+      "Subsemiring": {
+        "Pointwise.lean": null,
+        "Order.lean": null,
+        "Basic.lean": null
+      }
+    },
+    "Vertex": {
+      "HVertexOperator.lean": null
+    },
+    "MonoidAlgebra": {
+      "Support.lean": null,
+      "NoZeroDivisors.lean": null,
+      "Basic.lean": null,
+      "Ideal.lean": null,
+      "Grading.lean": null,
+      "Division.lean": null,
+      "Degree.lean": null,
+      "ToDirectSum.lean": null
+    },
+    "Regular": {
+      "Pow.lean": null,
+      "SMul.lean": null,
+      "Basic.lean": null
+    },
+    "CharP": {
+      "Two.lean": null,
+      "LocalRing.lean": null,
+      "MixedCharZero.lean": null,
+      "IntermediateField.lean": null,
+      "Invertible.lean": null,
+      "Pi.lean": null,
+      "Subring.lean": null,
+      "Basic.lean": null,
+      "Quotient.lean": null,
+      "Defs.lean": null,
+      "Algebra.lean": null,
+      "CharAndCard.lean": null,
+      "ExpChar.lean": null,
+      "Reduced.lean": null
+    },
+    "Pointwise": {
+      "Stabilizer.lean": null
+    },
+    "Polynomial": {
+      "Div.lean": null,
+      "Derivation.lean": null,
+      "Reverse.lean": null,
+      "SpecificDegree.lean": null,
+      "Smeval.lean": null,
+      "Expand.lean": null,
+      "Mirror.lean": null,
+      "Laurent.lean": null,
+      "Eval.lean": null,
+      "Monomial.lean": null,
+      "AlgebraMap.lean": null,
+      "Basic.lean": null,
+      "Derivative.lean": null,
+      "UnitTrinomial.lean": null,
+      "Lifts.lean": null,
+      "Taylor.lean": null,
+      "RingDivision.lean": null,
+      "CancelLeads.lean": null,
+      "BigOperators.lean": null,
+      "GroupRingAction.lean": null,
+      "PartialFractions.lean": null,
+      "Monic.lean": null,
+      "HasseDeriv.lean": null,
+      "Splits.lean": null,
+      "Coeff.lean": null,
+      "Induction.lean": null,
+      "Identities.lean": null,
+      "Cardinal.lean": null,
+      "Inductions.lean": null,
+      "FieldDivision.lean": null,
+      "Roots.lean": null,
+      "EraseLead.lean": null,
+      "DenomsClearable.lean": null,
+      "Module": {
+        "Basic.lean": null,
+        "AEval.lean": null,
+        "FiniteDimensional.lean": null
+      },
+      "Degree": {
+        "TrailingDegree.lean": null,
+        "CardPowDegree.lean": null,
+        "Lemmas.lean": null,
+        "Definitions.lean": null
+      }
+    },
+    "Squarefree": {
+      "Basic.lean": null
+    },
+    "Homology": {
+      "ExactSequence.lean": null,
+      "Opposite.lean": null,
+      "BifunctorShift.lean": null,
+      "Augment.lean": null,
+      "ComplexShape.lean": null,
+      "Additive.lean": null,
+      "QuasiIso.lean": null,
+      "HomologicalComplex.lean": null,
+      "LocalCohomology.lean": null,
+      "HomologicalComplexAbelian.lean": null,
+      "ImageToKernel.lean": null,
+      "HomologicalBicomplex.lean": null,
+      "Linear.lean": null,
+      "BifunctorHomotopy.lean": null,
+      "Bifunctor.lean": null,
+      "Single.lean": null,
+      "HomologicalComplexBiprod.lean": null,
+      "TotalComplex.lean": null,
+      "HomologySequence.lean": null,
+      "Localization.lean": null,
+      "Functor.lean": null,
+      "Exact.lean": null,
+      "TotalComplexSymmetry.lean": null,
+      "ComplexShapeSigns.lean": null,
+      "HomotopyCategory.lean": null,
+      "TotalComplexShift.lean": null,
+      "Homology.lean": null,
+      "HomologicalComplexLimits.lean": null,
+      "DifferentialObject.lean": null,
+      "HomotopyCofiber.lean": null,
+      "ConcreteCategory.lean": null,
+      "ModuleCat.lean": null,
+      "Homotopy.lean": null,
+      "HomologySequenceLemmas.lean": null,
+      "SingleHomology.lean": null,
+      "Embedding": {
+        "Basic.lean": null
+      },
+      "ShortComplex": {
+        "PreservesHomology.lean": null,
+        "QuasiIso.lean": null,
+        "HomologicalComplex.lean": null,
+        "FunctorEquivalence.lean": null,
+        "Abelian.lean": null,
+        "RightHomology.lean": null,
+        "Linear.lean": null,
+        "Preadditive.lean": null,
+        "Basic.lean": null,
+        "ExactFunctor.lean": null,
+        "ShortExact.lean": null,
+        "Exact.lean": null,
+        "Ab.lean": null,
+        "Limits.lean": null,
+        "Homology.lean": null,
+        "SnakeLemma.lean": null,
+        "ConcreteCategory.lean": null,
+        "LeftHomology.lean": null,
+        "ModuleCat.lean": null
+      },
+      "DerivedCategory": {
+        "Basic.lean": null,
+        "HomologySequence.lean": null
+      },
+      "Factorizations": {
+        "Basic.lean": null
+      },
+      "HomotopyCategory": {
+        "MappingCone.lean": null,
+        "HomologicalFunctor.lean": null,
+        "SingleFunctors.lean": null,
+        "Triangulated.lean": null,
+        "DegreewiseSplit.lean": null,
+        "ShiftSequence.lean": null,
+        "HomComplexShift.lean": null,
+        "HomComplex.lean": null,
+        "Shift.lean": null,
+        "Pretriangulated.lean": null
+      }
+    },
+    "Jordan": {
+      "Basic.lean": null
+    },
+    "Algebra": {
+      "Opposite.lean": null,
+      "RestrictScalars.lean": null,
+      "Bilinear.lean": null,
+      "Quasispectrum.lean": null,
+      "Prod.lean": null,
+      "Tower.lean": null,
+      "Pi.lean": null,
+      "Basic.lean": null,
+      "Operations.lean": null,
+      "Defs.lean": null,
+      "NonUnitalSubalgebra.lean": null,
+      "Equiv.lean": null,
+      "Unitization.lean": null,
+      "Hom.lean": null,
+      "Spectrum.lean": null,
+      "NonUnitalHom.lean": null,
+      "Subalgebra": {
+        "Rank.lean": null,
+        "Prod.lean": null,
+        "Pointwise.lean": null,
+        "Tower.lean": null,
+        "Order.lean": null,
+        "Basic.lean": null,
+        "Operations.lean": null,
+        "Unitization.lean": null,
+        "Directed.lean": null
+      }
+    },
+    "ContinuedFractions": {
+      "Basic.lean": null,
+      "ConvergentsEquiv.lean": null,
+      "Translations.lean": null,
+      "ContinuantsRecurrence.lean": null,
+      "TerminatedStable.lean": null,
+      "Computation": {
+        "Approximations.lean": null,
+        "Basic.lean": null,
+        "CorrectnessTerminating.lean": null,
+        "TerminatesIffRat.lean": null,
+        "Translations.lean": null,
+        "ApproximationCorollaries.lean": null
+      }
+    }
+  },
+  "Deprecated": {
+    "Ring.lean": null,
+    "Group.lean": null,
+    "Subfield.lean": null,
+    "Subring.lean": null,
+    "Submonoid.lean": null,
+    "Subgroup.lean": null
+  }
+}
