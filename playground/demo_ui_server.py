@@ -163,7 +163,7 @@ async def get_demo_page():
             --text-primary: #e5e5e5;
             --text-secondary: #a0a0a0;
             --text-muted: #666666;
-            --accent-blue: #3b82f6;
+            --accent-blue: #7ca3f2;
             --accent-green: #22c55e;
             --accent-red: #ef4444;
             --accent-yellow: #f59e0b;
@@ -208,8 +208,6 @@ async def get_demo_page():
         }
         
         .input-section {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
             padding: 1.5rem;
             margin-bottom: 1.5rem;
         }
@@ -229,7 +227,7 @@ async def get_demo_page():
             width: 100%;
             min-height: 100px;
             background: var(--bg-primary);
-            border: 1px solid var(--border-color);
+            border: 1px solid var(--text-muted);
             padding: 0.75rem;
             color: var(--text-primary);
             font-family: inherit;
@@ -239,7 +237,7 @@ async def get_demo_page():
         
         .theorem-input:focus {
             outline: none;
-            border-color: var(--accent-blue);
+            border-color: var(--text-secondary);
         }
         
         .slider-container {
@@ -249,9 +247,9 @@ async def get_demo_page():
         }
         
         .slider {
-            flex: 1;
+            width: 200px;
             height: 4px;
-            background: var(--bg-primary);
+            background: var(--bg-secondary);
             outline: none;
             -webkit-appearance: none;
         }
@@ -260,14 +258,14 @@ async def get_demo_page():
             -webkit-appearance: none;
             width: 16px;
             height: 16px;
-            background: var(--accent-blue);
+            background: black;
             cursor: pointer;
         }
         
         .slider::-moz-range-thumb {
             width: 16px;
             height: 16px;
-            background: var(--accent-blue);
+            background: black;
             cursor: pointer;
             border: none;
         }
@@ -279,9 +277,9 @@ async def get_demo_page():
         }
         
         .submit-btn {
-            background: var(--accent-blue);
+            background: black;
             color: white;
-            border: none;
+            border: 1px solid var(--text-muted);
             padding: 0.75rem 1.5rem;
             font-family: inherit;
             font-size: 0.9rem;
@@ -289,7 +287,7 @@ async def get_demo_page():
         }
         
         .submit-btn:hover {
-            background: #2563eb;
+            background: #1a1a1a;
         }
         
         .submit-btn:disabled {
@@ -299,7 +297,6 @@ async def get_demo_page():
         
         .terminal-output {
             background: var(--bg-primary);
-            border: 1px solid var(--border-color);
             padding: 1.5rem;
             font-family: inherit;
             font-size: 0.85rem;
@@ -340,7 +337,7 @@ async def get_demo_page():
         }
         
         .code-block {
-            background: var(--bg-secondary);
+            background: var(--bg-primary);
             border-left: 3px solid var(--accent-blue);
             padding: 0.75rem;
             margin: 0.5rem 0;
@@ -509,11 +506,11 @@ async def get_demo_page():
                 case 'model_response':
                     stopCurrentAnimation();
                     addTerminalLine('✓ model response received', 'success-line');
-                    addCodeBlock(data.content);
+                    addCodeBlock(data.content, '', 20);
                     break;
                 case 'extracted_proof':
                     addTerminalLine('✓ proof extracted', 'success-line');
-                    addCodeBlock(data.content, 'success-code');
+                    addCodeBlock(data.content, 'success-code', 20);
                     break;
                 case 'verifying':
                     stopCurrentAnimation();
@@ -527,12 +524,12 @@ async def get_demo_page():
                 case 'verification_error':
                     stopCurrentAnimation();
                     addTerminalLine('✗ verification failed', 'error-line');
-                    addCodeBlock(typeof data.errors === 'string' ? data.errors : JSON.stringify(data.errors, null, 2), 'error-code');
+                    addCodeBlock(typeof data.errors === 'string' ? data.errors : JSON.stringify(data.errors, null, 2), 'error-code', 10);
                     break;
                 case 'final_failure':
                     stopCurrentAnimation();
                     addTerminalLine(`\\n❌ Failed after ${data.turns} turns`, 'error-line');
-                    addCodeBlock(typeof data.errors === 'string' ? data.errors : JSON.stringify(data.errors, null, 2), 'error-code');
+                    addCodeBlock(typeof data.errors === 'string' ? data.errors : JSON.stringify(data.errors, null, 2), 'error-code', 10);
                     break;
                 case 'error':
                     stopCurrentAnimation();
@@ -549,10 +546,23 @@ async def get_demo_page():
             return div;
         }
         
-        function addCodeBlock(content, className = '') {
+        function addCodeBlock(content, className = '', maxLines = null) {
             const div = document.createElement('div');
             div.className = `code-block ${className}`;
-            div.textContent = content;
+            
+            if (maxLines && content) {
+                const lines = content.split('\\n');
+                if (lines.length > maxLines) {
+                    const truncatedLines = lines.slice(0, maxLines);
+                    const remainingLines = lines.length - maxLines;
+                    div.textContent = truncatedLines.join('\\n') + `\\n... (${remainingLines} more lines)`;
+                } else {
+                    div.textContent = content;
+                }
+            } else {
+                div.textContent = content;
+            }
+            
             terminalOutput.appendChild(div);
         }
         
@@ -560,7 +570,7 @@ async def get_demo_page():
             if (currentSpinner) {
                 const spinners = currentSpinner.querySelectorAll('.spinner, .cog');
                 spinners.forEach(spinner => {
-                    spinner.classList.add('complete');
+                    spinner.remove();
                 });
                 currentSpinner = null;
             }
