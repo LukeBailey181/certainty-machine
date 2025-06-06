@@ -47,6 +47,8 @@ setup(
         "langchain-openai",
         "sentence-transformers",
         "huggingface-hub",
+        "pydra-config",
+        "fastapi",
     ],
     # author="",
     # author_email="",
