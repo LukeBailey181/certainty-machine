@@ -37,7 +37,7 @@ def get_or_create_rag_instance():
         if parent_dir not in sys.path:
             sys.path.append(parent_dir)
         
-        from query_mathlib import MathlibRAG
+        from certainty_machine.querying.rag.query_mathlib import MathlibRAG
         print("Initializing MathlibRAG (this may take time)...")
         _rag_instance = MathlibRAG()
         print("✅ MathlibRAG initialized successfully")
@@ -45,59 +45,22 @@ def get_or_create_rag_instance():
     return _rag_instance
 
 
-def agentic_mathlib_retrieval(description: str, num_queries: int = 3, results_per_query: int = 3) -> str:
+def agentic_mathlib_retrieval(description: str, depth: int = 3, k: int = 5) -> str:
     """
-    Agentic retrieval system that generates optimal search queries and retrieves mathematical context.
-    Similar to OpenAI's deep research feature, but for mathematical theorems and concepts.
+    Iterative agentic retrieval system that refines search queries based on context quality.
+    Generates an initial query, evaluates results, and iteratively refines the search.
     
     Args:
         description: Text description of what theorem, lemma, or Lean context is needed
-        num_queries: Number of search queries to generate (default: 3)
-        results_per_query: Number of results to retrieve per query (default: 3)
+        depth: Number of refinement iterations to perform (default: 3)
+        k: Total number of highest-scoring results to return at the end (default: 5)
         
     Returns:
-        Formatted string containing retrieved context organized by query
+        Formatted string containing the k best retrieved results across all iterations
     """
     try:
         # Initialize OpenAI client
         client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
-        
-        # Generate optimal search queries using OpenAI
-        query_generation_prompt = f"""You are an expert in mathematics and formal verification. Given a description of what mathematical content someone is looking for, generate {num_queries} optimal search queries that would help find the most relevant theorems, lemmas, definitions, or proofs.
-
-The queries should be:
-1. Specific and targeted to mathematical concepts
-2. Use appropriate mathematical terminology
-3. Cover different aspects or approaches to the topic
-4. Be suitable for searching through mathematical literature and formal proofs
-
-Description: {description}
-
-Generate exactly {num_queries} search queries, one per line, without numbering or bullets:"""
-
-        # Call OpenAI to generate queries
-        response = client.chat.completions.create(
-            model="gpt-4o-mini",
-            messages=[
-                {
-                    "role": "system", 
-                    "content": "You are a mathematical research assistant who excels at creating targeted search queries for finding specific mathematical content, theorems, and formal proofs."
-                },
-                {
-                    "role": "user", 
-                    "content": query_generation_prompt
-                }
-            ],
-            max_tokens=300,
-            temperature=0.7
-        )
-        
-        # Extract and clean the generated queries
-        generated_text = response.choices[0].message.content.strip()
-        queries = [q.strip() for q in generated_text.split('\n') if q.strip()]
-        
-        # Ensure we have the right number of queries
-        queries = queries[:num_queries]
         
         # Initialize the RAG system (using cached instance if available)
         try:
@@ -107,57 +70,200 @@ Generate exactly {num_queries} search queries, one per line, without numbering o
         except Exception as e:
             return f"Error: Could not initialize MathlibRAG. Make sure the embedding files exist. Error: {str(e)}"
         
-        # Perform retrieval for each query
+        # Store all results across iterations
         all_results = []
+        current_query = None
+        search_history = []
         
-        for i, query in enumerate(queries, 1):
+        for iteration in range(depth):
+            # Generate or refine query
+            if iteration == 0:
+                # Generate initial query
+                initial_query_prompt = f"""You are an expert in mathematics and formal verification. Given a description of what mathematical content someone is looking for, generate ONE optimal search query that would help find the most relevant theorems, lemmas, definitions, or proofs.
+
+The query should be:
+1. Specific and targeted to mathematical concepts
+2. Use appropriate mathematical terminology
+3. Be suitable for searching through mathematical literature and formal proofs
+
+Description: {description}
+
+Generate exactly one search query (no numbering, bullets, or explanation):"""
+
+                response = client.chat.completions.create(
+                    model="gpt-4o-mini",
+                    messages=[
+                        {
+                            "role": "system", 
+                            "content": "You are a mathematical research assistant who excels at creating targeted search queries for finding specific mathematical content, theorems, and formal proofs."
+                        },
+                        {
+                            "role": "user", 
+                            "content": initial_query_prompt
+                        }
+                    ],
+                    max_tokens=150,
+                    temperature=0.7
+                )
+                
+                current_query = response.choices[0].message.content.strip()
+                
+            else:
+                # Refine query based on previous results and quality assessment
+                refinement_prompt = f"""You are refining a search query for mathematical content. 
+
+Original request: {description}
+
+Previous search query: {current_query}
+
+Previous search results summary:
+{chr(10).join([f"- {result['content'][:100]}..." for result in search_history[-1]['top_results'][:3]])}
+
+Quality assessment of previous results: {search_history[-1]['quality_assessment']}
+
+Based on the original request, previous query, results, and quality assessment, generate a refined search query that would better find the mathematical content being sought. The refined query should address any gaps or issues identified in the quality assessment.
+
+Generate exactly one refined search query (no numbering, bullets, or explanation):"""
+
+                response = client.chat.completions.create(
+                    model="gpt-4o-mini",
+                    messages=[
+                        {
+                            "role": "system", 
+                            "content": "You are a mathematical research assistant who excels at iteratively refining search queries based on result quality to find specific mathematical content."
+                        },
+                        {
+                            "role": "user", 
+                            "content": refinement_prompt
+                        }
+                    ],
+                    max_tokens=150,
+                    temperature=0.5
+                )
+                
+                current_query = response.choices[0].message.content.strip()
+            
+            # Execute RAG search with current query
             try:
-                results = rag.similarity_search(query, k=results_per_query)
-                all_results.append({
-                    'query': query,
-                    'query_number': i,
-                    'results': results
+                results = rag.similarity_search(current_query, k=10)  # Get more results for quality assessment
+                
+                if not results:
+                    search_history.append({
+                        'iteration': iteration + 1,
+                        'query': current_query,
+                        'top_results': [],
+                        'quality_assessment': "No results found",
+                        'should_continue': iteration < depth - 1
+                    })
+                    continue
+                
+                # Add results to our collection
+                for content, score, metadata in results:
+                    all_results.append({
+                        'content': content,
+                        'score': score,
+                        'metadata': metadata,
+                        'query': current_query,
+                        'iteration': iteration + 1
+                    })
+                
+                # Assess quality of results
+                top_results = results[:5]  # Assess top 5 results
+                results_summary = "\n\n".join([
+                    f"Result {i+1} (Score: {score:.3f}):\n{content[:300]}..."
+                    for i, (content, score, metadata) in enumerate(top_results)
+                ])
+                
+                quality_prompt = f"""Assess the quality and relevance of these search results for the following mathematical request:
+
+Original request: {description}
+Search query used: {current_query}
+
+Retrieved results:
+{results_summary}
+
+Please provide a quality assessment that addresses:
+1. How well do these results match the original request?
+2. Are the mathematical concepts relevant and accurate?
+3. What aspects of the original request are still missing or could be better addressed?
+4. Overall quality score from 1-10 (where 10 is perfect match)
+
+Provide a concise assessment (2-3 sentences):"""
+
+                quality_response = client.chat.completions.create(
+                    model="gpt-4o-mini",
+                    messages=[
+                        {
+                            "role": "system", 
+                            "content": "You are a mathematical expert who evaluates the quality and relevance of search results for mathematical queries."
+                        },
+                        {
+                            "role": "user", 
+                            "content": quality_prompt
+                        }
+                    ],
+                    max_tokens=200,
+                    temperature=0.3
+                )
+                
+                quality_assessment = quality_response.choices[0].message.content.strip()
+                
+                # Store iteration results
+                search_history.append({
+                    'iteration': iteration + 1,
+                    'query': current_query,
+                    'top_results': [{'content': content, 'score': score, 'metadata': metadata} 
+                                  for content, score, metadata in top_results],
+                    'quality_assessment': quality_assessment,
+                    'should_continue': iteration < depth - 1
                 })
+                
             except Exception as e:
-                all_results.append({
-                    'query': query,
-                    'query_number': i,
-                    'results': [],
-                    'error': str(e)
+                search_history.append({
+                    'iteration': iteration + 1,
+                    'query': current_query,
+                    'top_results': [],
+                    'quality_assessment': f"Error during search: {str(e)}",
+                    'should_continue': iteration < depth - 1
                 })
         
-        # Format the results nicely
-        formatted_output = f"# Agentic Retrieval Results for: {description}\n\n"
-        formatted_output += f"Generated {len(queries)} targeted search queries and retrieved relevant mathematical context.\n\n"
+        # Select top k results by score across all iterations
+        if not all_results:
+            return f"# Iterative Retrieval Results for: {description}\n\nNo results found across {depth} iterations.\n\n## Search History:\n" + \
+                   "\n".join([f"Iteration {h['iteration']}: {h['query']} - {h['quality_assessment']}" for h in search_history])
         
-        for result_set in all_results:
-            query_num = result_set['query_number']
-            query = result_set['query']
-            
-            formatted_output += f"## Query {query_num}: \"{query}\"\n\n"
-            
-            if 'error' in result_set:
-                formatted_output += f"❌ Error retrieving results: {result_set['error']}\n\n"
-                continue
-            
-            results = result_set['results']
-            if not results:
-                formatted_output += "No results found for this query.\n\n"
-                continue
-            
-            for j, (content, score, metadata) in enumerate(results, 1):
-                file_name = metadata.get('file_name', 'Unknown')
-                formatted_output += f"### Result {query_num}.{j} (Similarity: {score:.3f})\n"
-                formatted_output += f"**Source:** `{file_name}`\n\n"
-                formatted_output += f"```lean\n{content}\n```\n\n"
+        # Sort all results by score (descending) and take top k
+        all_results.sort(key=lambda x: x['score'], reverse=True)
+        top_k_results = all_results[:k]
+        
+        # Format the final output
+        formatted_output = f"# Iterative Agentic Retrieval Results for: {description}\n\n"
+        formatted_output += f"Performed {depth} iterations of query refinement and selected top {k} results by relevance score.\n\n"
+        
+        # Add search history
+        formatted_output += "## Search Refinement History:\n\n"
+        for i, history in enumerate(search_history, 1):
+            formatted_output += f"**Iteration {i}:** `{history['query']}`\n"
+            formatted_output += f"*Quality Assessment:* {history['quality_assessment']}\n\n"
+        
+        # Add top k results
+        formatted_output += f"## Top {k} Results (Highest Relevance Scores):\n\n"
+        
+        for i, result in enumerate(top_k_results, 1):
+            file_name = result['metadata'].get('file_name', 'Unknown')
+            formatted_output += f"### Result {i} (Score: {result['score']:.3f})\n"
+            formatted_output += f"**Source:** `{file_name}`\n"
+            formatted_output += f"**Found in iteration:** {result['iteration']}\n"
+            formatted_output += f"**Query:** `{result['query']}`\n\n"
+            formatted_output += f"```lean\n{result['content']}\n```\n\n"
         
         formatted_output += "---\n\n"
-        formatted_output += "*Results retrieved using agentic search with AI-generated queries optimized for mathematical content discovery.*"
+        formatted_output += f"*Results retrieved using iterative agentic search with {depth} refinement cycles, optimized for mathematical content discovery.*"
         
         return formatted_output
         
     except Exception as e:
-        return f"Error in agentic retrieval: {str(e)}\n\nPlease ensure:\n1. OpenAI API key is set\n2. MathlibRAG embeddings are available\n3. query_mathlib.py is accessible"
+        return f"Error in iterative agentic retrieval: {str(e)}\n\nPlease ensure:\n1. OpenAI API key is set\n2. MathlibRAG embeddings are available\n3. query_mathlib.py is accessible"
 
 
 ## html diagram generator
@@ -254,26 +360,15 @@ CUSTOM_TOOLS: List[Dict[str, Any]] = [
         "type": "function",
         "function": {
             "name": "agentic_mathlib_retrieval",
-            "description": "Agentic retrieval system for mathematical content. Generates multiple optimal search queries using AI and retrieves relevant theorems, lemmas, definitions, or proofs from the Mathlib database. Similar to OpenAI's deep research feature but specialized for mathematics.",
+            "description": "Iterative agentic retrieval system for mathematical content. Generates an initial search query, evaluates result quality, and iteratively refines the search based on context assessment. Returns the k highest-scoring results across all iterations.",
             "parameters": {
                 "type": "object",
                 "properties": {
                     "description": {
                         "type": "string",
                         "description": "Text description of what mathematical theorem, lemma, definition, or concept you need. Be specific about the mathematical area and what you're looking for (e.g., 'continuous functions on compact sets', 'Banach fixed point theorem', 'group homomorphism properties')"
-                    },
-                    "num_queries": {
-                        "type": "integer",
-                        "description": "Number of different search queries to generate (default: 3, range: 1-5)",
-                        "minimum": 1,
-                        "maximum": 5
-                    },
-                    "results_per_query": {
-                        "type": "integer", 
-                        "description": "Number of results to retrieve per query (default: 3, range: 1-10)",
-                        "minimum": 1,
-                        "maximum": 10
                     }
+                    ## hard code depth and k for now
                 },
                 "required": ["description"]
             }
