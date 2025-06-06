@@ -53,6 +53,56 @@ OUTPUT: <... your reasoning ...>
     return part_1 + ic_example_1
 
 
+def get_refinement_prompt(
+    header: str, 
+    theorem: str, 
+    turn_history: list
+) -> str:
+    """Create a refinement prompt based on full conversation history."""
+    
+    # Build the conversation history section
+    history_section = ""
+    for i, (prompt, response, verification) in enumerate(turn_history):
+        history_section += f"\n--- TURN {i+1} ---\n"
+        
+        # For the first turn, show it was the initial attempt
+        if i == 0:
+            history_section += "INITIAL ATTEMPT:\n"
+        else:
+            history_section += f"REFINEMENT ATTEMPT {i}:\n"
+        
+        history_section += f"\nYour reasoning and response:\n{response}\n"
+        
+        # Show verification result
+        if verification.verdict:
+            history_section += f"\nVerification: SUCCESS\n"
+        else:
+            history_section += f"\nVerification: FAILED\n"
+            if "errors" in verification.output:
+                history_section += f"Errors:\n{verification.output['errors']}\n"
+            else:
+                history_section += f"Output: {verification.output}\n"
+    
+    return f"""You are a math expert working on a lean4 problem. You have made several attempts to solve this problem. Here is the complete history of your attempts:
+
+ORIGINAL PROBLEM:
+```lean4
+{header + theorem}
+```
+
+CONVERSATION HISTORY:
+{history_section}
+
+Based on all the above attempts and their verification results, please analyze what went wrong and provide a corrected proof. Learn from ALL previous errors and attempts, not just the most recent one. Output the complete corrected proof (excluding the theorem statement) in lean4 between <begin_proof> and <end_proof> tags. Make sure that the proof is indented correctly.
+
+REMEMBER: 
+- Start your proof with <begin_proof> and end with <end_proof>
+- ONLY include the proof between these tags, NOT the theorem statement or imports
+- DO NOT use sorry, this will be counted as a failed proof
+- Learn from ALL previous attempts and errors shown above
+"""
+
+
 # ---------------------------------
 # Other model promtp output utils
 # ---------------------------------
