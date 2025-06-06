@@ -3,11 +3,16 @@ import numpy as np
 from langchain_openai import OpenAIEmbeddings
 from typing import List, Tuple
 import json
+from tqdm import tqdm
 
 class MathlibRAG:
     def __init__(self, embeddings_path: str = "mathlib_embeddings.pkl", tree_path: str = "mathlib_tree.json"):
         """Initialize the RAG system with saved embeddings"""
+        import time
+        
         print("Loading embeddings...")
+        start_time = time.time()
+        
         with open(embeddings_path, 'rb') as f:
             self.data = pickle.load(f)
         
@@ -15,13 +20,26 @@ class MathlibRAG:
         self.embeddings = np.array(self.data['embeddings'])
         self.metadata = self.data['metadata']
         
+        embeddings_time = time.time() - start_time
+        print(f"Embeddings loaded in {embeddings_time:.2f} seconds")
+        
+        print("Loading file tree...")
+        start_time = time.time()
+        
         # Load file tree
         with open(tree_path, 'r') as f:
             self.file_tree = json.load(f)
+            
+        tree_time = time.time() - start_time
+        print(f"File tree loaded in {tree_time:.2f} seconds")
+        import os
+        import dotenv
+        dotenv.load_dotenv()
         
         # Initialize OpenAI embeddings for queries
         self.embedding_model = OpenAIEmbeddings(
-            model=self.metadata['embedding_model']
+            model=self.metadata['embedding_model'],
+            api_key=os.getenv("OPENAI_API_KEY")
         )
         
         print(f"Loaded {len(self.documents)} document chunks")
@@ -49,7 +67,7 @@ class MathlibRAG:
         top_indices = np.argsort(similarities)[-k:][::-1]
         
         results = []
-        for idx in top_indices:
+        for idx in tqdm(top_indices, desc="Processing results"):
             doc = self.documents[idx]
             similarity = similarities[idx]
             results.append((doc.page_content, similarity, doc.metadata))
@@ -67,7 +85,7 @@ class MathlibRAG:
             List of document contents from that file
         """
         results = []
-        for doc in self.documents:
+        for doc in tqdm(self.documents, desc=f"Searching in {filename}"):
             if doc.metadata.get('file_name') == filename:
                 results.append(doc.page_content)
         return results
@@ -75,7 +93,7 @@ class MathlibRAG:
     def get_file_info(self):
         """Get information about the loaded dataset"""
         files = set()
-        for doc in self.documents:
+        for doc in tqdm(self.documents, desc="Analyzing files"):
             files.add(doc.metadata.get('file_name', 'Unknown'))
         
         return {
@@ -102,7 +120,7 @@ def main():
     for i, (content, score, metadata) in enumerate(results):
         print(f"\n--- Result {i+1} (Score: {score:.4f}) ---")
         print(f"File: {metadata['file_name']}")
-        print(f"Content preview: {content[:200]}...")
+        print(f"Content: {content}")
 
 if __name__ == "__main__":
     main() 

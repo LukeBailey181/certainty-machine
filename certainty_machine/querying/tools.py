@@ -7,12 +7,157 @@ import re
 import os
 from openai import OpenAI
 
+import dotenv
+dotenv.load_dotenv()
 
 # Built-in OpenAI tools that don't require local execution
 # Note: code_interpreter is passed separately in the API call, not in tools array
 BUILTIN_TOOLS = []
 
-## problem finder 
+# Global variable to cache the MathlibRAG instance
+_rag_instance = None
+
+
+def get_or_create_rag_instance():
+    """
+    Get or create the cached MathlibRAG instance.
+    This ensures we only load the embeddings once across all tool calls.
+    
+    Returns:
+        MathlibRAG instance
+    """
+    global _rag_instance
+    
+    if _rag_instance is None:
+        import sys
+        
+        # Add the parent directory to the path to import query_mathlib 
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        parent_dir = os.path.dirname(current_dir)
+        if parent_dir not in sys.path:
+            sys.path.append(parent_dir)
+        
+        from query_mathlib import MathlibRAG
+        print("Initializing MathlibRAG (this may take time)...")
+        _rag_instance = MathlibRAG()
+        print("✅ MathlibRAG initialized successfully")
+    
+    return _rag_instance
+
+
+def agentic_mathlib_retrieval(description: str, num_queries: int = 3, results_per_query: int = 3) -> str:
+    """
+    Agentic retrieval system that generates optimal search queries and retrieves mathematical context.
+    Similar to OpenAI's deep research feature, but for mathematical theorems and concepts.
+    
+    Args:
+        description: Text description of what theorem, lemma, or Lean context is needed
+        num_queries: Number of search queries to generate (default: 3)
+        results_per_query: Number of results to retrieve per query (default: 3)
+        
+    Returns:
+        Formatted string containing retrieved context organized by query
+    """
+    try:
+        # Initialize OpenAI client
+        client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+        
+        # Generate optimal search queries using OpenAI
+        query_generation_prompt = f"""You are an expert in mathematics and formal verification. Given a description of what mathematical content someone is looking for, generate {num_queries} optimal search queries that would help find the most relevant theorems, lemmas, definitions, or proofs.
+
+The queries should be:
+1. Specific and targeted to mathematical concepts
+2. Use appropriate mathematical terminology
+3. Cover different aspects or approaches to the topic
+4. Be suitable for searching through mathematical literature and formal proofs
+
+Description: {description}
+
+Generate exactly {num_queries} search queries, one per line, without numbering or bullets:"""
+
+        # Call OpenAI to generate queries
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                {
+                    "role": "system", 
+                    "content": "You are a mathematical research assistant who excels at creating targeted search queries for finding specific mathematical content, theorems, and formal proofs."
+                },
+                {
+                    "role": "user", 
+                    "content": query_generation_prompt
+                }
+            ],
+            max_tokens=300,
+            temperature=0.7
+        )
+        
+        # Extract and clean the generated queries
+        generated_text = response.choices[0].message.content.strip()
+        queries = [q.strip() for q in generated_text.split('\n') if q.strip()]
+        
+        # Ensure we have the right number of queries
+        queries = queries[:num_queries]
+        
+        # Initialize the RAG system (using cached instance if available)
+        try:
+            rag = get_or_create_rag_instance()
+        except ImportError as e:
+            return f"Error: Could not import MathlibRAG. Make sure query_mathlib.py is accessible. Error: {str(e)}"
+        except Exception as e:
+            return f"Error: Could not initialize MathlibRAG. Make sure the embedding files exist. Error: {str(e)}"
+        
+        # Perform retrieval for each query
+        all_results = []
+        
+        for i, query in enumerate(queries, 1):
+            try:
+                results = rag.similarity_search(query, k=results_per_query)
+                all_results.append({
+                    'query': query,
+                    'query_number': i,
+                    'results': results
+                })
+            except Exception as e:
+                all_results.append({
+                    'query': query,
+                    'query_number': i,
+                    'results': [],
+                    'error': str(e)
+                })
+        
+        # Format the results nicely
+        formatted_output = f"# Agentic Retrieval Results for: {description}\n\n"
+        formatted_output += f"Generated {len(queries)} targeted search queries and retrieved relevant mathematical context.\n\n"
+        
+        for result_set in all_results:
+            query_num = result_set['query_number']
+            query = result_set['query']
+            
+            formatted_output += f"## Query {query_num}: \"{query}\"\n\n"
+            
+            if 'error' in result_set:
+                formatted_output += f"❌ Error retrieving results: {result_set['error']}\n\n"
+                continue
+            
+            results = result_set['results']
+            if not results:
+                formatted_output += "No results found for this query.\n\n"
+                continue
+            
+            for j, (content, score, metadata) in enumerate(results, 1):
+                file_name = metadata.get('file_name', 'Unknown')
+                formatted_output += f"### Result {query_num}.{j} (Similarity: {score:.3f})\n"
+                formatted_output += f"**Source:** `{file_name}`\n\n"
+                formatted_output += f"```lean\n{content}\n```\n\n"
+        
+        formatted_output += "---\n\n"
+        formatted_output += "*Results retrieved using agentic search with AI-generated queries optimized for mathematical content discovery.*"
+        
+        return formatted_output
+        
+    except Exception as e:
+        return f"Error in agentic retrieval: {str(e)}\n\nPlease ensure:\n1. OpenAI API key is set\n2. MathlibRAG embeddings are available\n3. query_mathlib.py is accessible"
 
 
 ## html diagram generator
@@ -106,6 +251,35 @@ def calculator(expression: str) -> str:
 # Custom tools that require local execution
 CUSTOM_TOOLS: List[Dict[str, Any]] = [
     {
+        "type": "function",
+        "function": {
+            "name": "agentic_mathlib_retrieval",
+            "description": "Agentic retrieval system for mathematical content. Generates multiple optimal search queries using AI and retrieves relevant theorems, lemmas, definitions, or proofs from the Mathlib database. Similar to OpenAI's deep research feature but specialized for mathematics.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "description": {
+                        "type": "string",
+                        "description": "Text description of what mathematical theorem, lemma, definition, or concept you need. Be specific about the mathematical area and what you're looking for (e.g., 'continuous functions on compact sets', 'Banach fixed point theorem', 'group homomorphism properties')"
+                    },
+                    "num_queries": {
+                        "type": "integer",
+                        "description": "Number of different search queries to generate (default: 3, range: 1-5)",
+                        "minimum": 1,
+                        "maximum": 5
+                    },
+                    "results_per_query": {
+                        "type": "integer", 
+                        "description": "Number of results to retrieve per query (default: 3, range: 1-10)",
+                        "minimum": 1,
+                        "maximum": 10
+                    }
+                },
+                "required": ["description"]
+            }
+        }
+    },
+    {
         "type": "function", 
         "function": {
             "name": "calculator",
@@ -143,6 +317,7 @@ CUSTOM_TOOLS: List[Dict[str, Any]] = [
 
 # Mapping of custom tool names to their implementation functions
 TOOL_MAPPING: Dict[str, Callable] = {
+    "agentic_mathlib_retrieval": agentic_mathlib_retrieval,
     "calculator": calculator,
     "html_diagram_generator": html_diagram_generator
 }
