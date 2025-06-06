@@ -247,18 +247,15 @@ Provide a concise assessment (2-3 sentences):"""
             formatted_output += f"*Quality Assessment:* {history['quality_assessment']}\n\n"
         
         # Add top k results
-        formatted_output += f"## Top {k} Results (Highest Relevance Scores):\n\n"
+        formatted_output += f"## Top {k} mathlib context (Highest Relevance Scores):\n\n"
         
         for i, result in enumerate(top_k_results, 1):
             file_name = result['metadata'].get('file_name', 'Unknown')
-            formatted_output += f"### Result {i} (Score: {result['score']:.3f})\n"
             formatted_output += f"**Source:** `{file_name}`\n"
-            formatted_output += f"**Found in iteration:** {result['iteration']}\n"
             formatted_output += f"**Query:** `{result['query']}`\n\n"
             formatted_output += f"```lean\n{result['content']}\n```\n\n"
         
         formatted_output += "---\n\n"
-        formatted_output += f"*Results retrieved using iterative agentic search with {depth} refinement cycles, optimized for mathematical content discovery.*"
         
         return formatted_output
         
