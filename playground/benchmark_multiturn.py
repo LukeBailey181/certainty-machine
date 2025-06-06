@@ -263,8 +263,13 @@ class BenchmarkConfig(Config):
 
     def debug_mode(self):
         self.debug = True
+        self.max_turns = 3
 
     def full_run(self):
+        self.max_turns = 10
+
+    def o4_mini(self):
+        self.model = "o4-mini"
         self.max_turns = 10
 
     

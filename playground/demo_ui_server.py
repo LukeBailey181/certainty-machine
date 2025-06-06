@@ -158,17 +158,16 @@ async def get_demo_page():
     <title>Certainty Machine - Theorem Proving Demo</title>
     <style>
         :root {
-            --bg-primary: #0f0f0f;
+            --bg-primary: #0c0c0c;
             --bg-secondary: #1a1a1a;
-            --bg-tertiary: #252525;
-            --text-primary: #ffffff;
-            --text-secondary: #b3b3b3;
+            --text-primary: #e5e5e5;
+            --text-secondary: #a0a0a0;
             --text-muted: #666666;
             --accent-blue: #3b82f6;
-            --accent-green: #10b981;
+            --accent-green: #22c55e;
             --accent-red: #ef4444;
             --accent-yellow: #f59e0b;
-            --border-color: #333333;
+            --border-color: #2a2a2a;
         }
         
         * {
@@ -178,75 +177,69 @@ async def get_demo_page():
         }
         
         body {
-            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'JetBrains Mono', monospace;
             background: var(--bg-primary);
             color: var(--text-primary);
-            line-height: 1.6;
+            line-height: 1.5;
             min-height: 100vh;
+            font-size: 14px;
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 1.5rem;
         }
         
         .header {
-            text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
         
         .header h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--accent-blue);
             margin-bottom: 0.5rem;
         }
         
         .header p {
-            font-size: 1.2rem;
             color: var(--text-secondary);
+            font-size: 0.9rem;
         }
         
         .input-section {
             background: var(--bg-secondary);
-            border-radius: 12px;
-            padding: 2rem;
             border: 1px solid var(--border-color);
-            margin-bottom: 2rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
         }
         
         .form-group {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
         
         .form-group label {
             display: block;
             margin-bottom: 0.5rem;
-            font-weight: 600;
             color: var(--text-primary);
+            font-weight: 500;
         }
         
         .theorem-input {
             width: 100%;
-            min-height: 120px;
-            background: var(--bg-tertiary);
+            min-height: 100px;
+            background: var(--bg-primary);
             border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 1rem;
+            padding: 0.75rem;
             color: var(--text-primary);
-            font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
-            font-size: 0.9rem;
+            font-family: inherit;
+            font-size: 0.85rem;
             resize: vertical;
         }
         
         .theorem-input:focus {
             outline: none;
             border-color: var(--accent-blue);
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
         }
         
         .slider-container {
@@ -257,109 +250,125 @@ async def get_demo_page():
         
         .slider {
             flex: 1;
-            height: 6px;
-            background: var(--bg-tertiary);
-            border-radius: 3px;
+            height: 4px;
+            background: var(--bg-primary);
             outline: none;
             -webkit-appearance: none;
         }
         
         .slider::-webkit-slider-thumb {
             -webkit-appearance: none;
-            width: 20px;
-            height: 20px;
+            width: 16px;
+            height: 16px;
             background: var(--accent-blue);
-            border-radius: 50%;
             cursor: pointer;
         }
         
         .slider::-moz-range-thumb {
-            width: 20px;
-            height: 20px;
+            width: 16px;
+            height: 16px;
             background: var(--accent-blue);
-            border-radius: 50%;
             cursor: pointer;
             border: none;
         }
         
         .slider-value {
-            min-width: 60px;
-            text-align: center;
-            font-weight: 600;
+            min-width: 40px;
             color: var(--accent-blue);
+            font-weight: 500;
         }
         
         .submit-btn {
-            width: 100%;
-            background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
+            background: var(--accent-blue);
             color: white;
             border: none;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            font-family: inherit;
+            font-size: 0.9rem;
             cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
         }
         
         .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+            background: #2563eb;
         }
         
         .submit-btn:disabled {
             opacity: 0.6;
             cursor: not-allowed;
-            transform: none;
-            box-shadow: none;
         }
         
-        .progress-section {
-            background: var(--bg-secondary);
-            border-radius: 12px;
+        .terminal-output {
+            background: var(--bg-primary);
             border: 1px solid var(--border-color);
-            padding: 2rem;
+            padding: 1.5rem;
+            font-family: inherit;
+            font-size: 0.85rem;
             display: none;
         }
         
-        .progress-header {
-            display: flex;
-            justify-content: between;
-            align-items: center;
-            margin-bottom: 1.5rem;
+        .terminal-line {
+            margin-bottom: 0.5rem;
+            word-wrap: break-word;
         }
         
-        .turn-indicator {
-            background: var(--bg-tertiary);
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            font-weight: 600;
+        .terminal-line:last-child {
+            margin-bottom: 0;
+        }
+        
+        .turn-header {
             color: var(--accent-blue);
+            font-weight: 600;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
         }
         
-        .status-message {
-            padding: 1rem;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-            border-left: 4px solid var(--accent-blue);
-            background: rgba(59, 130, 246, 0.1);
+        .turn-header:first-child {
+            margin-top: 0;
+        }
+        
+        .status-line {
+            color: var(--text-secondary);
+        }
+        
+        .success-line {
+            color: var(--accent-green);
+            font-weight: 500;
+        }
+        
+        .error-line {
+            color: var(--accent-red);
+        }
+        
+        .code-block {
+            background: var(--bg-secondary);
+            border-left: 3px solid var(--accent-blue);
+            padding: 0.75rem;
+            margin: 0.5rem 0;
+            color: var(--text-primary);
+            white-space: pre-wrap;
+            font-family: inherit;
+        }
+        
+        .success-code {
+            border-left-color: var(--accent-green);
+        }
+        
+        .error-code {
+            border-left-color: var(--accent-red);
         }
         
         .spinner {
             display: inline-block;
-            width: 16px;
-            height: 16px;
-            border: 2px solid var(--bg-tertiary);
-            border-top: 2px solid var(--accent-blue);
+            width: 12px;
+            height: 12px;
+            border: 1px solid var(--text-muted);
+            border-top: 1px solid var(--accent-blue);
             border-radius: 50%;
             animation: spin 1s linear infinite;
             margin-right: 0.5rem;
         }
         
         .cog {
-            display: inline-block;
-            width: 16px;
-            height: 16px;
             margin-right: 0.5rem;
             animation: spin 2s linear infinite;
         }
@@ -369,46 +378,8 @@ async def get_demo_page():
             100% { transform: rotate(360deg); }
         }
         
-        .response-box {
-            background: var(--bg-tertiary);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 1rem;
-            margin: 1rem 0;
-            font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
-            font-size: 0.85rem;
-            white-space: pre-wrap;
-            max-height: 300px;
-            overflow-y: auto;
-        }
-        
-        .success-message {
-            background: rgba(16, 185, 129, 0.1);
-            border-left: 4px solid var(--accent-green);
-            color: var(--accent-green);
-        }
-        
-        .error-message {
-            background: rgba(239, 68, 68, 0.1);
-            border-left: 4px solid var(--accent-red);
-            color: var(--accent-red);
-        }
-        
-        .proof-display {
-            background: var(--bg-tertiary);
-            border: 1px solid var(--accent-green);
-            border-radius: 8px;
-            padding: 1.5rem;
-            font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
-            font-size: 0.9rem;
-            white-space: pre-wrap;
-            margin: 1rem 0;
-        }
-        
-        .section-title {
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: var(--text-primary);
+        .complete {
+            animation: none !important;
         }
     </style>
 </head>
@@ -416,23 +387,23 @@ async def get_demo_page():
     <div class="container">
         <div class="header">
             <h1>🎯 Certainty Machine</h1>
-            <p>AI-Powered Theorem Proving with Multi-Turn Refinement</p>
+            <p>AI-powered theorem proving with multi-turn refinement</p>
         </div>
         
         <div class="input-section">
             <form id="theoremForm">
                 <div class="form-group">
-                    <label for="theorem">Lean Theorem Statement:</label>
+                    <label for="theorem">theorem statement:</label>
                     <textarea 
                         id="theorem" 
                         class="theorem-input" 
-                        placeholder="Enter your theorem statement here, e.g.:&#10;theorem example (x y : ℕ) : x + y = y + x := by"
+                        placeholder="theorem example (x y : ℕ) : x + y = y + x := by"
                         required
                     ></textarea>
                 </div>
                 
                 <div class="form-group">
-                    <label for="thinking_time">Thinking Time (Number of Refinement Turns):</label>
+                    <label for="thinking_time">thinking time (turns):</label>
                     <div class="slider-container">
                         <input type="range" id="thinking_time" class="slider" min="1" max="20" value="5">
                         <div class="slider-value" id="slider-value">5</div>
@@ -440,28 +411,23 @@ async def get_demo_page():
                 </div>
                 
                 <button type="submit" class="submit-btn" id="submit-btn">
-                    Start Theorem Proving
+                    start proving
                 </button>
             </form>
         </div>
         
-        <div class="progress-section" id="progress-section">
-            <div class="progress-header">
-                <h3>Proving Progress</h3>
-                <div class="turn-indicator" id="turn-indicator">Turn 0/0</div>
-            </div>
-            <div id="progress-content"></div>
+        <div class="terminal-output" id="terminal-output">
         </div>
     </div>
 
     <script>
         const form = document.getElementById('theoremForm');
         const submitBtn = document.getElementById('submit-btn');
-        const progressSection = document.getElementById('progress-section');
-        const progressContent = document.getElementById('progress-content');
-        const turnIndicator = document.getElementById('turn-indicator');
+        const terminalOutput = document.getElementById('terminal-output');
         const slider = document.getElementById('thinking_time');
         const sliderValue = document.getElementById('slider-value');
+        
+        let currentSpinner = null;
         
         // Update slider value display
         slider.addEventListener('input', function() {
@@ -480,11 +446,11 @@ async def get_demo_page():
                 return;
             }
             
-            // Reset and show progress section
-            progressContent.innerHTML = '';
-            progressSection.style.display = 'block';
+            // Reset and show terminal
+            terminalOutput.innerHTML = '';
+            terminalOutput.style.display = 'block';
             submitBtn.disabled = true;
-            submitBtn.textContent = 'Proving...';
+            submitBtn.textContent = 'proving...';
             
             try {
                 const response = await fetch('/prove', {
@@ -521,105 +487,83 @@ async def get_demo_page():
                 }
             } catch (error) {
                 console.error('Error:', error);
-                addErrorMessage('Connection error occurred');
+                addTerminalLine('error: connection failed', 'error-line');
             } finally {
                 submitBtn.disabled = false;
-                submitBtn.textContent = 'Start Theorem Proving';
+                submitBtn.textContent = 'start proving';
             }
         });
         
         function handleProgressUpdate(data) {
             switch (data.type) {
                 case 'status':
-                    addStatusMessage(data.message, data.turn);
+                    addTerminalLine(`${data.message}`, 'status-line');
                     break;
                 case 'turn_start':
-                    turnIndicator.textContent = `Turn ${data.turn}/${data.max_turns}`;
+                    addTerminalLine(`\\n=== Turn ${data.turn}/${data.max_turns} ===`, 'turn-header');
                     break;
                 case 'querying':
-                    addStatusMessage(`<span class="spinner"></span>${data.message}`, data.turn);
+                    stopCurrentAnimation();
+                    currentSpinner = addTerminalLine(`<span class="spinner"></span>${data.message}`, 'status-line');
                     break;
                 case 'model_response':
-                    addResponseBox('Model Response', data.content);
+                    stopCurrentAnimation();
+                    addTerminalLine('✓ model response received', 'success-line');
+                    addCodeBlock(data.content);
                     break;
                 case 'extracted_proof':
-                    addResponseBox('Extracted Lean File', data.content);
+                    addTerminalLine('✓ proof extracted', 'success-line');
+                    addCodeBlock(data.content, 'success-code');
                     break;
                 case 'verifying':
-                    addStatusMessage(`<span class="cog">⚙️</span>${data.message}`, data.turn);
+                    stopCurrentAnimation();
+                    currentSpinner = addTerminalLine(`<span class="cog">⚙</span>${data.message}`, 'status-line');
                     break;
                 case 'success':
-                    addSuccessMessage(data.proof, data.full_file);
+                    stopCurrentAnimation();
+                    addTerminalLine('\\n🎉 PROOF SUCCESSFUL!', 'success-line');
+                    addCodeBlock(data.full_file, 'success-code');
                     break;
                 case 'verification_error':
-                    addVerificationError(data.errors, data.turn);
+                    stopCurrentAnimation();
+                    addTerminalLine('✗ verification failed', 'error-line');
+                    addCodeBlock(typeof data.errors === 'string' ? data.errors : JSON.stringify(data.errors, null, 2), 'error-code');
                     break;
                 case 'final_failure':
-                    addFinalFailure(data.errors, data.turns);
+                    stopCurrentAnimation();
+                    addTerminalLine(`\\n❌ Failed after ${data.turns} turns`, 'error-line');
+                    addCodeBlock(typeof data.errors === 'string' ? data.errors : JSON.stringify(data.errors, null, 2), 'error-code');
                     break;
                 case 'error':
-                    addErrorMessage(data.message);
+                    stopCurrentAnimation();
+                    addTerminalLine(`error: ${data.message}`, 'error-line');
                     break;
             }
         }
         
-        function addStatusMessage(message, turn) {
+        function addTerminalLine(text, className = '') {
             const div = document.createElement('div');
-            div.className = 'status-message';
-            div.innerHTML = `<strong>Turn ${turn}:</strong> ${message}`;
-            progressContent.appendChild(div);
-            progressContent.scrollTop = progressContent.scrollHeight;
+            div.className = `terminal-line ${className}`;
+            div.innerHTML = text;
+            terminalOutput.appendChild(div);
+            return div;
         }
         
-        function addResponseBox(title, content) {
+        function addCodeBlock(content, className = '') {
             const div = document.createElement('div');
-            div.innerHTML = `
-                <div class="section-title">${title}:</div>
-                <div class="response-box">${content}</div>
-            `;
-            progressContent.appendChild(div);
-            progressContent.scrollTop = progressContent.scrollHeight;
+            div.className = `code-block ${className}`;
+            div.textContent = content;
+            terminalOutput.appendChild(div);
         }
         
-        function addSuccessMessage(proof, fullFile) {
-            const div = document.createElement('div');
-            div.className = 'success-message status-message';
-            div.innerHTML = `
-                <strong>🎉 Proof Successful!</strong>
-                <div class="proof-display">${fullFile}</div>
-            `;
-            progressContent.appendChild(div);
-            progressContent.scrollTop = progressContent.scrollHeight;
-        }
-        
-        function addVerificationError(errors, turn) {
-            const div = document.createElement('div');
-            div.className = 'error-message status-message';
-            div.innerHTML = `
-                <strong>Turn ${turn}: Verification Failed</strong>
-                <div class="response-box">${typeof errors === 'string' ? errors : JSON.stringify(errors, null, 2)}</div>
-            `;
-            progressContent.appendChild(div);
-            progressContent.scrollTop = progressContent.scrollHeight;
-        }
-        
-        function addFinalFailure(errors, turns) {
-            const div = document.createElement('div');
-            div.className = 'error-message status-message';
-            div.innerHTML = `
-                <strong>❌ Failed to prove after ${turns} turns</strong>
-                <div class="response-box">${typeof errors === 'string' ? errors : JSON.stringify(errors, null, 2)}</div>
-            `;
-            progressContent.appendChild(div);
-            progressContent.scrollTop = progressContent.scrollHeight;
-        }
-        
-        function addErrorMessage(message) {
-            const div = document.createElement('div');
-            div.className = 'error-message status-message';
-            div.innerHTML = `<strong>Error:</strong> ${message}`;
-            progressContent.appendChild(div);
-            progressContent.scrollTop = progressContent.scrollHeight;
+        function stopCurrentAnimation() {
+            if (currentSpinner) {
+                const spinners = currentSpinner.querySelectorAll('.spinner, .cog');
+                spinners.forEach(spinner => {
+                    spinner.classList.add('complete');
+                });
+                currentSpinner = null;
+            }
         }
     </script>
 </body>

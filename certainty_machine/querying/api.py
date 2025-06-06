@@ -19,6 +19,7 @@ OPENAI_CLIENT = openai.OpenAI()
 
 GOOGLE_MODELS: List[str] = ["gemini-2.0-flash-001"]
 OPENAI_MODELS = [
+    "o4-mini",
     "gpt-4.1-mini",
     "gpt-4.1-nano",
     "gpt-4.1",
