@@ -39,6 +39,8 @@ setup(
         "tqdm",
         "vertexai",
         "pytest",
+        "pydra-config",
+        "fastapi",
     ],
     # author="",
     # author_email="",

@@ -3,6 +3,14 @@
 Automated theorem proving with AI
 
 
+# Luke TODOs
+
+
+-[x] Setup verification server on Stanford cluster
+-[x] Setup loading data scripts
+-[] Setup multiturn prompting
+
+
 ## Testing
 
 Testing files are in `./tests`. To run tests:
@@ -56,12 +64,5 @@ pre-commit install
 pre-commit run --all-files
 ```
 
-
-# Luke TODOs
-
-
--[] Setup verification server on Stanford cluster
--[] Setup loading data scripts
--[] Setup multiturn prompting
 
 
